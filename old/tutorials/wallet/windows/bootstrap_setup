@@ -1,8 +1,8 @@
 1. Close your wallet
-2. Go to your DAPScoin directory located at %AppData%\Roaming\DAPScoin
-3. Backup your wallet by right clicking on wallet.dat copying it and pasting it in a separate and secure location other than your DAPScoin folder.  *VERY IMPORTANT STEP
+2. Go to your PRCYcoin directory located at %AppData%\Roaming\PRCYcoin
+3. Backup your wallet by right clicking on wallet.dat copying it and pasting it in a separate and secure location other than your PRCYcoin folder.  *VERY IMPORTANT STEP
 4. Download the most recent Bootstrap from https://mega.nz/#F!2RsDmJxT!vs5ute2JyRDCRNsb7nEcMw
-5. Copy the Bootstrap file you just downloaded to the DAPScoin directory %AppData%\Roaming\DAPScoin
+5. Copy the Bootstrap file you just downloaded to the PRCYcoin directory %AppData%\Roaming\PRCYcoin
 6. Unzip the Bootstrap file and extract there.
 7. Double click on Install-Windows.bat.  Once it finishes installing hit Enter when prompted.
 8. Open your wallet
@@ -10,6 +10,6 @@
 
 
 If the Install-Windows.bat.fails:
-Unzip the Bootstrap file and copy the blk0001.dat file and the txleveldb folder and paste them into the %AppData%\Roaming\DAPScoin folder, overwriting any files it asks you to.
+Unzip the Bootstrap file and copy the blk0001.dat file and the txleveldb folder and paste them into the %AppData%\Roaming\PRCYcoin folder, overwriting any files it asks you to.
 Open your wallet
 Wait for sync

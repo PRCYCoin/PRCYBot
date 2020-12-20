@@ -1,7 +1,7 @@
 {
-  "name": "daps-bot",
+  "name": "prcy-bot",
   "version": "1.0.0",
-  "description": "DAPS Coin Bot - Answers Frequently Asked Questions",
+  "description": "PRCY Coin Bot - Answers Frequently Asked Questions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DAPSCoin/DAPSBot"
+    "url": "git+https://github.com/PRCYCoin/PRCYBot"
   },
-  "homepage": "https://github.com/DAPSCoin/DAPSBot#readme",
-  "author": "DAPS Developers",
+  "homepage": "https://github.com/PRCYCoin/PRCYBot#readme",
+  "author": "PRCY Developers",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^4.0.0",

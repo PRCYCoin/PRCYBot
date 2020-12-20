@@ -10,7 +10,7 @@ Now you can send these coins to yourself (any of your receiving addresses), copy
 
 MAC USERS:
 
-Click on DAPScoin-QT - Preferences - Display - Coin Control
+Click on PRCYcoin-QT - Preferences - Display - Coin Control
 Then proceed to your Send Coins tab, click the "Inputs" button
 Select the "List mode" feature - Select all coin stacks then click OK
 Now you can send these coins to yourself (any of your receiving addresses), copy the "After Fee" total amount and paste it into the amount field for the transaction. Send this amount to your chosen received address.

@@ -1,8 +1,8 @@
 1. Close your wallet
-2. Go to your DAPScoin directory located at %appdata%/DAPScoin
-3. *VERY IMPORTANT STEP IF YOU HAVE COINS IN YOUR WALLET Backup your wallet by right clicking on wallet.dat copying it and pasting it in a different location other than your DAPScoin directory.
+2. Go to your PRCYcoin directory located at %appdata%/PRCYcoin
+3. *VERY IMPORTANT STEP IF YOU HAVE COINS IN YOUR WALLET Backup your wallet by right clicking on wallet.dat copying it and pasting it in a different location other than your PRCYcoin directory.
 4. Download the recent Bootstrap from https://mega.nz/#F!2RsDmJxT!vs5ute2JyRDCRNsb7nEcMw
-5. Copy the Bootstrap file you just downloaded to the DAPScoin directory %appdata%/DAPScoin
+5. Copy the Bootstrap file you just downloaded to the PRCYcoin directory %appdata%/PRCYcoin
 6. Unzip the Bootstrap file and extract there.
 7. Double click on Install-Windows.bat.  Once it finishes installing hit Enter when prompted.
 8. Open your wallet
