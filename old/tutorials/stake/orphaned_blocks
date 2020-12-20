@@ -1,0 +1,3 @@
+ORPHANED BLOCKS / GENERATED BUT NOT ACCEPTED
+
+Your wallet tried to stake a block and at the same time another wallet did as well. Both wallets are broadcasting their output to the blockchain, the solution which gets accepted by the majority of nodes are accepted. In other words: Someone else was faster, and beat you to the reward. The total of the missed reward will be added to the next stake reward you win.

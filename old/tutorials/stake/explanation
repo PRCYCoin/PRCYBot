@@ -1,0 +1,32 @@
+PROOF OF STAKE THEORY:
+
+Staking is the process your wallet uses to validate transactions on the blockchain and reward you with coins. 
+When your wallet is staking it is checking transactions to make sure everyone who sends coins actually owned those coins and had the right to transfer them. 
+
+If most of the wallets online agree that a transaction is valid, then it gets accepted by the network. 
+As a reward for helping to keep the network secure one staking wallet is chosen every minute to receive a stake reward on the coins they own. 
+
+Whoever has the most “raffle tickets” has the best chance of winning the award. 
+The network weight can be understood as the number of coins available for this raffle. 
+In practice the network weight is the sum of “weighted coins age” of all the coins which are staking at this moment across the entire network. 
+
+Now your total weight is the number of tickets you own which allow you to participate in this raffle. It is calculated by summing up all the coins age of the coins which are staking in your wallet.
+Since different participants own a different number of those tickets and the more of them you own, the quicker you can expect to be a winner, this is the expected time until your next reward.
+Of course the raffle is completely random so this number is merely an approximation, it could be much higher or much lower than the expected time for you to actually win. 
+But in the long run, those differences average out and you would see that the expected time is pretty accurate averaged out over many stakes. 
+
+Bigger weight = more chances to get your reward sooner.
+
+
+IN PRACTICE:
+
+Here is a formula to show you how this works in practice. These numbers are an example only.
+Say the network weight is 30,408,157,568 and your weight is 2,176,782. 
+The expected time until reward will be:
+
+30,408,157,568 / 2,176,782 = 13,969.31 Blocks Until Reward
+
+Since one block is created approximately every 1 minute:
+13,969 blocks * 1 min = 13,969 minutes (rounded to 1 hour by the wallet)
+That's approximatley 232.8 hours until you should get your reward.
+

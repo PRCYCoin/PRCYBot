@@ -1,0 +1,19 @@
+You can use Coin Controls to combine your stacks. Be warned, this will reset your coins weight and they will need to mature for 510 blocks (about 8.5 hours) before they begin to stake again.
+
+WINDOWS USERS:
+
+Settings - Options - Display - Check the box marked "Display coin control features (experts only!)" - Apply
+Then proceed to your Send Coins tab, click the "Inputs" button
+Select the "List mode" feature - Select all coin stacks then click OK
+Now you can send these coins to yourself (any of your receiving addresses), copy the "After Fee" total amount and paste it into the amount field for the transaction. Send this amount to your chosen received address.
+
+
+MAC USERS:
+
+Click on DAPScoin-QT - Preferences - Display - Coin Control
+Then proceed to your Send Coins tab, click the "Inputs" button
+Select the "List mode" feature - Select all coin stacks then click OK
+Now you can send these coins to yourself (any of your receiving addresses), copy the "After Fee" total amount and paste it into the amount field for the transaction. Send this amount to your chosen received address.
+
+
+These transactions will appear in your wallet as a negative amount corresponding to the network fee you paid.

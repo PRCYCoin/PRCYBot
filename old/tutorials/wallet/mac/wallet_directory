@@ -1,0 +1,5 @@
+HIDDEN FOLDERS
+
+Sometimes folders like to play hide and seek.
+In order to see hidden folders, such as "~/Library" from Finder, hit "shift + ⌘ (command) + G" which will "GO" to a folder
+Then type: ~/Library/Application Support/DAPScoin and you will be in the Peepcoin wallet directory

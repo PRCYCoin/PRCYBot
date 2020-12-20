@@ -1,0 +1,24 @@
+{
+  "name": "daps-bot",
+  "version": "1.0.0",
+  "description": "DAPS Coin Bot - Answers Frequently Asked Questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DAPSCoin/DAPSBot"
+  },
+  "homepage": "https://github.com/DAPSCoin/DAPSBot#readme",
+  "author": "DAPS Developers",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "telegraf": "^3.28.0",
+    "telegraf-ratelimit": "^2.0.0"
+  }
+}
