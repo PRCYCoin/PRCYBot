@@ -118,7 +118,7 @@ bot.command('multisigwallets', ctx => {
 
 //Coinmarketcap command - link to CoinMarketCap
 bot.command('coinmarketcap', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketCap??\n\nAnswer: Yes, we are listed on Coin Market Cap, but we are currently experiencing ongoing issues with them since they are unfairly discriminating against some top-200 ranking projects such as PRCY because of new vague arbitrary rules that make no sense.\n\nTherefore we highly recommend using CoinGecko instead: https://www.coingecko.com/en/coins/prcy-coin/\n\nRead more about it in the latest interview with Forbes: http://bit.ly/PRCY_Forbes");
+  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketCap??\n\nAnswer: Yes, we are listed on Coin Market Cap - the link is: https://coinmarketcap.com/currencies/prcy-coin/");
   ctx.deleteMessage();
 });
 
