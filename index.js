@@ -37,7 +37,7 @@ bot.use(function(ctx, next){
 const walletversion = "1.0.9.0"
 
 //Add exchange constant for use in multiple commands
-const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://www.hotbit.io/register?ref=580426">HotBit</a>: No KYC\nTrading pairs: PRCY-ETH / PRCY-USDT\n\n<a href="https://altilly.com/asset/PRCY">Altilly</a>: No KYC\nTrading pairs: PRCY-ETH / PRCY-BTC\n\n<a href="http://www.bitmart.com/?r=189Ew0">BitMart.com</a>: KYC required\nTrading pairs: PRCY-ETH\n\n<a href="https://app.stex.com/?ref=59283356">Stex.com</a>: KYC required\nTrading pairs: PRCY-ETH / PRCY-USDT\n\n<a href="https://txbit.io/?r=4e43">Txbit.io</a>: KYC required\nNo KYC: $250USD/day\nTrading pairs: PRCY-BTC, ETH, XLR, EUR, USD, BRL, GBP, RUR, UAH, TRY and KZT\n\n<a href="https://www.probit.com/r/91425938">ProBit</a>: No KYC 10k limit/day\nTrading pairs: PRCY-BTC\n\n<a href="https://instaswap.io/">InstaSwap</a>: No KYC\nTrading pairs: PRCY-BTC / PRCY-ETH / PRCY-LTC\n\nExchange / mobile wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup.html?referrer=1438211">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nExchange / Staking:\n<a href="https://stakecube.net/app/exchange/">StakeCube</a>: No KYC\nTrading pairs: PRCY-BTC / PRCY-SCC / PRCY-LTC / PRCY-DASH\nPool stake possibility\n\nStaking:\n<a href="https://stackofstake.com/r/8057573689191828955">Stack of Stake</a>: No KYC\nPool stake possibility\n\n<a href="https://www.poolofstake.io/">Pool of Stake</a>:\nShared masternodes and pool of staking\n\nAll current markets can be seen here: https://officialprcycoin.com/markets\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember, not your keys, not your coins!'
+const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://www.hotbit.io/register?ref=580426">HotBit</a>: No KYC\nTrading pairs: PRCY-ETH / PRCY-USDT\n\n<a href="https://altilly.com/asset/PRCY">Altilly</a>: No KYC\nTrading pairs: PRCY-ETH / PRCY-BTC\n\n<a href="http://www.bitmart.com/?r=189Ew0">BitMart.com</a>: KYC required\nTrading pairs: PRCY-ETH\n\n<a href="https://app.stex.com/?ref=59283356">Stex.com</a>: KYC required\nTrading pairs: PRCY-ETH / PRCY-USDT\n\n<a href="https://txbit.io/?r=4e43">Txbit.io</a>: KYC required\nNo KYC: $250USD/day\nTrading pairs: PRCY-BTC, ETH, XLR, EUR, USD, BRL, GBP, RUR, UAH, TRY and KZT\n\n<a href="https://www.probit.com/r/91425938">ProBit</a>: No KYC 10k limit/day\nTrading pairs: PRCY-BTC\n\n<a href="https://instaswap.io/">InstaSwap</a>: No KYC\nTrading pairs: PRCY-BTC / PRCY-ETH / PRCY-LTC\n\nExchange / mobile wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup.html?referrer=1438211">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nExchange / Staking:\n<a href="https://stakecube.net/app/exchange/">StakeCube</a>: No KYC\nTrading pairs: PRCY-BTC / PRCY-SCC / PRCY-LTC / PRCY-DASH\nPool stake possibility\n\nStaking:\n<a href="https://stackofstake.com/r/8057573689191828955">Stack of Stake</a>: No KYC\nPool stake possibility\n\n<a href="https://www.poolofstake.io/">Pool of Stake</a>:\nShared masternodes and pool of staking\n\nAll current markets can be seen here: https://prcycoin.com/markets\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember, not your keys, not your coins!'
 
 const donationtxt = "PRCY Exchange Listing Community Fundraiser: https://prcylisting.com"
 
@@ -106,13 +106,13 @@ bot.command('markets', ctx => {
 
 //Wallets command - list available wallets
 bot.command('wallets', ctx => {
-  ctx.replyWithHTML('Question: What wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://officialprcycoin.com/wallets/\n\nWe now also have our mobile-friendly Web Wallet available at: https://apps.prcycoin.com\n\nSecuX: <a href="https://wallet.secuxtech.com/SecuXcess/">Use Your Wallet</a> | <a href="https://officialprcycoin.com/secux-hardware-wallets-pre-orders/">Order Here</a>\n\nRapids Mobile Wallet:\n<a href="https://play.google.com/store/apps/details?id=io.rapids.network.wallet">Android</a> | <a href="https://apps.apple.com/us/app/rapids-wallet/id1485755628">iOS</a>\n\nUpcoming Wallet Integrations:\n\nPolisPay: https://polispay.com/prcy-wallet/');
+  ctx.replyWithHTML('Question: What wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://prcycoin.com/wallets/\n\nWe now also have our mobile-friendly Web Wallet available at: https://apps.prcycoin.com\n\nSecuX: <a href="https://wallet.secuxtech.com/SecuXcess/">Use Your Wallet</a> | <a href="https://prcycoin.com/secux-hardware-wallets-pre-orders/">Order Here</a>\n\nRapids Mobile Wallet:\n<a href="https://play.google.com/store/apps/details?id=io.rapids.network.wallet">Android</a> | <a href="https://apps.apple.com/us/app/rapids-wallet/id1485755628">iOS</a>\n\nUpcoming Wallet Integrations:\n\nPolisPay: https://polispay.com/prcy-wallet/');
   ctx.deleteMessage();
 });
 
 //Wallets command - list available wallets
 bot.command('multisigwallets', ctx => {
-  ctx.replyWithHTML("Question: What Multisig wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://officialprcycoin.com/multisig-wallets/");
+  ctx.replyWithHTML("Question: What Multisig wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://prcycoin.com/multisig-wallets/");
   ctx.deleteMessage();
 });
 
@@ -130,13 +130,13 @@ bot.command('coingecko', ctx => {
 
 //Roadmap command - link to roadmap
 bot.command('roadmap', ctx => {
-  ctx.replyWithHTML("Question: Where is the PRCY roadmap?\n\nAnswer: You can view the most up to date roadmap at: https://officialprcycoin.com/roadmap/");
+  ctx.replyWithHTML("Question: Where is the PRCY roadmap?\n\nAnswer: You can view the most up to date roadmap at: https://prcycoin.com/roadmap/");
   ctx.deleteMessage();
 });
 
 //Whitepaper command - link to Whitepaper
 bot.command('whitepaper', ctx => {
-  ctx.replyWithHTML("Question: Where is the PRCY whitepaper?\n\nAnswer: You can view the full and most up to date whitepaper at: https://officialprcycoin.com/whitepaper.pdf");
+  ctx.replyWithHTML("Question: Where is the PRCY whitepaper?\n\nAnswer: You can view the full and most up to date whitepaper at: https://prcycoin.com/whitepaper.pdf");
   ctx.deleteMessage();
 });
 
@@ -148,13 +148,13 @@ bot.command('staking', ctx => {
 
 //FAQ command - link to FAQ
 bot.command('faq', ctx => {
-  ctx.replyWithHTML("Any other questions you can view our FAQ at: https://officialprcycoin.com/faq or ask in the channels.");
+  ctx.replyWithHTML("Any other questions you can view our FAQ at: https://prcycoin.com/faq or ask in the channels.");
   ctx.deleteMessage();
 });
 
 //Socialmedia command - link to all socials, might require updating - Jan 30/2019
 bot.command('socialmedia', ctx => {
-  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/officialPRCYcoin/\nFacebook Group: https://www.facebook.com/groups/prcycoin/\nInstagram: https://www.instagram.com/prcycoin/\nLinkedIn: https://www.linkedin.com/company/prcy-coin/\n\n<b>Chats</b>\nTelegram Official: @prcycoin\nTelegram Updates: @PRCYTG_Updates\nTelegram Tech Support: @PRCYTechSupport\nTelegram Lounge (Price discussion/spam): @PRCY_LOUNGE\nDiscord: http://www.officialprcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY Blog: https://officialprcycoin.com/prcy-project-blog/\nReddit: https://www.reddit.com/r/PRCYCoin/\n\n<b>Video</b>\nYoutube: https://www.youtube.com/prcycoin");
+  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/officialPRCYcoin/\nFacebook Group: https://www.facebook.com/groups/prcycoin/\nInstagram: https://www.instagram.com/prcycoin/\nLinkedIn: https://www.linkedin.com/company/prcy-coin/\n\n<b>Chats</b>\nTelegram Official: @prcycoin\nTelegram Updates: @PRCYTG_Updates\nTelegram Tech Support: @PRCYTechSupport\nTelegram Lounge (Price discussion/spam): @PRCY_LOUNGE\nDiscord: http://www.prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY Blog: https://prcycoin.com/prcy-project-blog/\nReddit: https://www.reddit.com/r/PRCYCoin/\n\n<b>Video</b>\nYoutube: https://www.youtube.com/prcycoin");
   ctx.deleteMessage();
 });
 
@@ -190,13 +190,13 @@ bot.command('lounge', ctx => {
 
 //Welcome command - a quick welcome, not used as much, mark for possible removal/add admin only
 bot.command('welcome', ctx => {
-  ctx.replyWithHTML('Welcome to the PRCY Telegram English chat! 👋\n\n<b>Useful PRCY Channels</b>\n<a href="https://t.me/PRCYTG_Updates">Update Channel</a> | <a href="https://t.me/PRCY_LOUNGE">PRCY Lounge</a> | <a href="https://t.me/PRCYTechSupport">Technical Support</a> | <a href="https://t.me/PRCY_MN_Support">Masternode Support</a>\n\n<b>Subscribe for News</b>\n<a href="https://www.subscribepage.com/Prcy">Newsletter</a>\n\n<b>PRCY Merchandise and Donations</b>\n<a href="https://www.zazzle.com/store/prcy_coin">Merchandise Shop</a> | <a href="https://officialprcycoin.com/secux-hardware-wallets-pre-orders/">SecuX Wallet Pre-order</a>\n\n<b>Where can you buy PRCY?</b>\n<a href="https://www.hotbit.io/register?ref=580426">HotBit</a> | <a href="http://www.bitmart.com/?r=189Ew0">BitMart</a> | <a href="https://app.stex.com/?ref=59283356">STEX</a> | <a href="https://txbit.io/?r=4e43">Txbit</a> | <a href="https://swap.swftcoin.com/swft-v3/InviteSignup.html?referrer=1438211">SWFT</a> | <a href="https://www.probit.com/r/91425938">ProBit</a> | <a href="https://instaswap.io/">InstaSwap</a>\n\n<b>Please Visit and Follow Us On:</b>\n<a href="https://officialprcycoin.com/">Official Website</a> | <a href="https://www.facebook.com/officialPRCYcoin/">Facebook</a> | <a href="https://twitter.com/PRCYcoin">Twitter</a> | <a href="https://www.instagram.com/prcycoin/">Instagram</a> | <a href="https://discord.gg/CwWU5H8">Discord</a> | <a href="https://www.reddit.com/r/PRCYCoin/">Reddit</a> | <a href="https://www.linkedin.com/company/prcy-coin/">LinkedIn</a> | <a href="https://www.weibo.com/PRCYcoin">Weibo</a> | <a href="https://www.youtube.com/prcycoin">YouTube</a> | <a href="https://medium.com/@PRCYcoin">Medium</a> | <a href="https://officialprcycoin.com/prcy-wechat">WeChat</a> | <a href="https://www.facebook.com/groups/prcycoin/">Facebook Group</a> | <a href="https://officialprcycoin.com/prcy-project-blog">PRCY Blog</a> | <a href="https://github.com/PRCYcoin">GitHub</a>\n\nLet us know if you have any other questions about our project.\n<b>Privacy is a right, not a privilege!</b>');
+  ctx.replyWithHTML('Welcome to the PRCY Telegram English chat! 👋\n\n<b>Useful PRCY Channels</b>\n<a href="https://t.me/PRCYTG_Updates">Update Channel</a> | <a href="https://t.me/PRCY_LOUNGE">PRCY Lounge</a> | <a href="https://t.me/PRCYTechSupport">Technical Support</a> | <a href="https://t.me/PRCY_MN_Support">Masternode Support</a>\n\n<b>Subscribe for News</b>\n<a href="https://www.subscribepage.com/Prcy">Newsletter</a>\n\n<b>PRCY Merchandise and Donations</b>\n<a href="https://www.zazzle.com/store/prcy_coin">Merchandise Shop</a> | <a href="https://prcycoin.com/secux-hardware-wallets-pre-orders/">SecuX Wallet Pre-order</a>\n\n<b>Where can you buy PRCY?</b>\n<a href="https://www.hotbit.io/register?ref=580426">HotBit</a> | <a href="http://www.bitmart.com/?r=189Ew0">BitMart</a> | <a href="https://app.stex.com/?ref=59283356">STEX</a> | <a href="https://txbit.io/?r=4e43">Txbit</a> | <a href="https://swap.swftcoin.com/swft-v3/InviteSignup.html?referrer=1438211">SWFT</a> | <a href="https://www.probit.com/r/91425938">ProBit</a> | <a href="https://instaswap.io/">InstaSwap</a>\n\n<b>Please Visit and Follow Us On:</b>\n<a href="https://prcycoin.com/">Official Website</a> | <a href="https://www.facebook.com/officialPRCYcoin/">Facebook</a> | <a href="https://twitter.com/PRCYcoin">Twitter</a> | <a href="https://www.instagram.com/prcycoin/">Instagram</a> | <a href="https://discord.gg/CwWU5H8">Discord</a> | <a href="https://www.reddit.com/r/PRCYCoin/">Reddit</a> | <a href="https://www.linkedin.com/company/prcy-coin/">LinkedIn</a> | <a href="https://www.weibo.com/PRCYcoin">Weibo</a> | <a href="https://www.youtube.com/prcycoin">YouTube</a> | <a href="https://medium.com/@PRCYcoin">Medium</a> | <a href="https://prcycoin.com/prcy-wechat">WeChat</a> | <a href="https://www.facebook.com/groups/prcycoin/">Facebook Group</a> | <a href="https://prcycoin.com/prcy-project-blog">PRCY Blog</a> | <a href="https://github.com/PRCYcoin">GitHub</a>\n\nLet us know if you have any other questions about our project.\n<b>Privacy is a right, not a privilege!</b>');
   ctx.deleteMessage();
 });
 
 //Masternodes command - Quick write-up of masternodes and how they work
 bot.command('masternodes', ctx => {
-  ctx.replyWithHTML('PRCY Masternodes are required to have 1,000,000 PRCY collateral, a dedicated IP address, and be able to run 24 hours a day without more than a 1-hour connection loss. Masternodes get paid using the See-Saw method. For offering their services to the network, Masternodes are paid a portion of block rewards to maintain the ecosystem. This payment will be in PRCY and it serves as a form of passive income to the Masternode owners\n\nTo make things easier, we have partnered with a few Masternode services as well where  there is no need to run your wallet 24/7.\n\nMasternode Hosting:\n<a href="https://higlan.com/">Higlan</a>\n<a href="https://central.zcore.cash/masternodes/PRCY">ZCore Masternodes System</a>\n<a href="https://node.trittium.cc/coin/PRCY">Trittium</a>\n<a href="https://nodecheck.io/currency/PRCY">Nodecheck</a>\n<a href="https://pecuniaplatform.io/ref/dded6bc0">Pecunia</a>\n<a href="https://masternodes.biz/coindetail.php?c=PRCY">MNBIZ</a>\n<a href="https://mymasternodes.host/">MyMasternode.host</a>\n\nCheck out our Masternode Hosts: https://officialprcycoin.com/masternode-hosts\n\nCheck out our Masternodes guide: https://officialprcycoin.com/masternodes');
+  ctx.replyWithHTML('PRCY Masternodes are required to have 1,000,000 PRCY collateral, a dedicated IP address, and be able to run 24 hours a day without more than a 1-hour connection loss. Masternodes get paid using the See-Saw method. For offering their services to the network, Masternodes are paid a portion of block rewards to maintain the ecosystem. This payment will be in PRCY and it serves as a form of passive income to the Masternode owners\n\nTo make things easier, we have partnered with a few Masternode services as well where  there is no need to run your wallet 24/7.\n\nMasternode Hosting:\n<a href="https://higlan.com/">Higlan</a>\n<a href="https://central.zcore.cash/masternodes/PRCY">ZCore Masternodes System</a>\n<a href="https://node.trittium.cc/coin/PRCY">Trittium</a>\n<a href="https://nodecheck.io/currency/PRCY">Nodecheck</a>\n<a href="https://pecuniaplatform.io/ref/dded6bc0">Pecunia</a>\n<a href="https://masternodes.biz/coindetail.php?c=PRCY">MNBIZ</a>\n<a href="https://mymasternodes.host/">MyMasternode.host</a>\n\nCheck out our Masternode Hosts: https://prcycoin.com/masternode-hosts\n\nCheck out our Masternodes guide: https://prcycoin.com/masternodes');
   ctx.deleteMessage();
 });
 
@@ -252,7 +252,7 @@ bot.command('scammers', ctx => {
 
 //Team command - link to PRCY team
 bot.command('team', ctx => {
-  ctx.replyWithHTML("Check out the PRCY Team page to see our list of team members: https://officialprcycoin.com/team");
+  ctx.replyWithHTML("Check out the PRCY Team page to see our list of team members: https://prcycoin.com/team");
   ctx.deleteMessage();
 });
 
@@ -276,19 +276,19 @@ bot.command('macwallet', ctx => {
 
 //PoAMiner command - info/help for PoA Miner
 bot.command('poaminer', ctx => {
-  ctx.replyWithHTML("You can download the latest PoA Miner at: https://github.com/PRCYCoin/POA-Miner/releases/tag/latest\n\nSetup instructions can be found at https://officialprcycoin.com/PoAMiner\n\nIf you need any help, feel free to join @PRCYTechSupport");
+  ctx.replyWithHTML("You can download the latest PoA Miner at: https://github.com/PRCYCoin/POA-Miner/releases/tag/latest\n\nSetup instructions can be found at https://prcycoin.com/PoAMiner\n\nIf you need any help, feel free to join @PRCYTechSupport");
   ctx.deleteMessage();
 });
 
 //Pitchdeck command - info and link to Pitch Deck
 bot.command('pitchdeck', ctx => {
-  ctx.replyWithHTML("Looking for a fast, simple and easy way to explain PRCY to friends or family?\n\nWe are happy to share with you a pitch deck that we recently created. We'll do an updated one again just before or after mainnet release. 😉\n\nhttps://officialprcycoin.com/prcy-pitch-deck/");
+  ctx.replyWithHTML("Looking for a fast, simple and easy way to explain PRCY to friends or family?\n\nWe are happy to share with you a pitch deck that we recently created. We'll do an updated one again just before or after mainnet release. 😉\n\nhttps://prcycoin.com/prcy-pitch-deck/");
   ctx.deleteMessage();
 });
 
 //Bootstrap command - info and link to bootstrap
 bot.command('bootstrap', ctx => {
-  ctx.replyWithHTML('The latest BootStrap is always available from: https://bootstrap.prcycoin.com/bootstrap.zip\n\nPlease remember to backup your wallet.dat and Mnemonic Recovery phrase before running the BootStrap!\n\nhttps://officialprcycoin.com/prcy-bootstrap-installation-and-instructions/\n\nVideo guide: https://youtu.be/kLogECRANZE');
+  ctx.replyWithHTML('The latest BootStrap is always available from: https://bootstrap.prcycoin.com/bootstrap.zip\n\nPlease remember to backup your wallet.dat and Mnemonic Recovery phrase before running the BootStrap!\n\nhttps://prcycoin.com/prcy-bootstrap-installation-and-instructions/\n\nVideo guide: https://youtu.be/kLogECRANZE');
   ctx.deleteMessage();
 });
 
@@ -324,7 +324,7 @@ bot.command('cheers', ctx => {
 
 //Audit command - links to audit
 bot.command('audit', ctx => {
-  ctx.replyWithHTML("Question: Has the PRCY Coin code been audited?\n\nAnswer: Yes, you can view the Red4Sec audit here: https://officialprcycoin.com/prcy-coin-audit-report-by-red4sec/");
+  ctx.replyWithHTML("Question: Has the PRCY Coin code been audited?\n\nAnswer: Yes, you can view the Red4Sec audit here: https://prcycoin.com/prcy-coin-audit-report-by-red4sec/");
   ctx.deleteMessage();
 });
 
