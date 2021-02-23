@@ -106,7 +106,7 @@ bot.command('markets', ctx => {
 
 //Wallets command - list available wallets
 bot.command('wallets', ctx => {
-  ctx.replyWithHTML('Question: What wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://prcycoin.com/wallets/\n\nWe now also have our mobile-friendly Web Wallet available at: https://apps.prcycoin.com\n\nSecuX: <a href="https://wallet.secuxtech.com/SecuXcess/">Use Your Wallet</a> | <a href="https://prcycoin.com/secux-hardware-wallets-pre-orders/">Order Here</a>\n\nRapids Mobile Wallet:\n<a href="https://play.google.com/store/apps/details?id=io.rapids.network.wallet">Android</a> | <a href="https://apps.apple.com/us/app/rapids-wallet/id1485755628">iOS</a>\n\nUpcoming Wallet Integrations:\n\nPolisPay: https://polispay.com/prcy-wallet/');
+  ctx.replyWithHTML('Question: What wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://prcycoin.com/wallets/');
   ctx.deleteMessage();
 });
 
