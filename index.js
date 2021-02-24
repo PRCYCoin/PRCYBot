@@ -346,6 +346,12 @@ bot.command('explorer', ctx => {
   ctx.deleteMessage();
 });
 
+//Github command - links to Github
+bot.command('github', ctx => {
+  ctx.replyWithHTML("Question: What is the link to the PRCY Coin GitHub?\n\nAnswer: The PRCY Coin GitHub is located at: https://github.com/PRCYcoin/\n\nGitHub page: https://prcycoin.github.io/PRCYCoin/");
+  ctx.deleteMessage();
+});
+
 //Listen for other coin mentions
 bot.hears([/pxn/i,/vestx/i,/rstr/i,/ondori/i,/dapsx/i,/EOM/i], (ctx) => {
   //ctx.replyWithHTML(ctx.from.username + ", Please don't discuss other projects in our official channel. Thanks for your cooperation.");
