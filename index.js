@@ -178,7 +178,7 @@ bot.command('tech', ctx => {
 
 //Tech command - a quick welcome to tech, not used as much, mark for possible removal/add admin only
 bot.command('techsupport', ctx => {
-  ctx.replyWithHTML("If you need any Tech Support, please join: https://t.me/prcySupport\For Masternode Support, please join: https://t.me/PRCY_MN_Support\n");
+  ctx.replyWithHTML("If you need any Tech Support, please join: https://t.me/prcySupport");
   ctx.deleteMessage();
 });
 
