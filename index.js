@@ -340,6 +340,12 @@ bot.command('freemarket', ctx => {
   ctx.deleteMessage();
 });
 
+//Explorer command - links to Explorer
+bot.command('explorer', ctx => {
+  ctx.replyWithHTML("Question: What is the link to the PRCY Coin?\n\nAnswer: The Explorer is located at here: https://explorer.prcycoin.com/\n\nBackup Explorer: https://backup.prcycoin.com/");
+  ctx.deleteMessage();
+});
+
 //Listen for other coin mentions
 bot.hears([/pxn/i,/vestx/i,/rstr/i,/ondori/i,/dapsx/i,/EOM/i], (ctx) => {
   //ctx.replyWithHTML(ctx.from.username + ", Please don't discuss other projects in our official channel. Thanks for your cooperation.");
