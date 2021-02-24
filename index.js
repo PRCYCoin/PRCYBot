@@ -136,7 +136,7 @@ bot.command('roadmap', ctx => {
 
 //Whitepaper command - link to Whitepaper
 bot.command('whitepaper', ctx => {
-  ctx.replyWithHTML("Question: Where is the PRCY whitepaper?\n\nAnswer: You can view the full and most up to date whitepaper at: https://prcycoin.com/whitepaper.pdf");
+  ctx.replyWithHTML("Question: Where is the PRCY whitepaper?\n\nAnswer: You can view the full and most up to date whitepaper at: https://prcycoin.com/whitepaper");
   ctx.deleteMessage();
 });
 
