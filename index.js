@@ -178,7 +178,7 @@ bot.command('techsupport', ctx => {
 
 //Lounge command - gentle reminder to keep price discussion to Lounge
 bot.command('lounge', ctx => {
-  ctx.replyWithHTML("Please keep price discussion to our Lounge :) @PRCY_LOUNGE");
+  ctx.replyWithHTML("Please keep price discussion to our Lounge :) @prcylounge");
   ctx.deleteMessage();
 });
 
@@ -196,13 +196,13 @@ bot.command('masternodes', ctx => {
 
 //Vote command - links to votes PRCY is in, may change frequently or not be needed at times
 bot.command('vote', ctx => {
-  ctx.replyWithHTML("Please don't forget to vote for PRCY in this Twitter vote!\n\nYou can vote at: https://twitter.com/CryptoBelgie/status/1330927357130133510");
+  //ctx.replyWithHTML("Please don't forget to vote for PRCY in this Twitter vote!\n\nYou can vote at: https://twitter.com/CryptoBelgie/status/1330927357130133510");
   ctx.deleteMessage();
 });
 
 //Promofriday command - information and link to Promo Friday materials
 bot.command('promofriday', ctx => {
-  ctx.replyWithHTML('<b>PRCY Promo Friday</b>\n\PRCY community, today is #PROMOFRIDAY! If you wish to create a post on social media related to PRCY then add $PRCY #PRCY & #PROMOFRIDAY.\n\nHere are some <a href="https://drive.google.com/drive/u/0/folders/11t-q7E32hYzxQzKqnx-FhpAqlOQiu-yp">PRCY Approved Graphics</a> - https://drive.google.com/drive/u/0/folders/11t-q7E32hYzxQzKqnx-FhpAqlOQiu-yp');
+  //ctx.replyWithHTML('<b>PRCY Promo Friday</b>\n\PRCY community, today is #PROMOFRIDAY! If you wish to create a post on social media related to PRCY then add $PRCY #PRCY & #PROMOFRIDAY.\n\nHere are some <a href="https://drive.google.com/drive/u/0/folders/11t-q7E32hYzxQzKqnx-FhpAqlOQiu-yp">PRCY Approved Graphics</a> - https://drive.google.com/drive/u/0/folders/11t-q7E32hYzxQzKqnx-FhpAqlOQiu-yp');
   ctx.deleteMessage();
 });
 
@@ -233,7 +233,7 @@ bot.command('giveaway', ctx => {
 //Gifparty command - Used for fun, invite people to lounge for gif party
 bot.command('gifparty', ctx => {
   ctx.deleteMessage();
-  var gifpartyresponses = ["Meet me in the @PRCY_Lounge for a good old fashioned GIF party!", "Do you like a good GIF party? Meet me in the @PRCY_Lounge!"];
+  var gifpartyresponses = ["Meet me in the @prcylounge for a good old fashioned GIF party!", "Do you like a good GIF party? Meet me in the @prcylounge!"];
   var gifpartyresponse = gifpartyresponses[Math.floor(Math.random() * gifpartyresponses.length)];
   ctx.replyWithHTML(gifpartyresponse);
 });
@@ -401,7 +401,7 @@ bot.hears(/moon/i, ctx => {
     let chatid = ctx.message.chat.id;
 	//If not Lounge (ID below), complain about moon mentions
     if(chatid != "-1001367088314") {
-		//ctx.replyWithHTML("Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:\n@PRCY_LOUNGE\nThank you!");
+		//ctx.replyWithHTML("Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:\n@prcylounge\nThank you!");
     }
 });
 
