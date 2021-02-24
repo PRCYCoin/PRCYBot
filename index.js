@@ -53,7 +53,7 @@ function remindUsers() {
   var reminderresponses = ["Do not store your crypto on any exchanges. Do your trading and save them in your own wallet with your own key", "Be safe on TG and remember PRCY admins will never DM you asking for personal information, your PRCY holdings etc. Always check handles!", "Set your TG phone number visibility to 'nobody' in the settings.", "If you get 'account suspended' on our Twitter account you need to clear the app data from your phone settings section.", "Do not keep your crypto on exchanges."]; // responses to choose from
   var reminderresponse = reminderresponses[Math.floor(Math.random() * reminderresponses.length)]; // pick random response from above
   if (chances < 5) bot.telegram.sendMessage("@prcycoin", "Friendly PRCY reminder: " + reminderresponse); //if chances is less than 5, send message to Official
-  if (chances > 5) bot.telegram.sendMessage("@PRCY_Lounge", "Friendly PRCY reminder: " + reminderresponse); //if chances is greater than 5, send message to Lounge
+  if (chances > 5) bot.telegram.sendMessage("@prcylounge", "Friendly PRCY reminder: " + reminderresponse); //if chances is greater than 5, send message to Lounge
 }
 
 //Timer - currently not set
@@ -70,7 +70,7 @@ bot.command('rules', ctx => {
     let chatid = ctx.message.chat.id;
 	//If not Lounge (ID below), give official rules
     if(chatid != "-1001367088314") {
-		ctx.replyWithHTML("<b>Chat Rules</b>\nWe will appreciate your cooperation in keeping our channel a clean and spam free environment.\nWe encourage respectful and constructive spreading of our message.\n1. No spam links (referrals/advertisements/etc)\n2. No talking/shilling for outside projects\n3. No gifs/memes/videos\n4. No hate speech\n5. No posts about price/predictions/moons/lambos/etc.\n\n<b>Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:</b>\n@PRCY_LOUNGE\n<b>Thank you!</b>");
+		ctx.replyWithHTML("<b>Chat Rules</b>\nWe will appreciate your cooperation in keeping our channel a clean and spam free environment.\nWe encourage respectful and constructive spreading of our message.\n1. No spam links (referrals/advertisements/etc)\n2. No talking/shilling for outside projects\n3. No gifs/memes/videos\n4. No hate speech\n5. No posts about price/predictions/moons/lambos/etc.\n\n<b>Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:</b>\n@prcylounge\n<b>Thank you!</b>");
 		ctx.deleteMessage();
     }
 	//If Lounge (ID below), give Lounge rules
@@ -154,7 +154,7 @@ bot.command('faq', ctx => {
 
 //Socialmedia command - link to all socials, might require updating - Jan 30/2019
 bot.command('socialmedia', ctx => {
-  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/officialPRCYcoin/\nFacebook Group: https://www.facebook.com/groups/prcycoin/\nInstagram: https://www.instagram.com/prcycoin/\nLinkedIn: https://www.linkedin.com/company/prcy-coin/\n\n<b>Chats</b>\nTelegram Official: @prcycoin\nTelegram Updates: @PRCYTG_Updates\nTelegram Tech Support: @PRCYTechSupport\nTelegram Lounge (Price discussion/spam): @PRCY_LOUNGE\nDiscord: http://www.prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY Blog: https://prcycoin.com/prcy-project-blog/\nReddit: https://www.reddit.com/r/PRCYCoin/\n\n<b>Video</b>\nYoutube: https://www.youtube.com/prcycoin");
+  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/officialPRCYcoin/\nFacebook Group: https://www.facebook.com/groups/prcycoin/\nInstagram: https://www.instagram.com/prcycoin/\nLinkedIn: https://www.linkedin.com/company/prcy-coin/\n\n<b>Chats</b>\nTelegram Official: @prcycoin\nTelegram Updates: @PRCYTG_Updates\nTelegram Tech Support: @PRCYTechSupport\nTelegram Lounge (Price discussion/spam): @prcylounge\nDiscord: http://www.prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY Blog: https://prcycoin.com/prcy-project-blog/\nReddit: https://www.reddit.com/r/PRCYCoin/\n\n<b>Video</b>\nYoutube: https://www.youtube.com/prcycoin");
   ctx.deleteMessage();
 });
 
