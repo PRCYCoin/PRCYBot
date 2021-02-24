@@ -158,12 +158,6 @@ bot.command('socialmedia', ctx => {
   ctx.deleteMessage();
 });
 
-//Shop command - link to PRCY shop
-bot.command('shop', ctx => {
-  ctx.replyWithHTML("Shop for PRCY merchandise at the new store! http://bit.ly/PRCY-Shop");
-  ctx.deleteMessage();
-});
-
 //Loungerules command - a quick welcome to lounge, not used as much, mark for possible removal/add admin only
 bot.command('loungerules', ctx => {
   ctx.replyWithHTML("Welcome to PRCY Lounge.\nPlease keep conversations about price discussion, chart watching, buy/sale walls and such here.\n\nThis room will have some very simple rules to follow with the normal rules we have:\n\nDo's:\n- General non-PRCY related discussions are allowed\n- PRCY market price discussions are allowed\n- GIFS and stickers are allowed in moderation, don't spam!\n- PRCY comparisons and discussions in relation to other privacy coins are allowed\n\nDon'ts:\n- Swearing/insults/trolling/flaming/baiting are not allowed\n- Discussing other projects or channels is not allowed\n- Spreading FUD or misinformation is not allowed\n- Advertising or recruiting members is not allowed\n- NSFW/18+ content is not allowed (keep it PG-13)\n\nPlease keep it friendly and fun, and follow the admin's instructions.\nThe admins are reasonable and will act in a fair manner, but there are boundaries. Not following the rules or the admin's instructions will result in a mute or a (perma)ban.\n\nNow with that out of the way and without further ado: enjoy your stay in the PRCY Lounge and have fun!");
