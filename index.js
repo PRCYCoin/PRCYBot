@@ -276,7 +276,7 @@ bot.command('poaminer', ctx => {
 
 //Pitchdeck command - info and link to Pitch Deck
 bot.command('pitchdeck', ctx => {
-  ctx.replyWithHTML("Looking for a fast, simple and easy way to explain PRCY to friends or family?\n\nWe are happy to share with you a pitch deck that we recently created. We'll do an updated one again just before or after mainnet release. 😉\n\nhttps://prcycoin.com/prcy-pitch-deck/");
+  //ctx.replyWithHTML("Looking for a fast, simple and easy way to explain PRCY to friends or family?\n\nWe are happy to share with you a pitch deck that we recently created. We'll do an updated one again just before or after mainnet release. 😉\n\nhttps://prcycoin.com/prcy-pitch-deck/");
   ctx.deleteMessage();
 });
 
@@ -318,7 +318,7 @@ bot.command('cheers', ctx => {
 
 //Audit command - links to audit
 bot.command('audit', ctx => {
-  ctx.replyWithHTML("Question: Has the PRCY Coin code been audited?\n\nAnswer: Yes, you can view the Red4Sec audit here: https://prcycoin.com/prcy-coin-audit-report-by-red4sec/");
+  //ctx.replyWithHTML("Question: Has the PRCY Coin code been audited?\n\nAnswer: Yes, you can view the Red4Sec audit here: https://prcycoin.com/prcy-coin-audit-report-by-red4sec/");
   ctx.deleteMessage();
 });
 
