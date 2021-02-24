@@ -282,7 +282,7 @@ bot.command('pitchdeck', ctx => {
 
 //Bootstrap command - info and link to bootstrap
 bot.command('bootstrap', ctx => {
-  ctx.replyWithHTML('The latest BootStrap is always available from: https://bootstrap.prcycoin.com/bootstrap.zip\n\nPlease remember to backup your wallet.dat and Mnemonic Recovery phrase before running the BootStrap!\n\nhttps://prcycoin.com/prcy-bootstrap-installation-and-instructions/\n\nVideo guide: https://youtu.be/kLogECRANZE');
+  ctx.replyWithHTML('The latest BootStrap is always available from: https://bootstrap.prcycoin.com/bootstrap.zip\n\nPlease remember to backup your wallet.dat and Mnemonic Recovery phrase before running the BootStrap!\n\nhttps://prcycoin.com/prcy-bootstrap-installation-and-instructions/\n\nVideo guide: Coming soon');
   ctx.deleteMessage();
 });
 
