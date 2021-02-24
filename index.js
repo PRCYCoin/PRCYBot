@@ -172,7 +172,7 @@ bot.command('tech', ctx => {
 
 //Tech command - a quick welcome to tech, not used as much, mark for possible removal/add admin only
 bot.command('techsupport', ctx => {
-  ctx.replyWithHTML("If you need any Tech Support, please join: https://t.me/PRCYTechSupport\nFor Masternode Support, please join: https://t.me/PRCY_MN_Support\n");
+  ctx.replyWithHTML("If you need any Tech Support, please join: https://t.me/prcySupport\For Masternode Support, please join: https://t.me/PRCY_MN_Support\n");
   ctx.deleteMessage();
 });
 
@@ -252,25 +252,25 @@ bot.command('team', ctx => {
 
 //Linuxwallet command - info/help for Linux Wallet
 bot.command('linuxwallet', ctx => {
-  ctx.replyWithHTML("You can download the latest Linux wallet at: https://github.com/PRCYCoin/PRCYCoin/releases/latest\n\nIf you need any help, feel free to join @PRCYTechSupport");
+  ctx.replyWithHTML("You can download the latest Linux wallet at: https://github.com/PRCYCoin/PRCYCoin/releases/latest\n\nIf you need any help, feel free to join @prcySupport");
   ctx.deleteMessage();
 });
 
 //Windowswallet command - info/help for Windows Wallet
 bot.command('windowswallet', ctx => {
-  ctx.replyWithHTML("You can download the latest Windows wallet at: https://github.com/PRCYCoin/PRCYCoin/releases/latest\n\nIf you need any help, feel free to join @PRCYTechSupport");
+  ctx.replyWithHTML("You can download the latest Windows wallet at: https://github.com/PRCYCoin/PRCYCoin/releases/latest\n\nIf you need any help, feel free to join @prcySupport");
   ctx.deleteMessage();
 });
 
 //Macwallet command - info/help for Mac Wallet
 bot.command('macwallet', ctx => {
-  ctx.replyWithHTML("You can download the latest Mac wallet at: https://github.com/PRCYCoin/PRCYCoin/releases/latest\n\nIf you need any help, feel free to join @PRCYTechSupport");
+  ctx.replyWithHTML("You can download the latest Mac wallet at: https://github.com/PRCYCoin/PRCYCoin/releases/latest\n\nIf you need any help, feel free to join @prcySupport");
   ctx.deleteMessage();
 });
 
 //PoAMiner command - info/help for PoA Miner
 bot.command('poaminer', ctx => {
-  ctx.replyWithHTML("You can download the latest PoA Miner at: https://github.com/PRCYCoin/POA-Miner/releases/tag/latest\n\nSetup instructions can be found at https://prcycoin.com/PoAMiner\n\nIf you need any help, feel free to join @PRCYTechSupport");
+  ctx.replyWithHTML("You can download the latest PoA Miner at: https://github.com/PRCYCoin/POA-Miner/releases/tag/latest\n\nSetup instructions can be found at https://prcycoin.com/PoAMiner\n\nIf you need any help, feel free to join @prcySupport");
   ctx.deleteMessage();
 });
 
