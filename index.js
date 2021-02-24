@@ -63,7 +63,7 @@ function remindUsers() {
 bot.start((ctx) => ctx.reply("Hello! Welcome to the PRCY Coin Bot. Feel free to start by entering /help to see all available commands."));
 
 //Help command - listing all commands for user
-bot.help((ctx) => ctx.replyWithHTML("Hello! Welcome to the PRCY Coin Bot.\n\nBelow are a list of all the commands:\n/bootstrap - Link to BootStrap\n/coingecko - CoinGecko Listing\n/exchanges or /markets - What exchanges is PRCY coin on?\n/faq - Other Questions?\n/gifparty - Used for fun, invite people to lounge for gif party\n/help - List all commands\n/links - Explorer, Github\n/masternodes - General Masternode description and instructions\n/poaminer - PoA Miner Instructions\n/roadmap - Latest Roadmap\n/rules - Chat Rules\n/scammers - Give our community a scammer warning\n/socialmedia - Social Media Accounts\n/wallets - Currently Supported Wallets\n/whitepaper - Latest Whitepaper"));
+bot.help((ctx) => ctx.replyWithHTML("Hello! Welcome to the PRCY Coin Bot.\n\nBelow are a list of all the commands:\n/bootstrap - Link to BootStrap\n/coinmarketcap - CoinMarketCap Listing\n/exchanges or /markets - What exchanges is PRCY coin on?\n/faq - Other Questions?\n/gifparty - Used for fun, invite people to lounge for gif party\n/help - List all commands\n/links - Explorer, Github\n/masternodes - General Masternode description and instructions\n/poaminer - PoA Miner Instructions\n/roadmap - Latest Roadmap\n/rules - Chat Rules\n/scammers - Give our community a scammer warning\n/socialmedia - Social Media Accounts\n/wallets - Currently Supported Wallets\n/whitepaper - Latest Whitepaper"));
 
 //Rules command = display rules for official or lounge, determined by chatid
 bot.command('rules', ctx => {
@@ -124,7 +124,7 @@ bot.command('coinmarketcap', ctx => {
 
 //Coingecko command - link to CoinGecko
 bot.command('coingecko', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinGecko??\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/prcy-coin/");
+  //ctx.replyWithHTML("Question: Is PRCY listed on CoinGecko??\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/prcy-coin/");
   ctx.deleteMessage();
 });
 
