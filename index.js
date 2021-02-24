@@ -342,7 +342,7 @@ bot.command('freemarket', ctx => {
 
 //Explorer command - links to Explorer
 bot.command('explorer', ctx => {
-  ctx.replyWithHTML("Question: What is the link to the PRCY Coin?\n\nAnswer: The Explorer is located at here: https://explorer.prcycoin.com/\n\nBackup Explorer: https://backup.prcycoin.com/");
+  ctx.replyWithHTML("Question: What is the link to the PRCY Coin Explorer?\n\nAnswer: The Explorer is located here: https://explorer.prcycoin.com/\n\nBackup Explorer: https://backup.prcycoin.com/");
   ctx.deleteMessage();
 });
 
