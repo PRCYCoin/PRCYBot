@@ -328,7 +328,7 @@ bot.command('audit', ctx => {
   ctx.deleteMessage();
 });
 
-//Audit command - links to audit
+//Supply command - links to supply
 bot.command('supply', ctx => {
   ctx.replyWithHTML("Question: What is the current supply of PRCY Coin?\n\nAnswer: The current supply can always be viewed here: https://explorer.prcycoin.com/api/getsupply");
   ctx.deleteMessage();
