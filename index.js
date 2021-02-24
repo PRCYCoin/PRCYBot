@@ -335,7 +335,7 @@ bot.command('freemarket', ctx => {
 });
 
 //Listen for other coin mentions
-bot.hears([/pxn/i,/vestx/i,/rstr/i,/ondori/i,/prcyx/i,/EOM/i], (ctx) => {
+bot.hears([/pxn/i,/vestx/i,/rstr/i,/ondori/i,/dapsx/i,/EOM/i], (ctx) => {
   //ctx.replyWithHTML(ctx.from.username + ", Please don't discuss other projects in our official channel. Thanks for your cooperation.");
   ctx.telegram.forwardMessage(-1001191950899, ctx.message.chat.id, ctx.message.message_id);
   //ctx.deleteMessage();
