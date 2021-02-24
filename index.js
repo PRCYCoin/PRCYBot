@@ -306,13 +306,13 @@ bot.command('mnscripts', ctx => {
 
 //Donations command - link to donations drive
 bot.command('donations', ctx => {
-  ctx.replyWithHTML(donationtxt);
+  //ctx.replyWithHTML(donationtxt);
   ctx.deleteMessage();
 });
 
 //Fundraiser command - link to donations drive
 bot.command('fundraiser', ctx => {
-  ctx.replyWithHTML(donationtxt);
+  //ctx.replyWithHTML(donationtxt);
   ctx.deleteMessage();
 });
 
