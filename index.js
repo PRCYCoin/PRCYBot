@@ -160,7 +160,7 @@ bot.command('faq', ctx => {
 
 //Socialmedia command - link to all socials, might require updating - Jan 30/2019
 bot.command('socialmedia', ctx => {
-  //ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/officialPRCYcoin/\nFacebook Group: https://www.facebook.com/groups/prcycoin/\nInstagram: https://www.instagram.com/prcycoin/\nLinkedIn: https://www.linkedin.com/company/prcy-coin/\n\n<b>Chats</b>\nTelegram Official: @prcycoin\nTelegram Updates: @PRCYTG_Updates\nTelegram Tech Support: @PRCYTechSupport\nTelegram Lounge (Price discussion/spam): @prcylounge\nDiscord: http://www.prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY Blog: https://prcycoin.com/prcy-project-blog/\nReddit: https://www.reddit.com/r/PRCYCoin/\n\n<b>Video</b>\nYoutube: https://www.youtube.com/prcycoin");
+  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/Prcycoin-101534778505838/\nInstagram: https://www.instagram.com/prcycoin/\n\n<b>Chats</b>\nTelegram Official: @prcycoin\nTelegram Updates: @prcyupdate\nTelegram Tech Support: @prcySupport\nTelegram Lounge (Price discussion/spam): @prcylounge\nDiscord: https://prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY Blog: https://prcycoin.com/blog/\nReddit: https://www.reddit.com/r/PRCYCoin/");
   ctx.deleteMessage();
 });
 
