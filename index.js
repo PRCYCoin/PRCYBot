@@ -352,6 +352,18 @@ bot.command('github', ctx => {
   ctx.deleteMessage();
 });
 
+//Passive_income command - links to Passive Income Opportunities
+bot.command('passive_income', ctx => {
+  ctx.replyWithHTML("Question: Does PRCY Coin have any Passive Income Opportunities?\n\nAnswer: Yes, we do! You can check them all out at: https://prcycoin.com/category/passive-incomes-opportunities/");
+  ctx.deleteMessage();
+});
+
+//Finance_report command - links to Financial Report
+bot.command('finance_report', ctx => {
+  ctx.replyWithHTML("Question: What is the link to the PRCY Coin Q1 Financial Report?\n\nAnswer: The PRCY Coin Q1 Financial Report is located at: https://prcycoin.com/wp-content/uploads/2021/02/1ST-QT-2021-FINANCIAL-REPORT-PRCY.pdf");
+  ctx.deleteMessage();
+});
+
 //Listen for other coin mentions
 bot.hears([/pxn/i,/vestx/i,/rstr/i,/ondori/i,/dapsx/i,/EOM/i], (ctx) => {
   //ctx.replyWithHTML(ctx.from.username + ", Please don't discuss other projects in our official channel. Thanks for your cooperation.");
