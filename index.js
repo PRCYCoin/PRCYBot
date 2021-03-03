@@ -124,7 +124,7 @@ bot.command('coinmarketcap', ctx => {
 
 //Coingecko command - link to CoinGecko
 bot.command('coingecko', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinGecko??\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/privacy-coin/");
+  ctx.replyWithHTML("Question: Is PRCY listed on CoinGecko??\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/prcy-coin/");
   ctx.deleteMessage();
 });
 
