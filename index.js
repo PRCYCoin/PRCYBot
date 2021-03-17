@@ -92,12 +92,6 @@ bot.command('newsletter', ctx => {
   ctx.deleteMessage();
 });
 
-//Binance command - link to Steemit post about Binance application
-bot.command('binance', ctx => {
-  ctx.replyWithHTML("PRCY Official Listing Application is in for Binance\n\n<b>Read more details here:</b> https://steemit.com/prcy/@prcycoin/prcy-official-listing-application-in-for-binance");
-  ctx.deleteMessage();
-});
-
 //Exchanges command - list available exchanges
 bot.command('exchanges', ctx => {
   ctx.replyWithHTML(exchangetext);
@@ -170,12 +164,6 @@ bot.command('socialmedia', ctx => {
   ctx.deleteMessage();
 });
 
-//Loungerules command - a quick welcome to lounge, not used as much, mark for possible removal/add admin only
-bot.command('loungerules', ctx => {
-  ctx.replyWithHTML("Welcome to PRCY Lounge.\nPlease keep conversations about price discussion, chart watching, buy/sale walls and such here.\n\nThis room will have some very simple rules to follow with the normal rules we have:\n\nDo's:\n- General non-PRCY related discussions are allowed\n- PRCY market price discussions are allowed\n- GIFS and stickers are allowed in moderation, don't spam!\n- PRCY comparisons and discussions in relation to other privacy coins are allowed\n\nDon'ts:\n- Swearing/insults/trolling/flaming/baiting are not allowed\n- Discussing other projects or channels is not allowed\n- Spreading FUD or misinformation is not allowed\n- Advertising or recruiting members is not allowed\n- NSFW/18+ content is not allowed (keep it PG-13)\n\nPlease keep it friendly and fun, and follow the admin's instructions.\nThe admins are reasonable and will act in a fair manner, but there are boundaries. Not following the rules or the admin's instructions will result in a mute or a (perma)ban.\n\nNow with that out of the way and without further ado: enjoy your stay in the PRCY Lounge and have fun!");
-  ctx.deleteMessage();
-});
-
 //Tech command - a quick welcome to tech, not used as much, mark for possible removal/add admin only
 bot.command('tech', ctx => {
   ctx.replyWithHTML("Welcome to the PRCY Tech Support room!\n\nThis is the support room for all your (technical) questions related to PRCY. 🛠\n\nIf you have any questions, do not hesitate to ask them here. Our admins will do their best to answer them and help you with your issues!");
@@ -209,24 +197,6 @@ bot.command('vote', ctx => {
 //Promofriday command - information and link to Promo Friday materials
 bot.command('promofriday', ctx => {
   //ctx.replyWithHTML('<b>PRCY Promo Friday</b>\n\PRCY community, today is #PROMOFRIDAY! If you wish to create a post on social media related to PRCY then add $PRCY #PRCY & #PROMOFRIDAY.\n\nHere are some <a href="https://drive.google.com/drive/u/0/folders/11t-q7E32hYzxQzKqnx-FhpAqlOQiu-yp">PRCY Approved Graphics</a> - https://drive.google.com/drive/u/0/folders/11t-q7E32hYzxQzKqnx-FhpAqlOQiu-yp');
-  ctx.deleteMessage();
-});
-
-//Trading command - Link to Trading channel on Discord
-bot.command('trading', ctx => {
-  //ctx.replyWithHTML('Interested in talking more about the new PRCY Collectibles? Join our Discord channel to discuss the collectibles and trade if you wish <b>(TRADE AT YOUR OWN RISK): </b>\n\<a href="https://discord.gg/kzK68Ce/">#prcy-collectibles</a> - https://discord.gg/kzK68Ce/');
-  ctx.deleteMessage();
-});
-
-//Articles command - List of articles by team members and users
-bot.command('articles', ctx => {
-  //ctx.replyWithHTML('Check out some of our Featured PRCY Articles in the News, written by team members and other members of the #PRCYFam:\n\n<a href="https://hackernoon.com/you-have-to-have-privacy-but-to-what-scale-and-under-whose-control-adel-de-meyer-ql203e1e">🔹 "You Have to Have Privacy, But to What Scale and Under Whose Control?" - Adel de Meyer | Hacker Noon🔹</a>\n<a href="https://medium.com/@hamedsep35/important-points-to-know-about-prcy-privacy-coin-incl-september-2020-updates-8517caa0846d">🔹 Important points to know about PRCY Privacy Coin: Incl September 2020 updates🔹</a>\n<a href="https://eng.ambcrypto.com/prcy-platform-a-new-privacy-platform-bringing-complete-anonymity-to-the-industry/">🔹 AMB Crypto: PRCY coin, A New Privacy Platform bringing Complete Anonymity to the Industry🔹</a>\n<a href="https://cointelegraph.com/news/new-privacy-coin-says-it-solves-problem-with-monero-and-zcash">🔹 Cointelegraph: New Privacy Coin says it solves Problem with Monero and Zcash</a>\n🔹 <a href="https://www.ajoobz.com/project-reports/prcyreview/">Ajoobz: PRCY Review,Report and Score</a>\n🔹 <a href="https://news.cryptoshib.com/prcy-redefining-privacy-transactions/">Crypto SHIB: PRCY Redefining Privacy Transactions</a>\n<a href="https://www.newsbtc.com/press-releases/secux-cross-platform-crypto-hardware-wallet-partners-with-prcy-coin/">🔹 News BTC: SecuX Cross-Platform Crypto Hardware Wallet Partners With PRCY coin</a>\n<a href="http://bit.ly/PRCYArticles1">🔹 A look at Privacy coins and why PRCY will be Different</a>\n<a href="http://bit.ly/PRCYArticles2">🔹 PRCY Privacy Features in a Nutshell</a>\n<a href="http://bit.ly/PRCYArticles3">🔹 PRCY Reward System in a Nutshell</a>\n<a href="http://bit.ly/CoinMint101">🔹 Coin Minting 101 and Responsible Monetary Policy</a>');
-  ctx.deleteMessage();
-});
-
-//Videos command - List of YouTube videos
-bot.command('videos', ctx => {
-  //ctx.replyWithHTML('Check out some of the YouTube videos and interviews from this year that you may have missed #PRCYFam:\n\n<a href="https://www.youtube.com/playlist?list=PL1qJxEydFmQwkaVpfHSV0_AdNo-38f_zl">🔹 PRCY Tutorials 🔹</a>\n<a href="https://www.youtube.com/playlist?list=PL1qJxEydFmQxfyMXqcj5hj6-Zq78SCxv0">🔹 PRCY User Generated Content 🔹</a>\n<a href="https://www.youtube.com/playlist?list=PL1qJxEydFmQw2scRnrYWvvQRkxvb84-4_">🔹 PRCY Global Talent 🔹</a>\n<a href="https://www.youtube.com/c/PRCYCoin/videos?view=0&sort=dd&shelf_id=1">🔹 PRCY Other Assorted Uploads 🔹</a>\n<a href="https://www.youtube.com/c/PRCYCoin/videos?view=2&sort=dd&live_view=503&shelf_id=4">🔹 Past live streams 🔹</a>');
   ctx.deleteMessage();
 });
 
@@ -280,12 +250,6 @@ bot.command('poaminer', ctx => {
   ctx.deleteMessage();
 });
 
-//Pitchdeck command - info and link to Pitch Deck
-bot.command('pitchdeck', ctx => {
-  //ctx.replyWithHTML("Looking for a fast, simple and easy way to explain PRCY to friends or family?\n\nWe are happy to share with you a pitch deck that we recently created. We'll do an updated one again just before or after mainnet release. 😉\n\nhttps://prcycoin.com/prcy-pitch-deck/");
-  ctx.deleteMessage();
-});
-
 //Bootstrap command - info and link to bootstrap
 bot.command('bootstrap', ctx => {
   ctx.replyWithHTML('The latest BootStrap is always available from: https://bootstrap.prcycoin.com/bootstrap.zip\n\nPlease remember to backup your wallet.dat and Mnemonic Recovery phrase before running the BootStrap!\n\nhttps://prcycoin.com/prcy-bootstrap-installation-and-instructions/\n\nVideo guide: Coming soon');
@@ -304,27 +268,9 @@ bot.command('mnscripts', ctx => {
   ctx.deleteMessage();
 });
 
-//Donations command - link to donations drive
-bot.command('donations', ctx => {
-  //ctx.replyWithHTML(donationtxt);
-  ctx.deleteMessage();
-});
-
-//Fundraiser command - link to donations drive
-bot.command('fundraiser', ctx => {
-  //ctx.replyWithHTML(donationtxt);
-  ctx.deleteMessage();
-});
-
 //Cheers command - fun cheers command
 bot.command('cheers', ctx => {
   ctx.replyWithHTML('Cheers mate!');
-  ctx.deleteMessage();
-});
-
-//Audit command - links to audit
-bot.command('audit', ctx => {
-  //ctx.replyWithHTML("Question: Has the PRCY Coin code been audited?\n\nAnswer: Yes, you can view the Red4Sec audit here: https://prcycoin.com/prcy-coin-audit-report-by-red4sec/");
   ctx.deleteMessage();
 });
 
@@ -362,25 +308,6 @@ bot.command('passive_income', ctx => {
 bot.command('finance_report', ctx => {
   ctx.replyWithHTML("Question: What is the link to the PRCY Coin Q1 Financial Report?\n\nAnswer: The PRCY Coin Q1 Financial Report is located at: https://prcycoin.com/wp-content/uploads/2021/02/1ST-QT-2021-FINANCIAL-REPORT-PRCY.pdf");
   ctx.deleteMessage();
-});
-
-//Listen for other coin mentions
-bot.hears([/pxn/i, /vestx/i, /rstr/i, /ondori/i, /dapsx/i, /EOM/i], (ctx) => {
-  //ctx.replyWithHTML(ctx.from.username + ", Please don't discuss other projects in our official channel. Thanks for your cooperation.");
-  ctx.telegram.forwardMessage(-1001191950899, ctx.message.chat.id, ctx.message.message_id);
-  //ctx.deleteMessage();
-});
-
-//Listen for DAPPT mention and delete
-bot.hears(/DAPPT/i, (ctx) => {
-  //ctx.replyWithHTML(ctx.from.username + ", Please don't discuss other projects in our official channel. Thanks for your cooperation.");
-  ctx.telegram.forwardMessage(-1001191950899, ctx.message.chat.id, ctx.message.message_id);
-  ctx.deleteMessage();
-});
-
-//Listen for name mentions
-bot.hears([/adel/i, /spock/i, /andrew/i, /dkill/i], (ctx) => {
-  ctx.telegram.forwardMessage(-1001191950899, ctx.message.chat.id, ctx.message.message_id);
 });
 
 //Listen for name changes
@@ -424,15 +351,6 @@ bot.hears([/kryptokompassDE/i, /PrcyUnofficialChannel/i, /pump signal/i, /McAfee
 //Listen for GeckoBot responding to all /commands
 bot.hears([/Oops, something went wrong... Try another command like/i], (ctx) => {
   ctx.deleteMessage();
-});
-
-//Listen for moon mentions, forward user to Lounge
-bot.hears(/moon/i, ctx => {
-  let chatid = ctx.message.chat.id;
-  //If not Lounge (ID below), complain about moon mentions
-  if (chatid != "-1001367088314") {
-    //ctx.replyWithHTML("Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:\n@prcylounge\nThank you!");
-  }
 });
 
 //Listen for issues, requests, suggestion mentions
