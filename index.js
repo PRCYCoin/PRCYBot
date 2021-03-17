@@ -65,6 +65,12 @@ bot.start((ctx) => ctx.reply("Hello! Welcome to the PRCY Coin Bot. Feel free to 
 //Help command - listing all commands for user
 bot.help((ctx) => ctx.replyWithHTML("Hello! Welcome to the PRCY Coin Bot.\n\nBelow are a list of all the commands:\n/bootstrap - Link to BootStrap\n/coinmarketcap - Is PRCY listed on CoinMarketCap?\n/exchanges - What exchanges is PRCY coin on?\n/explorer - Link to Explorer\n/faq - Other Questions?\n/finance_report - Link to the PRCY Coin Q1 Financial Report\n/gifparty - Used for fun, invite people to lounge for gif party\n/github - Link to GitHub\n/help - List all commands\n/markets - What exchanges is PRCY coin on?\n/masternodes - General Masternode description and instructions\n/mnscripts - Link to Masternode Scripts\n/passive_income - Link to Passive Income Opportunities\n/poaminer - PoA Miner Instructions\n/retention - What is the Retention Plan?\n/roadmap - Latest Roadmap\n/rules - Chat Rules\n/scammers - Give our community a scammer warning\n/socialmedia - Social Media Accounts\n/staking - Can you stake PRCY Coin?\n/supply - What is the current supply of PRCY Coin?\n/team - Who is on the PRCY Coin team?\n/wallets - Currently Supported Wallets\n/whitepaper - Latest Whitepaper"));
 
+//Welcome command - a quick welcome, not used as much, mark for possible removal/add admin only
+bot.command('welcome', ctx => {
+  ctx.replyWithHTML("<b>Welcome to the PRCY coin Official Chat Channel</b>\n\nMore information about PRCY coin can be found by visiting the Official website <a href='https://prcycoin.com/'>Official Website</a>\n\nOur Community Chat Rules\n\n▫️Please refrain from using foul/unpleasant language and be kind to community members.\n▫️Do not spread FUD. And do not spread DAPS FUD. It’s not our business, we are #PRCY\n▫️Do not post inappropriate content or personal links of interest.\n▫️No shilling will be permitted.\n▫️This is an English only chat, so please use English.\n▫️Avoid discussion of illegal activities.\n▫️Do not harass Community Managers. They are provided as a courtesy to the PRCY coin community.\n\n🤦‍♂️ Violation of chat rules will result in restrictions without warning.\n\n🙏 We strive for a friendly and positive chat experience!\n\n💁‍♂️ For any support issues please contact the team directly we are unable to help, verify, or fix any issues via public Telegram.\n\n🤥 Be highly cautious of members that private message you, we don't handle support tickets in public Telegram, admins will never ask for money, we will only handle support requests through the <a href='https://prcycoin.com/'>Official Website</a>  / <a href='https://t.me/prcySupport'>Telegram Support Channel</a> and will never contact you first.");
+  ctx.deleteMessage();
+});
+
 //Rules command = display rules for official or lounge, determined by chatid
 bot.command('rules', ctx => {
   let chatid = ctx.message.chat.id;
@@ -185,12 +191,6 @@ bot.command('techsupport', ctx => {
 //Lounge command - gentle reminder to keep price discussion to Lounge
 bot.command('lounge', ctx => {
   ctx.replyWithHTML("Please keep price discussion to our Lounge :) @prcylounge");
-  ctx.deleteMessage();
-});
-
-//Welcome command - a quick welcome, not used as much, mark for possible removal/add admin only
-bot.command('welcome', ctx => {
-  ctx.replyWithHTML("<b>Welcome to the PRCY coin Official Chat Channel</b>\n\nMore information about PRCY coin can be found by visiting the Official website <a href='https://prcycoin.com/'>Official Website</a>\n\nOur Community Chat Rules\n\n▫️Please refrain from using foul/unpleasant language and be kind to community members.\n▫️Do not spread FUD. And do not spread DAPS FUD. It’s not our business, we are #PRCY\n▫️Do not post inappropriate content or personal links of interest.\n▫️No shilling will be permitted.\n▫️This is an English only chat, so please use English.\n▫️Avoid discussion of illegal activities.\n▫️Do not harass Community Managers. They are provided as a courtesy to the PRCY coin community.\n\n🤦‍♂️ Violation of chat rules will result in restrictions without warning.\n\n🙏 We strive for a friendly and positive chat experience!\n\n💁‍♂️ For any support issues please contact the team directly we are unable to help, verify, or fix any issues via public Telegram.\n\n🤥 Be highly cautious of members that private message you, we don't handle support tickets in public Telegram, admins will never ask for money, we will only handle support requests through the <a href='https://prcycoin.com/'>Official Website</a>  / <a href='https://t.me/prcySupport'>Telegram Support Channel</a> and will never contact you first.");
   ctx.deleteMessage();
 });
 
