@@ -4,7 +4,7 @@ const Extra = require('telegraf/extra')
 const Markup = require('telegraf/markup')
 const rateLimit = require('telegraf-ratelimit')
 const token = process.env.TELEGRAM_API_KEY || '';
-const bot = new Telegraf(token, {username: 'PRCY_Coin_Bot'});
+const bot = new Telegraf(token, { username: 'PRCY_Coin_Bot' });
 
 // Set limit to 1 message per 0.5 second (for those having fun with good bot/bad bot) - can be adjusted or removed if necessary
 const limitConfig = {
@@ -15,23 +15,23 @@ const limitConfig = {
 //bot.use(rateLimit(limitConfig))
 
 //Check for admin in channel usage
-bot.use(function(ctx, next){
-	/// or other chat types...
-	// if( ctx.chat.type !== 'channel' ) return next();
-	if( ctx.chat.id > 0 ) return next();
+bot.use(function (ctx, next) {
+  /// or other chat types...
+  // if( ctx.chat.type !== 'channel' ) return next();
+  if (ctx.chat.id > 0) return next();
 
-	/// need to cache this result ( variable or session or ....)
-	/// because u don't need to call this method
-	/// every message
-	return bot.telegram.getChatAdministrators(ctx.chat.id)
-		.then(function(data){
-			if( !data || !data.length ) return;
-			console.log('admin list:', data);
-			ctx.chat._admins = data;
-			ctx.from._is_in_admin_list = data.some( adm => adm.user.id === ctx.from.id );
-		})
-		.catch(console.log)
-		.then(_ => next(ctx));
+  /// need to cache this result ( variable or session or ....)
+  /// because u don't need to call this method
+  /// every message
+  return bot.telegram.getChatAdministrators(ctx.chat.id)
+    .then(function (data) {
+      if (!data || !data.length) return;
+      console.log('admin list:', data);
+      ctx.chat._admins = data;
+      ctx.from._is_in_admin_list = data.some(adm => adm.user.id === ctx.from.id);
+    })
+    .catch(console.log)
+    .then(_ => next(ctx));
 });
 
 const walletversion = "1.0.0.5"
@@ -67,17 +67,17 @@ bot.help((ctx) => ctx.replyWithHTML("Hello! Welcome to the PRCY Coin Bot.\n\nBel
 
 //Rules command = display rules for official or lounge, determined by chatid
 bot.command('rules', ctx => {
-    let chatid = ctx.message.chat.id;
-	//If not Lounge (ID below), give official rules
-    if(chatid != "-1001367088314") {
-		ctx.replyWithHTML("<b>Chat Rules</b>\nWe will appreciate your cooperation in keeping our channel a clean and spam free environment.\nWe encourage respectful and constructive spreading of our message.\n1. No spam links (referrals/advertisements/etc)\n2. No talking/shilling for outside projects\n3. No gifs/memes/videos\n4. No hate speech\n5. No posts about price/predictions/moons/lambos/etc.\n\n<b>Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:</b>\n@prcylounge\n<b>Thank you!</b>");
-		ctx.deleteMessage();
-    }
-	//If Lounge (ID below), give Lounge rules
-    if(chatid == "-1001367088314") {
-		ctx.replyWithHTML("<b>Welcome to PRCY Lounge!</b>\nPlease keep conversations about price discussion, chart watching, buy/sell walls and such here.\n\nThis room will have some very simple rules to follow with the normal rules we have:\n\n<b>Do's:</b>\n- General non-PRCY related discussions are allowed\n- PRCY market price discussions are allowed\n- GIFS and stickers are allowed in moderation, don't spam!\n- PRCY comparisons and discussions in relation to other privacy coins are allowed\n\n<b>Don'ts:</b>\n- Swearing/insults/trolling/flaming/baiting are not allowed\n- Discussing other projects or channels is not allowed\n- Spreading FUD or misinformation is not allowed\n- Advertising or recruiting members is not allowed\n- NSFW/18+ content is not allowed (keep it PG-13)\n\nPlease keep it friendly and fun, and follow the admin's instructions.\nThe admins are reasonable and will act in a fair manner, but there are boundaries. Not following the rules or the admin's instructions will result in a mute or a (perma)ban.\n\nNow with that out of the way and without further ado: enjoy your stay in the PRCY Lounge and have fun!");
-		ctx.deleteMessage();
-    }
+  let chatid = ctx.message.chat.id;
+  //If not Lounge (ID below), give official rules
+  if (chatid != "-1001367088314") {
+    ctx.replyWithHTML("<b>Chat Rules</b>\nWe will appreciate your cooperation in keeping our channel a clean and spam free environment.\nWe encourage respectful and constructive spreading of our message.\n1. No spam links (referrals/advertisements/etc)\n2. No talking/shilling for outside projects\n3. No gifs/memes/videos\n4. No hate speech\n5. No posts about price/predictions/moons/lambos/etc.\n\n<b>Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:</b>\n@prcylounge\n<b>Thank you!</b>");
+    ctx.deleteMessage();
+  }
+  //If Lounge (ID below), give Lounge rules
+  if (chatid == "-1001367088314") {
+    ctx.replyWithHTML("<b>Welcome to PRCY Lounge!</b>\nPlease keep conversations about price discussion, chart watching, buy/sell walls and such here.\n\nThis room will have some very simple rules to follow with the normal rules we have:\n\n<b>Do's:</b>\n- General non-PRCY related discussions are allowed\n- PRCY market price discussions are allowed\n- GIFS and stickers are allowed in moderation, don't spam!\n- PRCY comparisons and discussions in relation to other privacy coins are allowed\n\n<b>Don'ts:</b>\n- Swearing/insults/trolling/flaming/baiting are not allowed\n- Discussing other projects or channels is not allowed\n- Spreading FUD or misinformation is not allowed\n- Advertising or recruiting members is not allowed\n- NSFW/18+ content is not allowed (keep it PG-13)\n\nPlease keep it friendly and fun, and follow the admin's instructions.\nThe admins are reasonable and will act in a fair manner, but there are boundaries. Not following the rules or the admin's instructions will result in a mute or a (perma)ban.\n\nNow with that out of the way and without further ado: enjoy your stay in the PRCY Lounge and have fun!");
+    ctx.deleteMessage();
+  }
 });
 
 //Newsletter command - provide latest newsletter link and subcription link
@@ -294,7 +294,7 @@ bot.command('bootstrap', ctx => {
 
 //Update command - info and link to update
 bot.command('update', ctx => {
-  ctx.replyWithHTML("How to update your wallet to v"  + walletversion + " 🤔💡\n\n1️⃣ Make sure you've backed up your wallet.dat file and written down your Mnemonic Phrase, then close the wallet.\n\n2️⃣ Windows: Go to where you have prcycoin-qt.exe in Windows Explorer\n\nMac: Go to Macintosh HD/⁨Users/⁨Username/⁨Library/⁨Applications/⁨PRCYcoin⁩\n\n3️⃣ Download the v"  + walletversion + " wallet from here: https://github.com/PRCYCoin/PRCYCoin/releases and open the zip file\n\n4️⃣ Copy the prcycoin-qt.exe/prcycoin-qt file and paste or place it over your current file.\n\n5️⃣ When asked if you want to replace the old file, click Yes.\n\nThat's it! Now you can open your wallet like normal and it is now running the new version. 🥳👍");
+  ctx.replyWithHTML("How to update your wallet to v" + walletversion + " 🤔💡\n\n1️⃣ Make sure you've backed up your wallet.dat file and written down your Mnemonic Phrase, then close the wallet.\n\n2️⃣ Windows: Go to where you have prcycoin-qt.exe in Windows Explorer\n\nMac: Go to Macintosh HD/⁨Users/⁨Username/⁨Library/⁨Applications/⁨PRCYcoin⁩\n\n3️⃣ Download the v" + walletversion + " wallet from here: https://github.com/PRCYCoin/PRCYCoin/releases and open the zip file\n\n4️⃣ Copy the prcycoin-qt.exe/prcycoin-qt file and paste or place it over your current file.\n\n5️⃣ When asked if you want to replace the old file, click Yes.\n\nThat's it! Now you can open your wallet like normal and it is now running the new version. 🥳👍");
   ctx.deleteMessage();
 });
 
@@ -365,7 +365,7 @@ bot.command('finance_report', ctx => {
 });
 
 //Listen for other coin mentions
-bot.hears([/pxn/i,/vestx/i,/rstr/i,/ondori/i,/dapsx/i,/EOM/i], (ctx) => {
+bot.hears([/pxn/i, /vestx/i, /rstr/i, /ondori/i, /dapsx/i, /EOM/i], (ctx) => {
   //ctx.replyWithHTML(ctx.from.username + ", Please don't discuss other projects in our official channel. Thanks for your cooperation.");
   ctx.telegram.forwardMessage(-1001191950899, ctx.message.chat.id, ctx.message.message_id);
   //ctx.deleteMessage();
@@ -379,12 +379,12 @@ bot.hears(/DAPPT/i, (ctx) => {
 });
 
 //Listen for name mentions
-bot.hears([/adel/i,/spock/i,/andrew/i,/dkill/i], (ctx) => {
+bot.hears([/adel/i, /spock/i, /andrew/i, /dkill/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001191950899, ctx.message.chat.id, ctx.message.message_id);
 });
 
 //Listen for name changes
-bot.hears([/changed name from/i,/changed username from/i,/and username from/i], (ctx) => {
+bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
   ctx.deleteMessage();
 });
@@ -411,14 +411,14 @@ bot.hears(/bad bot/i, (ctx) => {
 });
 
 //Listen for Spam channel(s)
-bot.hears([/kryptokompassDE/i,/PrcyUnofficialChannel/i,/pump signal/i,/McAfees Official Alliance/i,/TheChimeraSyndicate/i,/Krypto Freunde aufgepasst/i,/joinchat/i,/miningwithextractbot/i,/parazmat/i,/Binance Competition/i,/fxprofitlord/i,/Mytoken/i,/✅Invest/i,/@PRCY_RUS_MOONSPAM/i,/Goood! Google!/i,/Wooow! Google!/i,/tel_modern/i,/proxy.zedfilter.taggram/i,/emtiaz5star/i,/Trade_santos/i], (ctx) => {
-	let userid = ctx.message.from.id;
-	if(ctx.from._is_in_admin_list){
-		// admin, let it slide
-	} else {
-		ctx.deleteMessage();
-		ctx.kickChatMember(userid);
-	}
+bot.hears([/kryptokompassDE/i, /PrcyUnofficialChannel/i, /pump signal/i, /McAfees Official Alliance/i, /TheChimeraSyndicate/i, /Krypto Freunde aufgepasst/i, /joinchat/i, /miningwithextractbot/i, /parazmat/i, /Binance Competition/i, /fxprofitlord/i, /Mytoken/i, /✅Invest/i, /@PRCY_RUS_MOONSPAM/i, /Goood! Google!/i, /Wooow! Google!/i, /tel_modern/i, /proxy.zedfilter.taggram/i, /emtiaz5star/i, /Trade_santos/i], (ctx) => {
+  let userid = ctx.message.from.id;
+  if (ctx.from._is_in_admin_list) {
+    // admin, let it slide
+  } else {
+    ctx.deleteMessage();
+    ctx.kickChatMember(userid);
+  }
 });
 
 //Listen for GeckoBot responding to all /commands
@@ -428,97 +428,97 @@ bot.hears([/Oops, something went wrong... Try another command like/i], (ctx) => 
 
 //Listen for moon mentions, forward user to Lounge
 bot.hears(/moon/i, ctx => {
-    let chatid = ctx.message.chat.id;
-	//If not Lounge (ID below), complain about moon mentions
-    if(chatid != "-1001367088314") {
-		//ctx.replyWithHTML("Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:\n@prcylounge\nThank you!");
-    }
+  let chatid = ctx.message.chat.id;
+  //If not Lounge (ID below), complain about moon mentions
+  if (chatid != "-1001367088314") {
+    //ctx.replyWithHTML("Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:\n@prcylounge\nThank you!");
+  }
 });
 
 //Listen for issues, requests, suggestion mentions
-bot.hears([/issues/i,/requests/i,/suggestion/i], (ctx) => {
+bot.hears([/issues/i, /requests/i, /suggestion/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001191950899, ctx.message.chat.id, ctx.message.message_id);
 });
 
 // Delete .scr, .pdf, .exe, .pif, .com, .url, .rar posts
 bot.on('document', (ctx) => {
-	if( ctx.from._is_in_admin_list ){
-		// admin, let it slide
-	} else {
-	let userid = ctx.message.from.id;
-	let filetype = ctx.message.document.file_name;
-    if(filetype.endsWith(".scr")) {
-		ctx.replyWithHTML(ctx.from.username + ", Please don't post .scr files. Thanks for your cooperation.");
-		ctx.deleteMessage();
+  if (ctx.from._is_in_admin_list) {
+    // admin, let it slide
+  } else {
+    let userid = ctx.message.from.id;
+    let filetype = ctx.message.document.file_name;
+    if (filetype.endsWith(".scr")) {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't post .scr files. Thanks for your cooperation.");
+      ctx.deleteMessage();
     }
-    if(filetype.endsWith(".pdf")) {
-		ctx.replyWithHTML(ctx.from.username + ", Please don't post .pdf files. Thanks for your cooperation.");
-        ctx.deleteMessage();
+    if (filetype.endsWith(".pdf")) {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't post .pdf files. Thanks for your cooperation.");
+      ctx.deleteMessage();
     }
-    if(filetype.endsWith(".exe")) {
-		ctx.replyWithHTML(ctx.from.username + ", Please don't post .exe files. Thanks for your cooperation.");
-        ctx.deleteMessage();
+    if (filetype.endsWith(".exe")) {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't post .exe files. Thanks for your cooperation.");
+      ctx.deleteMessage();
     }
-    if(filetype.endsWith(".pif")) {
-		ctx.replyWithHTML(ctx.from.username + ", Please don't post .pif files. Thanks for your cooperation.");
-        ctx.deleteMessage();
+    if (filetype.endsWith(".pif")) {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't post .pif files. Thanks for your cooperation.");
+      ctx.deleteMessage();
     }
-    if(filetype.endsWith(".com")) {
-		ctx.replyWithHTML(ctx.from.username + ", Please don't post .com files. Thanks for your cooperation.");
-        ctx.deleteMessage();
+    if (filetype.endsWith(".com")) {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't post .com files. Thanks for your cooperation.");
+      ctx.deleteMessage();
     }
-    if(filetype.endsWith(".url")) {
-		ctx.replyWithHTML(ctx.from.username + ", Please don't post .url files. Thanks for your cooperation.");
-        ctx.deleteMessage();
+    if (filetype.endsWith(".url")) {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't post .url files. Thanks for your cooperation.");
+      ctx.deleteMessage();
     }
-    if(filetype.endsWith(".rar")) {
-		ctx.replyWithHTML(ctx.from.username + ", Please don't post .rar files. Thanks for your cooperation.");
-        ctx.deleteMessage();
+    if (filetype.endsWith(".rar")) {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't post .rar files. Thanks for your cooperation.");
+      ctx.deleteMessage();
     }
-	//ctx.kickChatMember(userid);
-	}
+    //ctx.kickChatMember(userid);
+  }
 })
 
 //Admins command - Provide a list of admin only commands
 bot.command('admins', ctx => {
-	if( ctx.from._is_in_admin_list ){
-		ctx.replyWithHTML("<b>Current Admin Only Commands:</b>\n/price (not finished yet) - List price in BTC/USD/CAD/Volume\n/welcome - Welcome user to room, soon to be smarter\n/loungerules - list lounge rules, to be edited as well\n/tech - list tech welcome/rules, to be edited as well");
-	} else {
-	}
+  if (ctx.from._is_in_admin_list) {
+    ctx.replyWithHTML("<b>Current Admin Only Commands:</b>\n/price (not finished yet) - List price in BTC/USD/CAD/Volume\n/welcome - Welcome user to room, soon to be smarter\n/loungerules - list lounge rules, to be edited as well\n/tech - list tech welcome/rules, to be edited as well");
+  } else {
+  }
 });
 
 //Add a bit of a swear filter
-bot.hears([/fuck/i,/bitch/i], (ctx) => {
-    let chatid = ctx.message.chat.id;
-	if( ctx.from._is_in_admin_list ){
-	} else {
-		//If not Lounge (ID below), complain about swear mentions
-		if(chatid != "-1001367088314") {
-			ctx.replyWithHTML(ctx.from.username + ", Please don't swear in our official channels. Thanks for your cooperation.");
-			ctx.deleteMessage();
-		}
-	}
+bot.hears([/fuck/i, /bitch/i], (ctx) => {
+  let chatid = ctx.message.chat.id;
+  if (ctx.from._is_in_admin_list) {
+  } else {
+    //If not Lounge (ID below), complain about swear mentions
+    if (chatid != "-1001367088314") {
+      ctx.replyWithHTML(ctx.from.username + ", Please don't swear in our official channels. Thanks for your cooperation.");
+      ctx.deleteMessage();
+    }
+  }
 });
 
 //Check for edited message scam posts
 bot.on('edited_message', (ctx) => {
-    //let chatid = ctx.message.chat.id;
-    //let userid = ctx.message.from.id;
-	if( ctx.from._is_in_admin_list ){
-	} else {
-    if (ctx.editedMessage.photo){
-		ctx.deleteMessage();
-		//bot.kickChatMember(chatid, userid);
+  //let chatid = ctx.message.chat.id;
+  //let userid = ctx.message.from.id;
+  if (ctx.from._is_in_admin_list) {
+  } else {
+    if (ctx.editedMessage.photo) {
+      ctx.deleteMessage();
+      //bot.kickChatMember(chatid, userid);
     }
-	let msg = ctx.message;
-	//If message contains link
-    if(msg.includes = "tinyurl.com") {
-		ctx.deleteMessage();
+    let msg = ctx.message;
+    //If message contains link
+    if (msg.includes = "tinyurl.com") {
+      ctx.deleteMessage();
     }
-    if(msg.includes = "bit.ly") {
-		ctx.deleteMessage();
+    if (msg.includes = "bit.ly") {
+      ctx.deleteMessage();
     }
-	}
+  }
 });
 
 //Clear the command queue (helps prevent backlog when restarted)
