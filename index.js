@@ -42,7 +42,7 @@ const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPR
 const donationtxt = "PRCY Exchange Listing Community Fundraiser: https://prcylisting.com"
 
 //Newsletter link
-const newsletterlink = "https://preview.mailerlite.com/a8p5n7/"
+const newsletterlink = "https://www.getrevue.co/profile/prcycoin/issues/weekly-newsletter-of-prcy-coin-official-issue-1-471692"
 
 //Scammer text
 const scammertext = '<b>Please BEWARE of scammers‼️\n\nThere might be admin impersonators, fake profiles, pages, websites and download links provided by scammers over the next week or two. ONLY follow links given in our official channels ❗️n\nHow can I tell if an admin is real? 🤔\n\nHere are some easy guidelines to make sure you are dealing with real admins:\n\n- Admins will never send you a DM first\n- They have an "admin" tag in their messages\n- They have a star symbol next to their name in the member list\n- Admins will never ask or offer you cryptocurrencies or referrals\n\nIf you spot a fake admin or if you are not sure: please inform an admin in the official PRCY channels. 🔎\n\nAlso: please be warned about other users contacting you in DM to fish for your private information or offer you deals, services or to trade.❗️🚫\n\nDo not engage with them and please report them to a PRCY admin so we can take care of the situation and keep our community safe. \n\nAgain, watch out for fake links. ONLY follow links given by admins in our official channels!\n\nBe safe! 🙏</b>'
@@ -88,7 +88,7 @@ bot.command('rules', ctx => {
 
 //Newsletter command - provide latest newsletter link and subcription link
 bot.command('newsletter', ctx => {
-  ctx.replyWithHTML("Our newsletter summarizes all our updates for you and also gives you the latest crypto news worth knowing about.\n\nThis week's newsletter: " + newsletterlink + "\n\n<b>Subscribe for future updates:</b> https://www.subscribepage.com/Prcy");
+  ctx.replyWithHTML("Our newsletter summarizes all our updates for you\n\nThis week's newsletter: " + newsletterlink + "\n\n<b>Subscribe for future updates:</b> https://www.getrevue.co/profile/prcycoin");
   ctx.deleteMessage();
 });
 
