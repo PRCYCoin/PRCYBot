@@ -252,7 +252,7 @@ bot.command('poaminer', ctx => {
 
 //Bootstrap command - info and link to bootstrap
 bot.command('bootstrap', ctx => {
-  ctx.replyWithHTML('The latest BootStrap is always available from: https://bootstrap.prcycoin.com/bootstrap.zip\n\nPlease remember to backup your wallet.dat and Mnemonic Recovery phrase before running the BootStrap!\n\nhttps://prcycoin.com/prcy-bootstrap-installation-and-instructions/\n\nVideo guide: Coming soon');
+  ctx.replyWithHTML('The latest BootStrap is always available from: https://bootstrap.prcycoin.com/bootstrap.zip\n\nPlease remember to backup your wallet.dat and Mnemonic Recovery phrase before running the BootStrap!\n\nhttps://prcycoin.com/knowledge-base/wallets/how-to-apply-bootstrap/\n\nVideo guide: Coming soon');
   ctx.deleteMessage();
 });
 
