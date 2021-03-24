@@ -52,7 +52,7 @@ function remindUsers() {
   let chances = Math.floor(Math.random() * 11); // returns a random integer from 0 to 10
   var reminderresponses = ["Do not store your crypto on any exchanges. Do your trading and save them in your own wallet with your own key", "Be safe on TG and remember PRCY admins will never DM you asking for personal information, your PRCY holdings etc. Always check handles!", "Set your TG phone number visibility to 'nobody' in the settings.", "If you get 'account suspended' on our Twitter account you need to clear the app data from your phone settings section.", "Do not keep your crypto on exchanges."]; // responses to choose from
   var reminderresponse = reminderresponses[Math.floor(Math.random() * reminderresponses.length)]; // pick random response from above
-  if (chances < 5) bot.telegram.sendMessage("@prcycoin", "Friendly PRCY reminder: " + reminderresponse); //if chances is less than 5, send message to Official
+  if (chances < 5) bot.telegram.sendMessage("@prcycoinofficial", "Friendly PRCY reminder: " + reminderresponse); //if chances is less than 5, send message to Official
   if (chances > 5) bot.telegram.sendMessage("@prcylounge", "Friendly PRCY reminder: " + reminderresponse); //if chances is greater than 5, send message to Lounge
 }
 
