@@ -39,7 +39,7 @@ const walletversion = "1.0.0.6"
 //Add exchange constant for use in multiple commands
 const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://www.hotbit.io/register?ref=580524">HotBit</a>: No KYC\nTrading pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://coinsbit.io/trade/PRCY_USDT">Coinsbit</a>: KYC\nTrading pairs: PRCY-BTC / PRCY-USDT\n\nExchange / mobile wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nAll current markets can be seen here: https://prcycoin.com/market\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
 
-const donationtxt = "PRCY Exchange Listing Community Fundraiser: https://prcylisting.com"
+const donationtxt = ""
 
 //Newsletter link
 const newsletterlink = "https://www.getrevue.co/profile/prcycoin/issues/weekly-newsletter-of-prcy-coin-official-issue-1-471692"
