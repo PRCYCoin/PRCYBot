@@ -310,6 +310,12 @@ bot.command('finance_report', ctx => {
   ctx.deleteMessage();
 });
 
+//International command - links to International channels
+bot.command('international', ctx => {
+  ctx.replyWithHTML("PRCY International Telegram Groups\n\nNederlands / Belgium: @PrcycoinNLBe\nPolish: @PRCYcoinPL\nRussia: @PRCYcoinRU");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
