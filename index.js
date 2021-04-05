@@ -222,7 +222,7 @@ bot.command('scammers', ctx => {
 
 //Team command - link to PRCY team
 bot.command('team', ctx => {
-  ctx.replyWithHTML("Check out the PRCY Team page to see our list of team members: https://prcycoin.com/team");
+  ctx.replyWithHTML("Check out the PRCY Team page to see our list of team members: https://prcycoin.com/our-team");
   ctx.deleteMessage();
 });
 
