@@ -320,7 +320,7 @@ bot.command('finance_report', ctx => {
 
 //International command - links to International channels
 bot.command('international', ctx => {
-  ctx.replyWithHTML("PRCY International Telegram Groups\n\nNederlands / Belgium: @PrcycoinNLBe\nPolish: @PRCYcoinPL\nRussia: @PRCYcoinRU");
+  ctx.replyWithHTML("PRCY International Telegram Groups\n\nNederlands / Belgium: @PrcycoinNLBe\nPolish: @PRCYcoinPL\nRussia: @PRCYcoinRU\nTurkish: @prcycointurkey");
   ctx.deleteMessage();
 });
 
