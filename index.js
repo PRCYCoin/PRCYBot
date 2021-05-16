@@ -431,7 +431,7 @@ bot.on('edited_message', (ctx) => {
   if (ctx.from._is_in_admin_list) {
   } else {
     if (ctx.editedMessage.photo) {
-      ctx.deleteMessage();
+      //ctx.deleteMessage();
       //bot.kickChatMember(chatid, userid);
     }
     let msg = ctx.message;
