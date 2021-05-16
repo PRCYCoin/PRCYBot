@@ -47,6 +47,8 @@ const newsletterlink = "https://www.getrevue.co/profile/prcycoin/issues/weekly-n
 //Scammer text
 const scammertext = '<b>Please BEWARE of scammers‼️\n\nThere might be admin impersonators, fake profiles, pages, websites and download links provided by scammers over the next week or two. ONLY follow links given in our official channels ❗️n\nHow can I tell if an admin is real? 🤔\n\nHere are some easy guidelines to make sure you are dealing with real admins:\n\n- Admins will never send you a DM first\n- They have an "admin" tag in their messages\n- They have a star symbol next to their name in the member list\n- Admins will never ask or offer you cryptocurrencies or referrals\n\nIf you spot a fake admin or if you are not sure: please inform an admin in the official PRCY channels. 🔎\n\nAlso: please be warned about other users contacting you in DM to fish for your private information or offer you deals, services or to trade.❗️🚫\n\nDo not engage with them and please report them to a PRCY admin so we can take care of the situation and keep our community safe. \n\nAgain, watch out for fake links. ONLY follow links given by admins in our official channels!\n\nBe safe! 🙏</b>'
 
+const supporttext = "If you need any Tech Support, please join: https://t.me/prcySupport\nFor Masternode Support, please join: https://t.me/PRCY_MN_Support"
+
 //Function to spark conversation, remind users about scammers, keeping coins on exchanges, etc.
 function remindUsers() {
   let chances = Math.floor(Math.random() * 11); // returns a random integer from 0 to 10
@@ -170,9 +172,15 @@ bot.command('tech', ctx => {
   ctx.deleteMessage();
 });
 
-//Tech command - a quick welcome to tech, not used as much, mark for possible removal/add admin only
+//Tech command - send user to Support
 bot.command('techsupport', ctx => {
-  ctx.replyWithHTML("If you need any Tech Support, please join: https://t.me/prcySupport\nFor Masternode Support, please join: https://t.me/PRCY_MN_Support");
+  ctx.replyWithHTML(supporttext);
+  ctx.deleteMessage();
+});
+
+//Support command - send user to Support
+bot.command('support', ctx => {
+  ctx.replyWithHTML(supporttext);
   ctx.deleteMessage();
 });
 
