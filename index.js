@@ -324,6 +324,12 @@ bot.command('international', ctx => {
   ctx.deleteMessage();
 });
 
+// Raspberry command -  links to  Raspberry Pi channel
+bot.command('raspberry', ctx => {
+  ctx.replyWithHTML("Question: Does PRCY Coin have a Raspberry Pi channel?\n\nAnswer: Yes, you can join the channel here - @prcyraspberry");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
