@@ -332,7 +332,7 @@ bot.command('raspberry', ctx => {
 
 //BBQ command - Fun BBQ command
 bot.command('bbq', ctx => {
-  ctx.replyWithAnimation({url: 'https://prcycoin.com/wp-content/uploads/2021/05/bbq.mp4'}, {caption: 'Time for the BBQ!'})
+  ctx.replyWithAnimation({ url: 'https://prcycoin.com/wp-content/uploads/2021/05/bbq.mp4' }, { caption: 'Time for the BBQ!\nhttps://www.indrapura.nl/'})
   ctx.deleteMessage();
 });
 
