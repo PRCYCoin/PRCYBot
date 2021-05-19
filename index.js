@@ -336,6 +336,12 @@ bot.command('bbq', ctx => {
   ctx.deleteMessage();
 });
 
+//Bridge command - Bridge information
+bot.command('bridge', ctx => {
+  ctx.replyWithHTML("Question: How do I bridge my PRCY to wPRCY/bPRCY and vice versa?\n\nAnswer: You can bridge between PRCY/wPRCY/bPRCY at:\nPRCY Bridge website: https://bridge.prcycoin.com\nor\nTXBit.io: https://txbit.io/?r=13747");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
