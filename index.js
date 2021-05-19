@@ -330,6 +330,12 @@ bot.command('raspberry', ctx => {
   ctx.deleteMessage();
 });
 
+//BBQ command - Fun BBQ command
+bot.command('bbq', ctx => {
+  ctx.replyWithAnimation({url: 'https://prcycoin.com/wp-content/uploads/2021/05/bbq.mp4'}, {caption: 'Time for the BBQ!'})
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
