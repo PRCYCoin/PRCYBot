@@ -342,6 +342,12 @@ bot.command('bridge', ctx => {
   ctx.deleteMessage();
 });
 
+//Wrapped command - Wrapped information
+bot.command('wrapped', ctx => {
+  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer: ETH: https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nChart:\n\nBSC: https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nChart: https://charts.bogged.finance/?token=0xdFC3829b127761a3218bFceE7fc92e1232c9D116");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
