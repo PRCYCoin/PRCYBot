@@ -344,7 +344,7 @@ bot.command('bridge', ctx => {
 
 //Wrapped command - Wrapped information
 bot.command('wrapped', ctx => {
-  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer: ETH: https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nChart:\n\nBSC: https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nCharts: https://charts.bogged.finance/?token=0xdFC3829b127761a3218bFceE7fc92e1232c9D116\nhttps://poocoin.app/tokens/0xdfc3829b127761a3218bfcee7fc92e1232c9d116");
+  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer:\nETH Contract: https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\n\nTrade: https://info.uniswap.org/#/pools/0x97a86cff15d1af9eebd67274341291fa73d0f204\nhttps://analytics.sushi.com/pairs/0x3867877d568b1699a7fd7d6190d0926aa88c4b86\n\nCharts: https://info.uniswap.org/#/tokens/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nhttps://analytics.sushi.com/tokens/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\n\nBSC Contract: https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nTrade:Charts:\nhttps://charts.bogged.finance/?token=0xdFC3829b127761a3218bFceE7fc92e1232c9D116\nhttps://poocoin.app/tokens/0xdfc3829b127761a3218bfcee7fc92e1232c9d116");
   ctx.deleteMessage();
 });
 
