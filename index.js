@@ -344,7 +344,7 @@ bot.command('bridge', ctx => {
 
 //Wrapped command - Wrapped information
 bot.command('wrapped', ctx => {
-  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer: ETH: https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nChart:\n\nBSC: https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nChart: https://charts.bogged.finance/?token=0xdFC3829b127761a3218bFceE7fc92e1232c9D116");
+  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer: ETH: https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nChart:\n\nBSC: https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116\nCharts: https://charts.bogged.finance/?token=0xdFC3829b127761a3218bFceE7fc92e1232c9D116\nhttps://poocoin.app/tokens/0xdfc3829b127761a3218bfcee7fc92e1232c9d116");
   ctx.deleteMessage();
 });
 
