@@ -37,7 +37,9 @@ bot.use(function (ctx, next) {
 const walletversion = "1.0.0.6"
 
 //Add exchange constant for use in multiple commands
-const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-EUR / PRCY-USD / PRCY-RUR\n\n<a href="https://app.stex.com?ref=05796629">STEX</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://www.hotbit.io/register?ref=1028586">HotBit</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://coinsbit.io/referral/e9e321fb-1bac-4d29-b154-8918d11013e0">Coinsbit</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\nExchange / Mobile Wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nWrapped PRCY (wPRCY) Markets\n<a href="https://coinsbit.io/referral/e9e321fb-1bac-4d29-b154-8918d11013e0">Coinsbit</a>: KYC\nTrading Pairs: wPRCY-BTC / wPRCY-USDT / wPRCY-ETH\n\nAll current markets can be seen here: https://prcycoin.com/market\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
+const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-EUR / PRCY-USD / PRCY-RUR\n\n<a href="https://app.stex.com?ref=05796629">STEX</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://www.hotbit.io/register?ref=1028586">HotBit</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\nExchange / Mobile Wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nAll current markets can be seen here: https://prcycoin.com/market\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
+
+//old exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-EUR / PRCY-USD / PRCY-RUR\n\n<a href="https://app.stex.com?ref=05796629">STEX</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://www.hotbit.io/register?ref=1028586">HotBit</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://coinsbit.io/referral/e9e321fb-1bac-4d29-b154-8918d11013e0">Coinsbit</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\nExchange / Mobile Wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nWrapped PRCY (wPRCY) Markets\n<a href="https://coinsbit.io/referral/e9e321fb-1bac-4d29-b154-8918d11013e0">Coinsbit</a>: KYC\nTrading Pairs: wPRCY-BTC / wPRCY-USDT / wPRCY-ETH\n\nAll current markets can be seen here: https://prcycoin.com/market\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
 
 const donationtxt = ""
 
@@ -144,9 +146,11 @@ bot.command('whitepaper', ctx => {
 
 //Staking command - explain staking can't be done until mainnet as we are ERC-20
 bot.command('staking', ctx => {
-  ctx.replyWithHTML("Question: Can you stake PRCY Coin?\n\nAnswer: Yes, you can stake with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe have also made an awesome deal for you.\n\nCoinsbit Staking Pool -https://coinsbit.io/staking-pool/plan/503\n\n1. 7.50% after 30 days.\n2. Accrual – daily block for withdrawal 2 weeks\n3. Minimum deposit – 7500 #PRCY\n4. No maximum deposit");
+  ctx.replyWithHTML("Question: Can you stake PRCY Coin?\n\nAnswer: Yes, you can stake with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.");
   ctx.deleteMessage();
 });
+
+//Coinsbit Staking text - \n\nWe have also made an awesome deal for you.\n\nCoinsbit Staking Pool - https://coinsbit.io/staking-pool/plan/503\n\n1. 7.50% after 30 days.\n2. Accrual – daily block for withdrawal 2 weeks\n3. Minimum deposit – 7500 #PRCY\n4. No maximum deposit
 
 //Retention command - explain staking can't be done until mainnet as we are ERC-20
 bot.command('retention', ctx => {
