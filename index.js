@@ -342,7 +342,7 @@ bot.command('bbq', ctx => {
 
 //Bridge command - Bridge information
 bot.command('bridge', ctx => {
-  ctx.replyWithHTML("Question: How do I bridge my PRCY to wPRCY/bPRCY and vice versa?\n\nAnswer: You can bridge between PRCY/wPRCY/bPRCY at:\nPRCY Bridge website: https://bridge.prcycoin.com\nor\nTXBit.io: https://txbit.io/?r=13747");
+  ctx.replyWithHTML("Question: How do I bridge my PRCY to wPRCY/bPRCY and vice versa?\n\nAnswer: You can bridge between PRCY/wPRCY/bPRCY at:\nPRCY Bridge website: https://bridge.prcycoin.com\nor\nTXBit.io: https://txbit.io/?r=13747\n\nCheck out our guide for instructions: https://prcycoin.com/knowledge-base/wallets/how-to-bridge-prcy-wprcy-bprcy/");
   ctx.deleteMessage();
 });
 
