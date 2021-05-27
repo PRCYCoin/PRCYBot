@@ -352,6 +352,12 @@ bot.command('wrapped', ctx => {
   ctx.deleteMessage();
 });
 
+//Bridge command - Bridge information
+bot.command('comparison', ctx => {
+  ctx.replyWithHTML("Question: Is there a comparison chart for PRCY and other privacy coins?\n\nAnswer: Yes, we have created one at https://comparison.prcycoin.com");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
