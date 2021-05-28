@@ -110,7 +110,7 @@ bot.command('markets', ctx => {
 
 //Wallets command - list available wallets
 bot.command('wallets', ctx => {
-  ctx.replyWithHTML('Question: What wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://prcycoin.com/wallets/');
+  ctx.replyWithHTML('Question: What wallets currently support PRCY Coin?\n\nAnswer: We currently recommend our desktop wallet which can be downloaded for Windows, Mac and Linux here: https://prcycoin.com/wallets/\n\nWe also have the Web Wallet at: https://wallet.prcycoin.com\n\nMobile Wallets:\nPRCY Mobile: Coming Soon\Rapids Mobile Wallet: Android: https://play.google.com/store/apps/details?id=io.rapids.network.wallet\niOS: https://apps.apple.com/us/app/rapids-wallet/id1485755628\n\nWrapped PRCY can be used on:\nTrust Wallet\nAndroid: https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp\niOS: https://apps.apple.com/app/apple-store/id1288339409\n\nGuide to add Wrapped PRCY to Trust Wallet: https://prcycoin.com/knowledge-base/wallets/how-to-add-wrapped-prcy-wprcy-bprcy-to-trust-wallet/');
   ctx.deleteMessage();
 });
 
