@@ -454,7 +454,7 @@ bot.command('admins', ctx => {
 });
 
 //Add a bit of a swear filter
-bot.hears([/fuck/i, /bitch/i], (ctx) => {
+bot.hears([/fuck/i], (ctx) => {
   let chatid = ctx.message.chat.id;
   if (ctx.from._is_in_admin_list) {
   } else {
