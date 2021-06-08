@@ -358,6 +358,12 @@ bot.command('comparison', ctx => {
   ctx.deleteMessage();
 });
 
+//Autobootstrap command - Autobootstrap information
+bot.command('autobootstrap', ctx => {
+  ctx.replyWithHTML("Question: Where is the Auto Bootstrap Tool?\n\nAnswer: It can be downloaded at https://prcycoin.com/auto-bootstrap/");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
