@@ -318,7 +318,7 @@ bot.command('passive_income', ctx => {
 
 //Finance_report command - links to Financial Report
 bot.command('finance_report', ctx => {
-  ctx.replyWithHTML("Question: What is the link to the PRCY Coin Q1 Financial Report?\n\nAnswer: The PRCY Coin Q1 Financial Report is located at: https://prcycoin.com/wp-content/uploads/2021/02/1ST-QT-2021-FINANCIAL-REPORT-PRCY.pdf");
+  ctx.replyWithHTML("Question: What is the link to the PRCY Coin Q1 Financial Report?\n\nAnswer: The PRCY Coin Q1 Financial Report is located at: financialreport.prcycoin.com/");
   ctx.deleteMessage();
 });
 
