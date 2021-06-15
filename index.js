@@ -37,7 +37,7 @@ bot.use(function (ctx, next) {
 const walletversion = "1.0.0.6"
 
 //Add exchange constant for use in multiple commands
-const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-EUR / PRCY-USD / PRCY-RUR\n\n<a href="https://app.stex.com?ref=05796629">STEX</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://www.hotbit.io/register?ref=1028586">HotBit</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://polarity.exchange/">Polarity.Exchange</a>: No KYC\nTrading Pairs: PRCY-USDT\n\nExchange / Mobile Wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nAll current markets can be seen here: https://prcycoin.com/market\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
+const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-EUR / PRCY-USD / PRCY-RUR\n\n<a href="https://app.stex.com?ref=05796629">STEX</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://www.hotbit.io/register?ref=1028586">HotBit</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://polarity.exchange/">Polarity.Exchange</a>: No KYC\nTrading Pairs: PRCY-USDT\n\nExchange / Mobile Wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nAll current markets can be seen here: https://prcycoin.com/exchange\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
 
 //old exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-EUR / PRCY-USD / PRCY-RUR\n\n<a href="https://app.stex.com?ref=05796629">STEX</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://www.hotbit.io/register?ref=1028586">HotBit</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://coinsbit.io/referral/e9e321fb-1bac-4d29-b154-8918d11013e0">Coinsbit</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\nExchange / Mobile Wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nWrapped PRCY (wPRCY) Markets\n<a href="https://coinsbit.io/referral/e9e321fb-1bac-4d29-b154-8918d11013e0">Coinsbit</a>: KYC\nTrading Pairs: wPRCY-BTC / wPRCY-USDT / wPRCY-ETH\n\nAll current markets can be seen here: https://prcycoin.com/market\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
 
@@ -166,7 +166,7 @@ bot.command('faq', ctx => {
 
 //Socialmedia command - link to all socials, might require updating - Jan 30/2019
 bot.command('socialmedia', ctx => {
-  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/Prcycoin-101534778505838/\nInstagram: https://www.instagram.com/prcycoin/\n\n<b>Chats</b>\nTelegram Official: @prcycoinofficial\nTelegram Updates: @prcyupdate\nTelegram Tech Support: @prcySupport\nTelegram Lounge (Price discussion/spam): @prcylounge\nDiscord: https://prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY Blog: https://prcycoin.com/blog/\nReddit: https://www.reddit.com/r/PRCYCoin/");
+  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\nTwitter: https://twitter.com/PRCYcoin\nFacebook Page: https://www.facebook.com/Prcycoin-101534778505838/\nInstagram: https://www.instagram.com/prcycoin/\n\n<b>Chats</b>\nTelegram Official: @prcycoinofficial\nTelegram Updates: @prcyupdate\nTelegram Tech Support: @prcySupport\nTelegram Lounge (Price discussion/spam): @prcylounge\nDiscord: https://prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY News: https://prcycoin.com/news/\nReddit: https://www.reddit.com/r/PRCYCoin/");
   ctx.deleteMessage();
 });
 
@@ -318,7 +318,7 @@ bot.command('passive_income', ctx => {
 
 //Finance_report command - links to Financial Report
 bot.command('finance_report', ctx => {
-  ctx.replyWithHTML("Question: What is the link to the PRCY Coin Q1 Financial Report?\n\nAnswer: The PRCY Coin Q1 Financial Report is located at: financialreport.prcycoin.com/");
+  ctx.replyWithHTML("Question: What is the link to the PRCY Coin Q1 Financial Report?\n\nAnswer: The PRCY Coin Q1 Financial Report is located at: https://financialreport.prcycoin.com");
   ctx.deleteMessage();
 });
 
