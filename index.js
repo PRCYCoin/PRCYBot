@@ -67,7 +67,7 @@ function remindUsers() {
 bot.start((ctx) => ctx.reply("Hello! Welcome to the PRCY Coin Bot. Feel free to start by entering /help to see all available commands."));
 
 //Help command - listing all commands for user
-bot.help((ctx) => ctx.replyWithHTML("Hello! Welcome to the PRCY Coin Bot.\n\nBelow are a list of all the commands:\n/bootstrap - Link to BootStrap\n/coinmarketcap - Is PRCY listed on CoinMarketCap?\n/exchanges - What exchanges is PRCY coin on?\n/explorer - Link to Explorer\n/faq - Other Questions?\n/finance_report - Link to the PRCY Coin Q2 Financial Report\n/gifparty - Used for fun, invite people to lounge for gif party\n/github - Link to GitHub\n/help - List all commands\n/markets - What exchanges is PRCY coin on?\n/masternodes - General Masternode description and instructions\n/mnscripts - Link to Masternode Scripts\n/passive_income - Link to Passive Income Opportunities\n/poaminer - PoA Miner Instructions\n/retention - What is the Retention Plan?\n/roadmap - Latest Roadmap\n/rules - Chat Rules\n/scammers - Give our community a scammer warning\n/socialmedia - Social Media Accounts\n/staking - Can you stake PRCY Coin?\n/supply - What is the current supply of PRCY Coin?\n/team - Who is on the PRCY Coin team?\n/wallets - Currently Supported Wallets\n/whitepaper - Latest Whitepaper"));
+bot.help((ctx) => ctx.replyWithHTML("Hello! Welcome to the PRCY Coin Bot.\n\nBelow are a list of all the commands:\n/bootstrap - Link to BootStrap\n/coinmarketcap - Is PRCY listed on CoinMarketCap?\n/exchanges - What exchanges is PRCY coin on?\n/explorer - Link to Explorer\n/faq - Other Questions?\n/finance_report - Link to the PRCY Coin Q2 Financial Report\n/gifparty - Used for fun, invite people to lounge for gif party\n/github - Link to GitHub\n/help - List all commands\n/markets - What exchanges is PRCY coin on?\n/masternodes - General Masternode description and instructions\n/mnscripts - Link to Masternode Scripts\n/passive_income - Link to Passive Income Opportunities\n/poaminer - PoA Miner Instructions\n/retention - What is the Retention Plan?\n/roadmap - Latest Roadmap\n/rules - Chat Rules\n/scammers - Give our community a scammer warning\n/shop - Link to PRCY Shop\n/socialmedia - Social Media Accounts\n/staking - Can you stake PRCY Coin?\n/supply - What is the current supply of PRCY Coin?\n/team - Who is on the PRCY Coin team?\n/wallets - Currently Supported Wallets\n/whitepaper - Latest Whitepaper"));
 
 //Welcome command - a quick welcome, not used as much, mark for possible removal/add admin only
 bot.command('welcome', ctx => {
@@ -361,6 +361,12 @@ bot.command('comparison', ctx => {
 //Autobootstrap command - Autobootstrap information
 bot.command('autobootstrap', ctx => {
   ctx.replyWithHTML("Question: Where is the Auto Bootstrap Tool?\n\nAnswer: It can be downloaded at https://prcycoin.com/auto-bootstrap/");
+  ctx.deleteMessage();
+});
+
+//Shop command - link to DAPS shop
+bot.command('shop', ctx => {
+  ctx.replyWithHTML("Shop for PRCY merchandise at the new store! https://shop.prcycoin.com");
   ctx.deleteMessage();
 });
 
