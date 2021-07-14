@@ -370,6 +370,12 @@ bot.command('shop', ctx => {
   ctx.deleteMessage();
 });
 
+//Dex command - PrivacyDex.io information
+bot.command('dex', ctx => {
+  ctx.replyWithHTML("Question: What coins can be swapped for PRCY at PrivacyDEX.io?\n\nAnswer: Below are the coins that you can swap to PRCY on PrivacyDEX.io:\n\nBitcoin (BTC): https://privacydex.io/Swap?from=BTC&to=PRCY\nBitcoin SV (BSV): https://privacydex.io/Swap?from=BSV&to=PRCY\nBitcoinCash (BCH): https://privacydex.io/Swap?from=BCH&to=PRCY\nConceal (CCX): https://privacydex.io/Swap?from=CCX&to=PRCY\nDash (DASH): https://privacydex.io/Swap?from=DASH&to=PRCY\nDigiByte (DGB): https://privacydex.io/Swap?from=DGB&to=PRCY\nDogeCoin (DOGE): https://privacydex.io/Swap?from=DOGE&to=PRCY\nEthereum (ETH): https://privacydex.io/Swap?from=ETH&to=PRCY\nFiro (FIRO): https://privacydex.io/Swap?from=FIRO&to=PRCY\nMonero (XMR): https://privacydex.io/Swap?from=XMR&to=PRCY\nPirateChain (ARRR):https://privacydex.io/Swap?from=ARRR&to=PRCY\nRaven (RVN): https://privacydex.io/Swap?from=RVN&to=PRCY\nShiba Inu (SHIB): https://privacydex.io/Swap?from=SHIB&to=PRCY\nUSDT (USDT): https://privacydex.io/Swap?from=USDT&to=PRCY\nVerge (XVG): https://privacydex.io/Swap?from=XVG&to=PRCY\nWownero (WOW): https://privacydex.io/Swap?from=WOW&to=PRCY\nZcash (ZEC): https://privacydex.io/Swap?from=ZEC&to=PRCY");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
