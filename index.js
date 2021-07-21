@@ -376,6 +376,12 @@ bot.command('dex', ctx => {
   ctx.deleteMessage();
 });
 
+//Promotion materials command - information and link to Promo materials
+bot.command('promo', ctx => {
+  ctx.replyWithHTML('If you wish to create a post on social media related to PRCY then add $PRCY #PRCY.\n\nHere are some <a href="https://drive.google.com/drive/folders/1QE9UtLOkSyC6tCu_25lUzEOHV5AQzocc">PRCY Approved Graphics</a> -https://drive.google.com/drive/folders/1QE9UtLOkSyC6tCu_25lUzEOHV5AQzocc');
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
