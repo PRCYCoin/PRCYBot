@@ -166,7 +166,7 @@ bot.command('faq', ctx => {
 
 //Socialmedia command - link to all socials, might require updating - Jan 30/2019
 bot.command('socialmedia', ctx => {
-  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\n<a href='https://twitter.com/PRCYcoin'>PRCY Coin Twitter</a>\n<a href='https://t.me/PRCYsocialmediachannel'>Social Media Army</a>\n\n<b>Chats</b>\n<a href='https://t.me/prcycoinofficial'>PRCY Coin Official</a>\n<a href='https://t.me/prcyupdate'>PRCY Coin Updates</a>\n<a href='https://t.me/prcylounge'>PRCY Coin Lounge (Price discussion/spam)</a>\n<a href='https://t.me/prcySupport'>PRCY Coin Tech Support</a>\n<a href='https://prcycoin.com/discord'>PRCY Coin Discord</a>\n\n<b>Blogs/News</b>\n<a href='https://prcycoin.com/news/'>PRCY Coin News</a>\n<a href='https://www.reddit.com/r/PRCYCoin/'>PRCY Coin Reddit</a>");
+  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\n<a href='https://twitter.com/PRCYcoin'>PRCY Coin Twitter</a>\n<a href='https://t.me/PRCYsocialmediachannel'>Social Media Army</a>\n\n<b>Chats</b>\n<a href='https://t.me/prcycoinofficial'>PRCY Coin Official</a>\n<a href='https://t.me/prcyupdate'>PRCY Coin Updates</a>\n<a href='https://t.me/prcylounge'>PRCY Coin Lounge (Please keep price discussion and chit chat in our Lounge 🙂)</a>\n<a href='https://t.me/prcySupport'>PRCY Coin Tech Support</a>\n<a href='https://prcycoin.com/discord'>PRCY Coin Discord</a>\n\n<b>Blogs/News</b>\n<a href='https://prcycoin.com/news/'>PRCY Coin News</a>\n<a href='https://www.reddit.com/r/PRCYCoin/'>PRCY Coin Reddit</a>");
   ctx.deleteMessage();
 });
 
