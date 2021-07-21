@@ -166,7 +166,7 @@ bot.command('faq', ctx => {
 
 //Socialmedia command - link to all socials, might require updating - Jan 30/2019
 bot.command('socialmedia', ctx => {
-  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\n<a href='https://twitter.com/PRCYcoin'>Twitter</a> \n\n<b>Chats</b>\nTelegram Official: @prcycoinofficial\nTelegram Updates: @prcyupdate\nTelegram Lounge (Price discussion/spam): @prcylounge\nTelegram social media army: @prcysocialmediachannel\nTelegram Tech Support: @prcySupport\nDiscord: https://prcycoin.com/discord\n\n<b>Blogs/News</b>\nPRCY News: https://prcycoin.com/news/\nReddit: https://www.reddit.com/r/PRCYCoin/");
+  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\n<a href='https://twitter.com/PRCYcoin'>PRCY Coin Twitter</a>\n<a href='@prcysocialmediachannel'>Social Media Army</a>\n\n<b>Chats</b>\n<a href='@prcycoinofficial'>PRCY Coin Official</a>\n<a href='@prcyupdate'>PRCY Coin Updates</a>\n<a href='@prcylounge'>PRCY Coin Lounge (Price discussion/spam)</a>\n<a href='@prcySupport'>PRCY Coin Tech Support</a>\n<a href='https://prcycoin.com/discord>PRCY Coin Discord</a>\n\n<b>Blogs/News</b>\n<a href='https://prcycoin.com/news/'>PRCY Coin News</a>\n<a href='https://www.reddit.com/r/PRCYCoin/'>PRCY Coin Reddit</a>");
   ctx.deleteMessage();
 });
 
