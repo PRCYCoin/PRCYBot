@@ -34,7 +34,7 @@ bot.use(function (ctx, next) {
     .then(_ => next(ctx));
 });
 
-const walletversion = "1.0.0.6"
+const walletversion = "1.0.0.7"
 
 //Add exchange constant for use in multiple commands
 const exchangetext = 'Question: What exchanges is PRCY Coin being traded on?\nPRCY Coin is trading on:\n\nExchanges:\n<a href="https://privacydex.io">PRivaCYDEX.io</a>: No KYC / No limits\nTrading Pairs: BITCOIN, BITCOIN CASH, bPRCY, CONCEAL, DASH, DIGIBYTE, DOGECOIN, ETHEREUM, FIRO, MONERO, PIRATECHAIN, PIVX, PRCY, RAVEN, SHIBA INU, SOLARIS, USDT, VERGE, WOWNERO, wPRCY, ZCASH\n\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-EUR / PRCY-USD / PRCY-RUR\n\n<a href="https://tradeogre.com/">TradeOgre</a>: No KYC\nTrading Pairs: PRCY-BTC\n\n<a href="https://polarity.exchange/">Polarity.Exchange</a>: No KYC\nTrading Pairs: PRCY-USDT\n\n<a href="https://www.hotbit.io/register?ref=1028586">HotBit</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://app.stex.com?ref=05796629">STEX</a>: KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\nExchange / Mobile Wallet:\n<a href="https://swap.swftcoin.com/swft-v3/InviteSignup-pc.html?referrer=1476348">SWFT</a>: KYC required\nSwap directly between more than 200 different coins for PRCY\n\nAll current markets can be seen here: https://prcycoin.com/market\n\nNote: PRCY is not responsible for the coins you hold on an exchange. Remember: not your keys, not your coins!'
@@ -270,7 +270,7 @@ bot.command('bootstrap', ctx => {
 
 //Update command - info and link to update
 bot.command('update', ctx => {
-  ctx.replyWithHTML("How to update your wallet to v" + walletversion + " 🤔💡\n\n1️⃣ Make sure you've backed up your wallet.dat file and written down your Mnemonic Phrase, then close the wallet.\n\n2️⃣ Windows: Go to where you have prcycoin-qt.exe in Windows Explorer\n\nMac: Go to Macintosh HD/⁨Users/⁨Username/⁨Library/⁨Applications/⁨PRCYcoin⁩\n\n3️⃣ Download the v" + walletversion + " wallet from here: https://github.com/PRCYCoin/PRCYCoin/releases and open the zip file\n\n4️⃣ Copy the prcycoin-qt.exe/prcycoin-qt file and paste or place it over your current file.\n\n5️⃣ When asked if you want to replace the old file, click Yes.\n\nThat's it! Now you can open your wallet like normal and it is now running the new version. 🥳👍");
+  ctx.replyWithHTML("How to update your wallet to v" + walletversion + " 🤔💡\n\n1️⃣ Make sure you've backed up your wallet.dat file and written down your Mnemonic Phrase, then close the wallet.\n\n2️⃣ Windows: Go to where you have prcycoin-qt.exe in Windows Explorer\n\nMac: Go to Macintosh HD/⁨Users/⁨Username/⁨Library/⁨Applications/⁨PRCYcoin⁩\n\n3️⃣ Download the v" + walletversion + " wallet from here: https://github.com/PRCYCoin/PRCYCoin/releases and open the zip file\n\n4️⃣ Copy the prcycoin-qt.exe/prcycoin-qt file and paste or place it over your current file.\n\n5️⃣ When asked if you want to replace the old file, click Yes.\n\nThat's it! Now you can open your wallet like normal and it is now running the new version. 🥳👍\n\nHow To Guide: https://prcycoin.com/knowledge-base/wallets/how-to-update-qt-wallet/");
   ctx.deleteMessage();
 });
 
