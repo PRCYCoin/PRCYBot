@@ -190,7 +190,7 @@ bot.command('support', ctx => {
 
 //Lounge command - gentle reminder to keep price discussion to Lounge
 bot.command('lounge', ctx => {
-  ctx.replyWithHTML("Please keep price discussion to our Lounge :) @prcylounge");
+  ctx.replyWithHTML("Please keep price discussion and chit chat in our <a href='https://t.me/prcylounge'>Lounge</a>");
   ctx.deleteMessage();
 });
 
