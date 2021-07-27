@@ -364,7 +364,7 @@ bot.command('autobootstrap', ctx => {
   ctx.deleteMessage();
 });
 
-//Shop command - link to DAPS shop
+//Shop command - link to PRCY shop
 bot.command('shop', ctx => {
   ctx.replyWithHTML("Shop for PRCY merchandise at the new store! https://shop.prcycoin.com");
   ctx.deleteMessage();
