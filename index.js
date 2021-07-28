@@ -258,7 +258,7 @@ bot.command('macwallet', ctx => {
 
 //PoAMiner command - info/help for PoA Miner
 bot.command('poaminer', ctx => {
-  ctx.replyWithHTML("You can download the latest PoA Miner at: https://github.com/PRCYCoin/POA-Miner/releases/tag/latest\n\nSetup instructions can be found at https://prcycoin.com/PoAMiner\n\nIf you need any help, feel free to join @prcySupport");
+  ctx.replyWithHTML("You can download the latest PoA Miner at: https://github.com/PRCYCoin/POA-Miner/releases/tag/latest\n\nSetup instructions can be found at https://prcycoin.com/PoAMiner\n\nIf you need any help or want to discuss mining, feel free to join @PRCYMiners");
   ctx.deleteMessage();
 });
 
