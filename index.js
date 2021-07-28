@@ -160,7 +160,7 @@ bot.command('retention', ctx => {
 
 //FAQ command - link to FAQ
 bot.command('faq', ctx => {
-  ctx.replyWithHTML("Any other questions you can view our FAQ at: https://prcycoin.com/faq or ask in the channels.");
+  ctx.replyWithHTML("Any other questions you can view our FAQ at: https://prcycoin.com/knowledge-base/ or ask in the channels.");
   ctx.deleteMessage();
 });
 
