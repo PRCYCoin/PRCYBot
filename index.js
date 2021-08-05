@@ -382,6 +382,12 @@ bot.command('promo', ctx => {
   ctx.deleteMessage();
 });
 
+//Gamble command - link to CasinoGate
+bot.command('gamble', ctx => {
+  ctx.replyWithHTML("Want to take a gamble?\nTry out PRCY's new integration at <a href='https://www.casinogate.live/?ref=871'>CasinoGate</a>)!\nPlay Baccarat, Blackjack, Dice, Roulette, Fruits Slots, and many more to earn PRCY.\nGood luck!");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
