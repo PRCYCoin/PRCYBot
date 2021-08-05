@@ -394,6 +394,12 @@ bot.command('plane', ctx => {
   ctx.deleteMessage();
 });
 
+//KingKabab command - link to King Kabab
+bot.command('kingkabab', ctx => {
+  ctx.replyWithHTML("Looking to grab some excellent food in Charlotte, NC?\n\nPay with PRCY at: <a href='https://ballantyne.kingkababs.com/'>King Kabab (Ballantyne)</a>!");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
