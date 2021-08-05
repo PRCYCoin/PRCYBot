@@ -388,6 +388,12 @@ bot.command('gamble', ctx => {
   ctx.deleteMessage();
 });
 
+//Plane command - link to TopAviation
+bot.command('plane', ctx => {
+  ctx.replyWithHTML("Looking to catch your next private plane? Pay with PRCY at: <a href='https://topgun-aviation.com'>TopGun Aviation</a>!");
+  ctx.deleteMessage();
+});
+
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
