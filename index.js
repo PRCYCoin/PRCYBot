@@ -388,9 +388,9 @@ bot.command('gamble', ctx => {
   ctx.deleteMessage();
 });
 
-//Plane command - link to TopAviation
+//Plane command - link to Top Gun Aviation
 bot.command('plane', ctx => {
-  ctx.replyWithHTML("Looking to catch your next private plane?\n\nPay with PRCY at: <a href='https://topgun-aviation.com'>TopGun Aviation</a>!");
+  ctx.replyWithHTML("Looking to catch your next private plane?\n\nPay with PRCY at: <a href='https://topgun-aviation.com'>Top Gun Aviation</a>!");
   ctx.deleteMessage();
 });
 
