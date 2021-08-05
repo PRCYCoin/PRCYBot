@@ -390,7 +390,7 @@ bot.command('gamble', ctx => {
 
 //Plane command - link to TopAviation
 bot.command('plane', ctx => {
-  ctx.replyWithHTML("Looking to catch your next private plane? Pay with PRCY at: <a href='https://topgun-aviation.com'>TopGun Aviation</a>!");
+  ctx.replyWithHTML("Looking to catch your next private plane?\n\nPay with PRCY at: <a href='https://topgun-aviation.com'>TopGun Aviation</a>!");
   ctx.deleteMessage();
 });
 
