@@ -384,7 +384,7 @@ bot.command('promo', ctx => {
 
 //Gamble command - link to CasinoGate
 bot.command('gamble', ctx => {
-  ctx.replyWithHTML("Want to take a gamble?\nTry out PRCY's new integration at <a href='https://www.casinogate.live/?ref=871'>CasinoGate</a>!\nPlay Baccarat, Blackjack, Dice, Roulette, Fruits Slots, and many more to earn PRCY.\nGood luck!\nPlease play wisely, It’s real Crypto!");
+  ctx.replyWithHTML("Want to take a gamble?\nTry out PRCY's new integration at <a href='https://www.casinogate.live/?ref=871'>CasinoGate</a>!\nPlay Baccarat, Blackjack, Dice, Roulette, Fruits Slots, and many more to earn PRCY.\nGood luck!\n\nPlease play wisely, It’s real Crypto!\nUse below referral and get 50 free credits! https://www.casinogate.live/?ref=871");
   ctx.deleteMessage();
 });
 
