@@ -400,14 +400,6 @@ bot.command('kingkabab', ctx => {
   ctx.deleteMessage();
 });
 
-bot.command('socialtest', ctx => {
-  ctx.reply('Menu', Markup.inlineKeyboard([
-  Markup.button.callback('Telegram', 'telegram'),
-  Markup.button.callback('Social Media', 'socials')
-])
-,ctx.deleteMessage());
-});
-
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
