@@ -402,7 +402,7 @@ bot.command('kingkabab', ctx => {
 
 //Reward command - reply about houw much you earn by staking
 bot.command('rewards', ctx => {
-  ctx.replyWithHTML("As we use PoSv3 it's not possible to calculate the daily staking rewards or its frequency. Because it relies on time + users staking + amount of coins staking in your wallet + luck = reward\n<b>You want to know more about staking PRCY coin? Look <a href='https://prcycoin.com/features/staking/'>here</a>");
+  ctx.replyWithHTML('As we use PoSv3 it\'s not possible to calculate the daily staking rewards or its frequency. Because it relies on time + users staking + amount of coins staking in your wallet + luck = reward\n<b>You want to know more about staking PRCY coin? Look <a href="https://prcycoin.com/features/staking/">here</a>');
   ctx.deleteMessage();
 });
 
