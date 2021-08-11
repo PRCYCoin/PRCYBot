@@ -146,7 +146,7 @@ bot.command('whitepaper', ctx => {
 
 //Staking command - explain staking can't be done until mainnet as we are ERC-20
 bot.command('staking', ctx => {
-  ctx.replyWithHTML("Question: Can you stake PRCY Coin?\n\nAnswer: Yes, you can stake with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.");
+  ctx.replyWithHTML("Question: Can you stake PRCY Coin?\n\nAnswer: Yes, you can stake PRCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nYou can also stake bPRCY on: https://safeswap.online/safeearn/bprcy");
   ctx.deleteMessage();
 });
 
