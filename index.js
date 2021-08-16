@@ -214,7 +214,7 @@ bot.command('promofriday', ctx => {
 
 //Giveaway command - Used for various giveaways/competitions, comment out reply when not in use
 bot.command('giveaway', ctx => {
-  ctx.replyWithPhoto({ url: 'https://prcycoin.com/wp-content/uploads/2021/05/logo-512-300x300.png' }, { caption: 'Remember to enter our recent Giveaway!\n\nEnter at: https://givelab.com/IfDbN1/prcy-coin-giveaway'})
+  ctx.replyWithPhoto({ url: 'https://prcycoin.com/wp-content/uploads/2021/08/giveaway.jpg' }, { caption: 'Remember to enter our recent Giveaway!\n\nEnter at: https://givelab.com/IfDbN1/prcy-coin-giveaway'})
   ctx.deleteMessage();
 });
 
