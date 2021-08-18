@@ -34,7 +34,7 @@ bot.use(function (ctx, next) {
     .then(_ => next(ctx));
 });
 
-const walletversion = "1.0.0.7"
+const walletversion = "1.0.0.8"
 
 //Coins that can be swapped in the DEX - If you add it here, add it to the dex command
 const dexcoins = "BINANCE COIN, BINANCE USD, BINANCE USD (BEP20), BITCOIN, BITCOIN CASH, bPRCY, CONCEAL, DASH, DIGIBYTE, DOGECOIN, ETHEREUM, FANTOM, FIRO, LITECOIN, MONERO, PIRATECHAIN, PIVX, PRCY, RAVEN, SHIBA INU, SOLARIS, TRX, USDC, USDT, USDT (BEP20), USDT (TRC20), VERGE, WOWNERO, wPRCY, XRP, ZCASH"
