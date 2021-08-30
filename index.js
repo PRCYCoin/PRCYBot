@@ -443,7 +443,7 @@ bot.hears(/good bot/i, (ctx) => {
 
 //Bad bot, use random response from our array
 bot.hears(/bad bot/i, (ctx) => {
-  var badbotresponses = ["Aw, gosh, I didn't mean it!", "Sorry! Please don't tell my handler!", "ERROR! Initiating reboot sequence...", "Kiss my shiny metal PRCY", "Think that's bad? Wait 'til Combot comes out, then you have trouble."];
+  var badbotresponses = ["Aw, gosh, I didn't mean it!", "Sorry! Please don't tell my handler!", "ERROR! Initiating reboot sequence...", "Kiss my shiny metal PRCY", "Think that's bad? Wait 'til Combot comes out, then you have trouble.", "https://www.youtube.com/watch?v=dsUXAEzaC3Q"];
   var badbotresponse = badbotresponses[Math.floor(Math.random() * badbotresponses.length)];
   ctx.replyWithHTML(badbotresponse);
 });
