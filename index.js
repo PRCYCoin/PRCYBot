@@ -422,11 +422,11 @@ bot.command('channels', ctx => {
 });
 
 //Menu command - menu structure
-bot.command('socialtest', ctx => {ctx.reply('Menu', Markup.inlineKeyboard([
+bot.command('socialtest', ctx => {
+  ctx.replyWithHTML('Menu', Markup.inlineKeyboard([
   Markup.button.callback('Telegram', 'telegram'),
   Markup.button.callback('Social Media', 'socials')
-  ])
-  ,ctx.deleteMessage());
+  ]));
 });
 
 // //Shows what social media PRCY has
