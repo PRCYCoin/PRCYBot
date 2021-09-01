@@ -421,23 +421,6 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
-//Menu command - menu structure
-bot.command('socialtest', ctx => {
-  ctx.replyWithHTML('Menu', Markup.inlineKeyboard([
-  Markup.button.callback('Telegram', 'telegram'),
-  Markup.button.callback('Social Media', 'socials')
-  ]));
-});
-
-// //Shows what social media PRCY has
-// bot.action('socials', (ctx) => {ctx.reply('web shizzle', Markup.inlineKeyboard([
-//     Markup.button.url('🌐Website', 'https://prcycoin.com/news'),
-//     Markup.button.url('🗣Discord', 'https://prcycoin.com/discord'),
-//     Markup.button.url('Reddit', 'https://prcycoin.com')
-//   ])
-//   ,ctx.deleteMessage());
-// });
-
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
   ctx.telegram.forwardMessage(-1001217171305, ctx.message.chat.id, ctx.message.message_id);
