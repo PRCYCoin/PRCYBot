@@ -423,30 +423,20 @@ bot.command('channels', ctx => {
 
 //Menu command - menu structure
 bot.command('socialtest', ctx => {ctx.reply('Menu', Markup.inlineKeyboard([
-    Markup.button.callback('Telegram', 'telegram'),
-    Markup.button.callback('Social Media', 'socials')
+  Markup.button.callback('Telegram', 'telegram'),
+  Markup.button.callback('Social Media', 'socials')
   ])
   ,ctx.deleteMessage());
 });
 
-//Shows what channels after user pressed Telegram button
-bot.action('telegram', (ctx) => {ctx.reply('Telegram channels', Markup.inlineKeyboard([
-    Markup.button.url('🔊Updates', 'https://t.me/prcyupdate'),
-    Markup.button.url('✅Official', 'https://t.me/prcycoinofficial'),
-    Markup.button.url('💬Lounge', 'https://t.me/prcylounge')
-  ])
-  ,ctx.deleteMessage());
-});
-
-
-//Shows what social media PRCY has
-bot.action('socials', (ctx) => {ctx.reply('web shizzle', Markup.inlineKeyboard([
-    Markup.button.url('🌐Website', 'https://prcycoin.com/news'),
-    Markup.button.url('🗣Discord', 'https://prcycoin.com/discord'),
-    Markup.button.url('Reddit', 'https://prcycoin.com')
-  ])
-  ,ctx.deleteMessage());
-});
+// //Shows what social media PRCY has
+// bot.action('socials', (ctx) => {ctx.reply('web shizzle', Markup.inlineKeyboard([
+//     Markup.button.url('🌐Website', 'https://prcycoin.com/news'),
+//     Markup.button.url('🗣Discord', 'https://prcycoin.com/discord'),
+//     Markup.button.url('Reddit', 'https://prcycoin.com')
+//   ])
+//   ,ctx.deleteMessage());
+// });
 
 //Listen for name changes
 bot.hears([/changed name from/i, /changed username from/i, /and username from/i], (ctx) => {
