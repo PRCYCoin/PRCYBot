@@ -421,10 +421,16 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
+const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ends on September 30, 2021. Distribution will <b>begin</b> on October 1, 2021."
 //Distribution
 bot.command('distribution', ctx => {
-  ctx.replyWithHTML("Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ends on September 30, 2021. Distribution will <b>begin</b> on October 1, 2021.\n");
+  ctx.replyWithHTML(distrbutiontext);
   ctx.deleteMessage();
+});
+
+//Listen for distribution, airdrop, withdraw
+bot.hears([/when distribution/i, /when airdrop/i, /when withdraw/i], (ctx) => {
+  ctx.replyWithHTML(distrbutiontext);
 });
 
 //Listen for name changes
