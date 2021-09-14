@@ -225,16 +225,16 @@ bot.command('giveaway', ctx => {
 bot.command('gifparty', ctx => {
   ctx.deleteMessage();
   var gifpartyresponses = ["Meet me in the @prcylounge for a good old fashioned GIF party!", "Do you like a good GIF party? Meet me in the @prcylounge!"];
-  var gifpartyresponse = gifpartyresponses[Math.floor(Math.random() * gifpartyresponses.length)];
-  ctx.replyWithHTML(gifpartyresponse);
+  var randomgifpartyresponse = gifpartyresponses[Math.floor(Math.random() * gifpartyresponses.length)];
+  ctx.replyWithHTML(randomgifpartyresponse);
 });
 
 //Rainparty command - Used for fun, invite people to lounge for rain party
 bot.command('rainparty', ctx => {
   ctx.deleteMessage();
   var rainpartyresponses = ["Meet me in the @prcylounge for a good old fashioned Rain party!", "Do you like to make it rain? Meet me in the @prcylounge!"];
-  var rainpartyresponse = rainpartyresponses[Math.floor(Math.random() * rainpartyresponses.length)];
-  ctx.replyWithHTML(rainpartyresponse);
+  var randomrainpartyresponse = rainpartyresponses[Math.floor(Math.random() * rainpartyresponses.length)];
+  ctx.replyWithHTML(randomrainpartyresponse);
 });
 
 //Scammers command - Warn about scammers
