@@ -229,6 +229,14 @@ bot.command('gifparty', ctx => {
   ctx.replyWithHTML(gifpartyresponse);
 });
 
+//Rainparty command - Used for fun, invite people to lounge for rain party
+bot.command('rainparty', ctx => {
+  ctx.deleteMessage();
+  var rainpartyresponses = ["Meet me in the @prcylounge for a good old fashioned Rain party!", "Do you like to make it rain? Meet me in the @prcylounge!"];
+  var rainpartyresponse = rainpartyresponses[Math.floor(Math.random() * rainpartyresponses.length)];
+  ctx.replyWithHTML(rainpartyresponse);
+});
+
 //Scammers command - Warn about scammers
 bot.command('scammers', ctx => {
   ctx.deleteMessage();
