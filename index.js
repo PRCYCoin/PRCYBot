@@ -135,6 +135,12 @@ bot.command('coingecko', ctx => {
   ctx.deleteMessage();
 });
 
+//Coinmarketleague command - link to CoinMarketLeague
+bot.command('coinmarketleague', ctx => {
+  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketLeague??\n\nAnswer: Yes, we are listed on CoinMarketLeague - the link is: https://coinmarketleague.com/coin/prcy-coin");
+  ctx.deleteMessage();
+});
+
 //Roadmap command - link to roadmap
 bot.command('roadmap', ctx => {
   ctx.replyWithHTML("Question: Where is the PRCY roadmap?\n\nAnswer: You can view the most up to date roadmap at: https://prcycoin.com/roadmap/");
