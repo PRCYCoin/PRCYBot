@@ -442,9 +442,15 @@ bot.command('distribution', ctx => {
   ctx.deleteMessage();
 });
 
-//Listen for distribution, airdrop, withdraw
-bot.hears([/when distribution/i, /when airdrop/i, /when withdraw/i], (ctx) => {
-  ctx.replyWithHTML(distrbutiontext);
+//Listen for distribution, airdrop, withdraw in Official
+bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
+  if (chatid == "-1001251263614") {
+    if (ctx.from._is_in_admin_list) {
+      // admin, let it slide
+    } else {
+      ctx.replyWithHTML(distrbutiontext);
+    }
+  }
 });
 
 //Listen for name changes
