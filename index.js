@@ -155,7 +155,7 @@ bot.command('whitepaper', ctx => {
 
 //Staking command - explain staking can't be done until mainnet as we are ERC-20
 bot.command('staking', ctx => {
-  ctx.replyWithHTML("Question: Can you stake <b>PRCY Coin</b>?\n\nAnswer: Yes, you can stake PRCY Coin with our desktop QT <a href='https://prcycoin.com/wallets'>wallet</a>. A minimum of 2.5k (2,500) PRCY is required.\n\nQuestion: Can you stake </b>bPRCY</b>?\n\nYou can also stake bPRCY, BUSD, USDT and SWAP to earn bPRCY on: <a href='https://safeswap.online/safeearn/bprcy'>Safeswap.online</a>\nOr stake and Masternode service for <b>PRCY Coin</b> on <a href='https://stackofstake.com/r/4511222407073786006'>Stackofstake.com</a>");
+  ctx.replyWithHTML("Question: What are the options for PRCY Staking?\n\nAnswer:\n<b><u>PRCY Coin:</u></b> You can stake PRCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required. You can also stake PRCY Coin on <a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n\n<b><u>bPRCY:</u></b> You stake bPRCY, BUSD, USDT and SWAP to earn bPRCY on: <a href='https://safeswap.online/safeearn/bprcy'>Safeswap.online</a>\n");
   ctx.deleteMessage();
 });
 
@@ -435,7 +435,7 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
-const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ends on September 30, 2021. Distribution will <b>begin</b> on October 1, 2021.\n You can buy some mpre on the exchanges PRCY Coin is listed https://prcycoin.com/exchange/"
+const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ends on September 30, 2021. Distribution will <b>begin</b> on October 1, 2021.\n\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/"
 //Distribution
 bot.command('distribution', ctx => {
   ctx.replyWithHTML(distrbutiontext);
@@ -444,6 +444,7 @@ bot.command('distribution', ctx => {
 
 //Listen for distribution, airdrop, withdraw in Official
 bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
+  let chatid = ctx.message.chat.id;
   if (chatid == "-1001251263614") {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
