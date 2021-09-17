@@ -444,6 +444,7 @@ bot.command('distribution', ctx => {
 
 //Listen for distribution, airdrop, withdraw in Official
 bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
+  let chatid = ctx.message.chat.id;
   if (chatid == "-1001251263614") {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
