@@ -435,7 +435,7 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
-const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ends on September 30, 2021. Distribution will <b>begin</b> on October 1, 2021.\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/"
+const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ends on September 30, 2021. Distribution will <b>begin</b> on October 1, 2021.\n\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/"
 //Distribution
 bot.command('distribution', ctx => {
   ctx.replyWithHTML(distrbutiontext);
