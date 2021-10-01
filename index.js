@@ -449,7 +449,7 @@ bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
     } else {
-      ctx.replyWithHTML("Here is the winnerlist https://winnerlist.prcycoin.com/\nCheck to see if you <a href='https://winnerlist.prcycoin.com/'>won</a>!");
+      ctx.replyWithHTML("Here is the winnerlist https://winnerlist.prcycoin.com/\nCheck to see if you <a href='https://winnerlist.prcycoin.com/'>won</a>!\n\n🔵Distribution will <b>begin</b> on October 1, 2021.\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your mobile wallet is loaded, try again in a few hours</b>\n\n");
     }
   }
 });
