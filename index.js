@@ -442,6 +442,16 @@ bot.command('distribution', ctx => {
   ctx.deleteMessage();
 });
 
+
+bot.hears([/winner/i,/winner list/i], ctx => {
+  ctx.replyWithHTML("There will be no winners list because of privacy.");
+});
+
+bot.hears([/server/i, /network/i, /app/i, /down/i, /not recieved/i], ctx => {
+  ctx.replyWithHTML("Wait three days as the distrubution will take three days.\nNo network problems, just a busy network.");
+});
+
+
 //Listen for distribution, airdrop, withdraw in Official
 bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
   let chatid = ctx.message.chat.id;
