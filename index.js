@@ -443,15 +443,8 @@ bot.command('distribution', ctx => {
 });
 
 
-bot.hears([/winner/i,/winner list/i], ctx => {
-  let chatid = ctx.message.chat.id;
-  if (chatid == "-1001251263614") {
-    if (ctx.from._is_in_admin_list) {
-      // admin, let it slide
-    } else {
-      ctx.replyWithHTML("There will be no winners list because of privacy.");
-    }
-  }
+bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
+  ctx.replyWithHTML("Here is the winnerlist https://winnerlist.prcycoin.com/\nCheck to see if you <a href='https://winnerlist.prcycoin.com/'>won</a>!");
 });
 
 bot.hears([/server/i, /network/i, /app/i, /down/i, /not recieved/i], ctx => {
