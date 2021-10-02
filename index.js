@@ -448,6 +448,12 @@ bot.command('why', ctx => {
   ctx.deleteMessage();
 });
 
+//Mobile - Answer about mobile
+bot.command('mobile', ctx => {
+  ctx.replyWithHTML("Question: My Mobile/Web Wallet won't load, what can I do?\n\nAnswer: We are aware of the Mobile Wallet/Web Wallet taking a long time to sync.\n\nThis is due to 20k+ users trying to access it at once to check the airdrop.\nFor now, the current solutions:\n- If it has already been running for 5 minutes, Restart the app\nor\n- Check back later.\n\nDesktop wallets are unaffected.");
+  ctx.deleteMessage();
+});
+
 bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
   let chatid = ctx.message.chat.id;
   if (chatid == "-1001251263614") {
