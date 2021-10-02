@@ -442,6 +442,11 @@ bot.command('distribution', ctx => {
   ctx.deleteMessage();
 });
 
+//Why - Answer why not on the winner list
+bot.command('why', ctx => {
+  ctx.replyWithHTML("Question: Why am I not on the Winner's list?\n\nAnswer: There were a total of 37000 participants, of which we have removed about 1000 due to unfair play, such as exchange addresses, or duplicate accounts. Of these 36000 the #PRCY team <b>randomly selected 20000 users.</b>");
+  ctx.deleteMessage();
+});
 
 bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
   let chatid = ctx.message.chat.id;
