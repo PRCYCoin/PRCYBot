@@ -471,7 +471,7 @@ bot.hears([/server/i, /network/i, /app/i, /down/i, /not recieved/i], ctx => {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
     } else {
-      ctx.replyWithHTML("Wait three days as the distrubution will take three days.\nNo network problems, just a busy network.");
+      ctx.replyWithHTML("🔵Distribution ongoing, 90% paid.\nNo network problems, just a busy network.");
     }
   }
 });
