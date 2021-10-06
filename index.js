@@ -435,7 +435,7 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
-const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ends on September 30, 2021. Distribution will <b>begin</b> on October 1, 2021.\n\n🔵 <b>it can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your mobile wallet is loaded, try again in a few hours</b>\n\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/\n\n<b>Winnerlist:</b>\nhttps://winnerlist.prcycoin.com/"
+const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ended on September 30, 2021. 🔵Distribution ongoing, 90% paid.\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your mobile wallet is loaded, try again in a few hours or try the Web Wallet.</b>\n\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/\n\n<b>Winnerlist:</b>\nhttps://winnerlist.prcycoin.com/"
 //Distribution
 bot.command('distribution', ctx => {
   ctx.replyWithHTML(distrbutiontext);
