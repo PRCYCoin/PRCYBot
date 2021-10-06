@@ -465,17 +465,6 @@ bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
   }
 });
 
-bot.hears([/server/i, /network/i, /app/i, /down/i, /not recieved/i], ctx => {
-  let chatid = ctx.message.chat.id;
-  if (chatid == "-1001251263614") {
-    if (ctx.from._is_in_admin_list) {
-      // admin, let it slide
-    } else {
-      ctx.replyWithHTML("🔵Distribution ongoing, 90% paid.\nNo network problems, just a busy network.");
-    }
-  }
-});
-
 //Listen for distribution, airdrop, withdraw in Official
 bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
   let chatid = ctx.message.chat.id;
