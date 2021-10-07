@@ -465,6 +465,18 @@ bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
   }
 });
 
+//Listen for words thatare about the airdrop payment
+bot.hears([/not recieved/i, /receive/i, /send/i], ctx => {
+  let chatid = ctx.message.chat.id;
+  if (chatid == "-1001251263614") {
+    if (ctx.from._is_in_admin_list) {
+      // admin, let it slide
+    } else {
+      ctx.replyWithHTML("🔵Distribution ongoing, 90% paid.\nNo network problems, just a busy network.\nBefore you send wait untill airdrop is over!!");
+    }
+  }
+});
+
 //Listen for distribution, airdrop, withdraw in Official
 bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
   let chatid = ctx.message.chat.id;
