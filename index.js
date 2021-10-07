@@ -582,14 +582,6 @@ bot.on('document', (ctx) => {
   }
 })
 
-//Admins command - Provide a list of admin only commands
-bot.command('admins', ctx => {
-  if (ctx.from._is_in_admin_list) {
-    ctx.replyWithHTML("<b>Current Admin Only Commands:</b>\n/price (not finished yet) - List price in BTC/USD/CAD/Volume\n/welcome - Welcome user to room, soon to be smarter\n/loungerules - list lounge rules, to be edited as well\n/tech - list tech welcome/rules, to be edited as well");
-  } else {
-  }
-});
-
 //Add a bit of a swear filter
 bot.hears([/fuck/i], (ctx) => {
   let chatid = ctx.message.chat.id;
