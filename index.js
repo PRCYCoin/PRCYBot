@@ -466,7 +466,7 @@ bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
 });
 
 //Listen for words thatare about the airdrop payment
-bot.hears([/not recieved/i, /receive/i, /send/i], ctx => {
+bot.hears([/not recieved/i, /receive/i, /send/i, /recieved/i], ctx => {
   let chatid = ctx.message.chat.id;
   if (chatid == "-1001251263614") {
     if (ctx.from._is_in_admin_list) {
