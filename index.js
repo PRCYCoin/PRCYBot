@@ -54,6 +54,9 @@ const scammertext = '<b>Please BEWARE of scammers‼️\n\nThere might be admin 
 
 const supporttext = "If you need any Tech Support, please join: https://t.me/prcySupport\nFor Masternode Support, please join: https://t.me/PRCY_MN_Support"
 
+const officialID = "-1001251263614"
+const loungeID = "-1001475331704"
+
 //Function to spark conversation, remind users about scammers, keeping coins on exchanges, etc.
 function remindUsers() {
   let chances = Math.floor(Math.random() * 11); // returns a random integer from 0 to 10
@@ -82,12 +85,12 @@ bot.command('welcome', ctx => {
 bot.command('rules', ctx => {
   let chatid = ctx.message.chat.id;
   //If not Lounge (ID below), give official rules
-  if (chatid != "-1001475331704") {
+  if (chatid != loungeID) {
     ctx.replyWithHTML("<b>Chat Rules</b>\nWe will appreciate your cooperation in keeping our channel a clean and spam free environment.\nWe encourage respectful and constructive spreading of our message.\n1. No spam links (referrals/advertisements/etc)\n2. No talking/shilling for outside projects\n3. No gifs/memes/videos\n4. No hate speech\n5. No posts about price/predictions/moons/lambos/etc.\n\n<b>Please use this room for less restricted chat about price discussion, chart watching, buy/sell walls and such:</b>\n@prcylounge\n<b>Thank you!</b>");
     ctx.deleteMessage();
   }
   //If Lounge (ID below), give Lounge rules
-  if (chatid == "-1001475331704") {
+  if (chatid == loungeID) {
     ctx.replyWithHTML("<b>Welcome to PRCY Lounge!</b>\nPlease keep conversations about price discussion, chart watching, buy/sell walls and such here.\n\nThis room will have some very simple rules to follow with the normal rules we have:\n\n<b>Do's:</b>\n- General non-PRCY related discussions are allowed\n- PRCY market price discussions are allowed\n- GIFS and stickers are allowed in moderation, don't spam!\n- PRCY comparisons and discussions in relation to other privacy coins are allowed\n\n<b>Don'ts:</b>\n- Swearing/insults/trolling/flaming/baiting are not allowed\n- Discussing other projects or channels is not allowed\n- Spreading FUD or misinformation is not allowed\n- Advertising or recruiting members is not allowed\n- NSFW/18+ content is not allowed (keep it PG-13)\n\nPlease keep it friendly and fun, and follow the admin's instructions.\nThe admins are reasonable and will act in a fair manner, but there are boundaries. Not following the rules or the admin's instructions will result in a mute or a (perma)ban.\n\nNow with that out of the way and without further ado: enjoy your stay in the PRCY Lounge and have fun!");
     ctx.deleteMessage();
   }
@@ -462,7 +465,7 @@ bot.command('withdraw', ctx => {
 
 bot.hears([/winner/i, /winner list/i, /list/i], ctx => {
   let chatid = ctx.message.chat.id;
-  if (chatid == "-1001251263614") {
+  if (chatid == officialID) {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
     } else {
@@ -474,7 +477,7 @@ bot.hears([/winner/i, /winner list/i, /list/i], ctx => {
 //Listen for words thatare about the airdrop payment
 bot.hears([/not recieved/i, /receive/i, /send/i, /recieved/i], ctx => {
   let chatid = ctx.message.chat.id;
-  if (chatid == "-1001251263614") {
+  if (chatid == officialID) {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
     } else {
@@ -486,7 +489,7 @@ bot.hears([/not recieved/i, /receive/i, /send/i, /recieved/i], ctx => {
 //Listen for distribution, airdrop, withdraw in Official
 bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
   let chatid = ctx.message.chat.id;
-  if (chatid == "-1001251263614") {
+  if (chatid == officialID) {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
     } else {
@@ -588,7 +591,7 @@ bot.hears([/fuck/i], (ctx) => {
   if (ctx.from._is_in_admin_list) {
   } else {
     //If not Lounge (ID below), complain about swear mentions
-    if (chatid != "-1001475331704") {
+    if (chatid != loungeID) {
       ctx.replyWithHTML(ctx.from.username + ", Please don't swear in our official channels. Thanks for your cooperation.");
       ctx.deleteMessage();
     }
