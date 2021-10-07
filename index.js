@@ -459,7 +459,7 @@ bot.command('mobile', ctx => {
 
 //Withdraw - Answer about Min Withdraw from wallets
 bot.command('withdraw', ctx => {
-  ctx.replyWithHTML("Question: What is the Minimum Withdrawal from PRCY Wallets?\n\nAnswer: <b>The Minimum is 5 PRCY to withdraw. PLUS 1 PRCY FEE <--- this means you CAN’T send 5 coins.</b>\n\nAll people who did not complete all required Airdrop tasks and got 5 or less coins. You can buy some, or forget it. Period.\n\n- No we wont change it for you\n- No we don't speed up any process\n- When you pm our admins about above questions, you're blocked.\n\nNeed more PRCY. Check our exchanges: https://prcycoin.com/exchange/");
+  ctx.replyWithHTML("Question: What is the Minimum Withdrawal from PRCY Wallets?\n\nAnswer: The Minimum is 5 PRCY to withdraw, plus 1 PRCY for fees. This means you <b>CAN NOT</b> send 5 PRCY coins.\nThis will not be changed until the designated date.\n\nNeed more PRCY? Our exchanges are listed at: https://prcycoin.com/exchange/");
   ctx.deleteMessage();
 });
 
