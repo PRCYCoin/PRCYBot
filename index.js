@@ -454,7 +454,7 @@ bot.command('mobile', ctx => {
   ctx.deleteMessage();
 });
 
-bot.hears([/winner/i,/winner list/i, /list/i], ctx => {
+bot.hears([/winner/i, /winner list/i, /list/i], ctx => {
   let chatid = ctx.message.chat.id;
   if (chatid == "-1001251263614") {
     if (ctx.from._is_in_admin_list) {
