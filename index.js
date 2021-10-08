@@ -57,6 +57,8 @@ const supporttext = "If you need any Tech Support, please join: https://t.me/prc
 const officialID = "-1001251263614"
 const loungeID = "-1001475331704"
 
+const airdropPaid = "95% paid"
+
 //Function to spark conversation, remind users about scammers, keeping coins on exchanges, etc.
 function remindUsers() {
   let chances = Math.floor(Math.random() * 11); // returns a random integer from 0 to 10
@@ -438,7 +440,7 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
-const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ended on September 30, 2021.\n\n🔵Distribution ongoing, 90% paid.\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your mobile wallet is loaded, try again in a few hours or try the Web Wallet.</b>\n\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/\n\n<b>Winnerlist:</b>\nhttps://winnerlist.prcycoin.com/"
+const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ended on September 30, 2021.\n\n🔵Distribution ongoing, " + airdropPaid+ ".\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your mobile wallet is loaded, try again in a few hours or try the Web Wallet.</b>\n\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/\n\n<b>Winnerlist:</b>\nhttps://winnerlist.prcycoin.com/"
 //Distribution
 bot.command('distribution', ctx => {
   ctx.replyWithHTML(distrbutiontext);
@@ -469,7 +471,7 @@ bot.hears([/winner/i, /winner list/i, /list/i], ctx => {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
     } else {
-      ctx.replyWithHTML("Here is the winnerlist https://winnerlist.prcycoin.com/\nCheck to see if you <a href='https://winnerlist.prcycoin.com/'>won</a>!\n\n🔵Distribution ongoing, 90% paid.\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your Mobile Wallet is loaded, try again in a few hours or use the <a href='https://wallet.prcycoin.com/'>Web Wallet</a></b>\n\nMinimum 5 PRCY withdraw. <b>PLUS FEE<b>\n\nNeed more PRCY? Check our exchanges: https://prcycoin.com/exchange/");
+      ctx.replyWithHTML("Here is the winnerlist https://winnerlist.prcycoin.com/\nCheck to see if you <a href='https://winnerlist.prcycoin.com/'>won</a>!\n\n🔵Distribution ongoing, " + airdropPaid+ ".\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your Mobile Wallet is loaded, try again in a few hours or use the <a href='https://wallet.prcycoin.com/'>Web Wallet</a></b>\n\nMinimum 5 PRCY withdraw. <b>PLUS FEE<b>\n\nNeed more PRCY? Check our exchanges: https://prcycoin.com/exchange/");
     }
   }
 });
@@ -481,7 +483,7 @@ bot.hears([/not recieved/i, /receive/i, /send/i, /recieved/i], ctx => {
     if (ctx.from._is_in_admin_list) {
       // admin, let it slide
     } else {
-      ctx.replyWithHTML("🔵Distribution ongoing, 90% paid.\nNo network problems, just a busy network.\nBefore you send wait untill airdrop is over!!");
+      ctx.replyWithHTML("🔵Distribution ongoing, " + airdropPaid+ ".\nNo network problems, just a busy network.\nBefore you send wait untill airdrop is over!!");
     }
   }
 });
