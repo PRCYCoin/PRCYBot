@@ -57,8 +57,6 @@ const supporttext = "If you need any Tech Support, please join: https://t.me/prc
 const officialID = "-1001251263614"
 const loungeID = "-1001475331704"
 
-const airdropPaid = "95% paid"
-
 //Function to spark conversation, remind users about scammers, keeping coins on exchanges, etc.
 function remindUsers() {
   let chances = Math.floor(Math.random() * 11); // returns a random integer from 0 to 10
@@ -463,41 +461,6 @@ bot.command('mobile', ctx => {
 bot.command('withdraw', ctx => {
   ctx.replyWithHTML("Question: What is the Minimum Withdrawal from PRCY Wallets?\n\nAnswer: The Minimum is 5 PRCY to withdraw, plus 1 PRCY for fees. This means you <b>CAN NOT</b> send 5 PRCY coins.\nThis will not be changed until the designated date.\n\nNeed more PRCY? Our exchanges are listed at: https://prcycoin.com/exchange/");
   ctx.deleteMessage();
-});
-
-bot.hears([/winner/i, /winner list/i, /list/i], ctx => {
-  let chatid = ctx.message.chat.id;
-  if (chatid == officialID) {
-    if (ctx.from._is_in_admin_list) {
-      // admin, let it slide
-    } else {
-      ctx.replyWithHTML("Here is the winnerlist https://winnerlist.prcycoin.com/\nCheck to see if you <a href='https://winnerlist.prcycoin.com/'>won</a>!\n\n🔵Distribution ongoing, " + airdropPaid+ ".\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your Mobile Wallet is loaded, try again in a few hours or use the <a href='https://wallet.prcycoin.com/'>Web Wallet</a></b>\n\nMinimum 5 PRCY withdraw. <b>PLUS FEE<b>\n\nNeed more PRCY? Check our exchanges: https://prcycoin.com/exchange/");
-    }
-  }
-});
-
-//Listen for words thatare about the airdrop payment
-bot.hears([/not recieved/i, /receive/i, /send/i, /recieved/i], ctx => {
-  let chatid = ctx.message.chat.id;
-  if (chatid == officialID) {
-    if (ctx.from._is_in_admin_list) {
-      // admin, let it slide
-    } else {
-      ctx.replyWithHTML("🔵Distribution ongoing, " + airdropPaid+ ".\nNo network problems, just a busy network.\nBefore you send wait untill airdrop is over!!");
-    }
-  }
-});
-
-//Listen for distribution, airdrop, withdraw in Official
-bot.hears([/distribution/i, /airdrop/i, /when withdraw/i], (ctx) => {
-  let chatid = ctx.message.chat.id;
-  if (chatid == officialID) {
-    if (ctx.from._is_in_admin_list) {
-      // admin, let it slide
-    } else {
-      ctx.replyWithHTML(distrbutiontext);
-    }
-  }
 });
 
 //Listen for name changes
