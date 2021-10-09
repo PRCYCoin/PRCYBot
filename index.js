@@ -438,13 +438,6 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
-const distrbutiontext = "Question: When is the PRCY Coin Airdrop Distribution?\n\nAnswer: The PRCY Coin Airdrop ended on September 30, 2021.\n\n🔵Distribution ongoing, " + airdropPaid+ ".\n\n🔵 <b>It can take a few days for all payments to be made 🔵\nDue to the traffic on the network, it may take a while before your mobile wallet is loaded, try again in a few hours or try the Web Wallet.</b>\n\nYou can buy some more on the current exchanges PRCY Coin is listed on: https://prcycoin.com/exchange/\n\n<b>Winnerlist:</b>\nhttps://winnerlist.prcycoin.com/"
-//Distribution
-bot.command('distribution', ctx => {
-  ctx.replyWithHTML(distrbutiontext);
-  ctx.deleteMessage();
-});
-
 //Why - Answer why not on the winner list
 bot.command('why', ctx => {
   ctx.replyWithHTML("Question: Why am I not on the Winner's list?\n\nAnswer: There were a total of 37000 participants, of which we have removed about 1000 due to unfair play, such as exchange addresses, or duplicate accounts. Of these 36000 the #PRCY team <b>randomly selected 20000 users.</b>");
