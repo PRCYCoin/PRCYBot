@@ -438,12 +438,6 @@ bot.command('channels', ctx => {
   ctx.deleteMessage();
 });
 
-//Why - Answer why not on the winner list
-bot.command('why', ctx => {
-  ctx.replyWithHTML("Question: Why am I not on the Winner's list?\n\nAnswer: There were a total of 37000 participants, of which we have removed about 1000 due to unfair play, such as exchange addresses, or duplicate accounts. Of these 36000 the #PRCY team <b>randomly selected 20000 users.</b>");
-  ctx.deleteMessage();
-});
-
 //Mobile - Answer about mobile
 bot.command('mobile', ctx => {
   ctx.replyWithHTML("Question: My Mobile/Web Wallet won't load, what can I do?\n\nAnswer: We are aware of the Mobile Wallet/Web Wallet taking a long time to sync.\n\nThis is due to 20k+ users trying to access it at once to check the airdrop.\nFor now, the current solutions:\n- If it has already been running for 5 minutes, Restart the app\nor\n- Check back later.\n\nDesktop wallets are unaffected.");
