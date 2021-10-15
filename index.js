@@ -372,7 +372,13 @@ bot.command('wrapped', ctx => {
   ctx.deleteMessage();
 });
 
-//Bridge command - Bridge information
+//Contracts command - Basic Contracts information
+bot.command('contracts', ctx => {
+  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer:\n<a href='https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>ETH Contract</a>\n<a href='https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>BSC Contract</a>\n<a href='https://tronscan.io/#/token20/TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS'>TRON Contract</a>\n);
+  ctx.deleteMessage();
+});
+
+//Comparison command - Comparison information
 bot.command('comparison', ctx => {
   ctx.replyWithHTML("Question: Is there a comparison chart for PRCY and other privacy coins?\n\nAnswer: Yes, we have created one at https://comparison.prcycoin.com");
   ctx.deleteMessage();
