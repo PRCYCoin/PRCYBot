@@ -128,19 +128,19 @@ bot.command('multisigwallets', ctx => {
 
 //Coinmarketcap command - link to CoinMarketCap
 bot.command('coinmarketcap', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketCap??\n\nAnswer: Yes, we are listed on Coin Market Cap - the link is: https://coinmarketcap.com/currencies/prcy-coin/");
+  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketCap?\n\nAnswer: Yes, we are listed on Coin Market Cap - the link is: https://coinmarketcap.com/currencies/prcy-coin/");
   ctx.deleteMessage();
 });
 
 //Coingecko command - link to CoinGecko
 bot.command('coingecko', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinGecko??\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/prcy-coin/");
+  ctx.replyWithHTML("Question: Is PRCY listed on CoinGecko?\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/prcy-coin/");
   ctx.deleteMessage();
 });
 
 //Coinmarketleague command - link to CoinMarketLeague
 bot.command('coinmarketleague', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketLeague??\n\nAnswer: Yes, we are listed on CoinMarketLeague - the link is: https://coinmarketleague.com/coin/prcy-coin");
+  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketLeague?\n\nAnswer: Yes, we are listed on CoinMarketLeague - the link is: https://coinmarketleague.com/coin/prcy-coin");
   ctx.deleteMessage();
 });
 
