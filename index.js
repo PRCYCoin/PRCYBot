@@ -374,7 +374,7 @@ bot.command('wrapped', ctx => {
 
 //Contracts command - Basic Contracts information
 bot.command('contracts', ctx => {
-  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer:\n<a href='https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>ETH Contract</a>\n<a href='https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>BSC Contract</a>\n<a href='https://tronscan.io/#/token20/TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS'>TRON Contract</a>");
+  ctx.replyWithHTML("Question: What are the Wrapped PRCY (wPRCY/bPRCY) Contract Addresses?\n\nAnswer:\n<a href='https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>ETH Contract</a>: 0xdfc3829b127761a3218bfcee7fc92e1232c9d116\n<a href='https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>BSC Contract</a>: 0xdfc3829b127761a3218bfcee7fc92e1232c9d116\n<a href='https://tronscan.io/#/token20/TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS'>TRON Contract</a>: TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS");
   ctx.deleteMessage();
 });
 
