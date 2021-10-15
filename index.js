@@ -52,7 +52,7 @@ const newsletterlink = "https://www.getrevue.co/profile/prcycoin/issues/weekly-n
 //Scammer text
 const scammertext = '<b>Please BEWARE of scammers‼️\n\nThere might be admin impersonators, fake profiles, pages, websites and download links provided by scammers. ONLY follow links given in our official channels ❗️n\nHow can I tell if an admin is real? 🤔\n\nHere are some easy guidelines to make sure you are dealing with real admins:\n\n- Admins will never send you a DM first\n- They have an "admin" tag in their messages\n- They have a star symbol next to their name in the member list\n- Admins will never ask or offer you cryptocurrencies or referrals\n\nIf you spot a fake admin or if you are not sure: please inform an admin in the official PRCY channels. 🔎\n\nAlso: please be warned about other users contacting you in DM to fish for your private information or offer you deals, services or to trade.❗️🚫\n\nDo not engage with them and please report them to a PRCY admin so we can take care of the situation and keep our community safe. \n\nAgain, watch out for fake links. ONLY follow links given by admins in our official channels!\n\nBe safe! 🙏</b>'
 
-const supporttext = "Question: What are the Support channels?\n\nAnswer:For Tech Support, please join: @prcySupport\nFor Masternode Support, please join: @PRCY_MN_Support\nFor PoA Mining Support, please join: @PRCYMiners"
+const supporttext = "Question: What are the Support channels?\n\nAnswer:\nFor Tech Support, please join: @prcySupport\nFor Masternode Support, please join: @PRCY_MN_Support\nFor PoA Mining Support, please join: @PRCYMiners"
 
 const officialID = "-1001251263614"
 const loungeID = "-1001475331704"
