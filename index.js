@@ -137,7 +137,7 @@ bot.command('coingecko', ctx => {
 
 //Coinmarketleague command - link to CoinMarketLeague
 bot.command('coinmarketleague', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketLeague?\n\nAnswer: Yes, we are listed on CoinMarketLeague - the link is: https://coinmarketleague.com/coin/prcy-coin");
+  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketLeague?\n\nAnswer: Yes, we are listed on CoinMarketLeague - the link is: https://coinmarketleague.com/coin/prcy-coin\n\nYou can vote daily to help PRCY Coin reach the top of their Mineable, PoS, and Privacy lists. Every vote counts!");
   ctx.deleteMessage();
 });
 
