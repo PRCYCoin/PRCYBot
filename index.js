@@ -163,7 +163,7 @@ bot.command('staking', ctx => {
 
 //Retention command - explain staking can't be done until mainnet as we are ERC-20
 bot.command('retention', ctx => {
-  ctx.replyWithHTML("Question: What is the Retention Plan? How do I participate?\n\nAnswer: You can read the details of the Retention Plan here: https://retention.prcycoin.com/");
+  ctx.replyWithHTML("Question: What is the Retention Plan? How do I participate?\n\nAnswer: You can read the details of the Retention Plan here: <a href='https://prcycoin.com/wp-content/uploads/2021/12/Retention-December-21-.pdf'>Retention Plan</a>");
   ctx.deleteMessage();
 });
 
