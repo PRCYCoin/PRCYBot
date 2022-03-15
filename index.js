@@ -305,7 +305,7 @@ bot.command('cheers', ctx => {
 
 //Supply command - links to supply
 bot.command('supply', ctx => {
-  ctx.replyWithHTML("Question: What is the current supply of PRCY Coin?\n\nAnswer: The current supply can always be viewed here: https://explorer.prcycoin.com/api/getsupply");
+  ctx.replyWithHTML("Question: What is the current supply of PRCY Coin?\n\nAnswer: The <b>Current Supply</b> can always be viewed here: https://explorer.prcycoin.com/api/getsupply\nThe <b>Circulating Supply</b> can always be viewed here: https://api.prcycoin.com/api/getcirculatingsupply\nThe <b>Total Supply</b> can always be viewed here: https://explorer.prcycoin.com/api/getmaxsupply");
   ctx.deleteMessage();
 });
 
