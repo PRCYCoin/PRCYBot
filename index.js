@@ -34,7 +34,7 @@ bot.use(function (ctx, next) {
     .then(_ => next(ctx));
 });
 
-const walletversion = "1.0.0.8"
+const walletversion = "2.0.0.0"
 const officialID = "-1001251263614"
 const loungeID = "-1001475331704"
 
