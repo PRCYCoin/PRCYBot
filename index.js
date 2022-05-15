@@ -175,7 +175,7 @@ bot.command('faq', ctx => {
 
 //Socialmedia command - link to all socials, might require updating - Jul 8-21
 bot.command('socialmedia', ctx => {
-  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\n<a href='https://twitter.com/PRCYcoin'>PRivaCY Coin Twitter</a>\n<a href='https://t.me/PRCYsocialmediachannel'>PRivaCY Coin Social Media Army</a>\n<a href='https://www.youtube.com/c/PRCYCoin'>PRivaCY Coin Youtube</a>\n<a href='https://discord.gg/privacycycoin'>PRivaCY Coin Discord</a>\n\n<b>Blogs/News</b>\n<a href='https://prcycoin.com/news/'>PRivaCY Coin News</a>\n<a href='https://www.reddit.com/r/PRCYCoin/'>PRivaCY Coin Reddit</a>\n\n<a href='https://linktr.ee/PRivaCYcoin'>PRivaCY Coin Linktree</a>");
+  ctx.replyWithHTML("<b>Official Social Media Accounts</b>\n<a href='https://twitter.com/PRCYcoin'>PRivaCY Coin Twitter</a>\n<a href='https://t.me/PRCYsocialmediachannel'>PRivaCY Coin Social Media Army</a>\n<a href='https://www.youtube.com/c/PRCYCoin'>PRivaCY Coin Youtube</a>\n<a href='https://discord.gg/privacycycoin'>PRivaCY Coin Discord</a>\n\n<b>Blogs/News</b>\n<a href='https://prcycoin.com/news/'>PRivaCY Coin News</a>\n<a href='https://www.reddit.com/r/PRCYCoin/'>PRivaCY Coin Reddit</a>\n<a href='https://linktr.ee/PRivaCYcoin'>PRivaCY Coin Linktree</a>");
   ctx.deleteMessage();
 });
 
