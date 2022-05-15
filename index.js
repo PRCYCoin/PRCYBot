@@ -4,7 +4,7 @@ const Extra = require('telegraf/extra')
 const Markup = require('telegraf/markup')
 const rateLimit = require('telegraf-ratelimit')
 const token = process.env.TELEGRAM_API_KEY || '';
-const bot = new Telegraf(token, { username: 'PRCY_Coin_Bot' });
+const bot = new Telegraf(token, { username: 'PRivaCY_Coin_Bot' });
 
 // Set limit to 1 message per 0.5 second (for those having fun with good bot/bad bot) - can be adjusted or removed if necessary
 const limitConfig = {
