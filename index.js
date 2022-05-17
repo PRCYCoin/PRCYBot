@@ -323,7 +323,7 @@ bot.command('explorer', ctx => {
 
 //Github command - links to Github
 bot.command('github', ctx => {
-  ctx.replyWithHTML("Question: What is the link to the PrivaCY Coin GitHub?\n\nAnswer: The PrivaCY Coin GitHub is located at: https://github.com/PRCYcoin/\n\nGitHub page: https://prcycoin.github.io/PRCYCoin/");
+  ctx.replyWithHTML("Question: What is the link to the PrivaCY Coin GitHub?\n\nAnswer: The PrivaCY Coin GitHub is located at: https://github.com/PRCYcoin/\n\nGitHub Telegram Channel: @prcycoingithub");
   ctx.deleteMessage();
 });
 
