@@ -88,7 +88,7 @@ bot.command('rules', ctx => {
   }
   //If Lounge (ID below), give Lounge rules
   if (chatid == loungeID) {
-    ctx.replyWithHTML("<b>Welcome to PRCY Lounge!</b>\nPlease keep conversations about price discussion, chart watching, buy/sell walls and such here.\n\nThis room will have some very simple rules to follow with the normal rules we have:\n\n<b>Do's:</b>\n- General non-PRCY related discussions are allowed\n- PRCY market price discussions are allowed\n- GIFS and stickers are allowed in moderation, don't spam!\n- PRCY comparisons and discussions in relation to other privacy coins are allowed\n\n<b>Don'ts:</b>\n- Swearing/insults/trolling/flaming/baiting are not allowed\n- Discussing other projects or channels is not allowed\n- Spreading FUD or misinformation is not allowed\n- Advertising or recruiting members is not allowed\n- NSFW/18+ content is not allowed (keep it PG-13)\n\nPlease keep it friendly and fun, and follow the admin's instructions.\nThe admins are reasonable and will act in a fair manner, but there are boundaries. Not following the rules or the admin's instructions will result in a mute or a (perma)ban.\n\nNow with that out of the way and without further ado: enjoy your stay in the PRCY Lounge and have fun!");
+    ctx.replyWithHTML("<b>Welcome to PRivaCY Lounge!</b>\nPlease keep conversations about price discussion, chart watching, buy/sell walls and such here.\n\nThis room will have some very simple rules to follow with the normal rules we have:\n\n<b>Do's:</b>\n- General non-PRCY related discussions are allowed\n- PRCY market price discussions are allowed\n- GIFS and stickers are allowed in moderation, don't spam!\n- PRCY comparisons and discussions in relation to other privacy coins are allowed\n\n<b>Don'ts:</b>\n- Swearing/insults/trolling/flaming/baiting are not allowed\n- Discussing other projects or channels is not allowed\n- Spreading FUD or misinformation is not allowed\n- Advertising or recruiting members is not allowed\n- NSFW/18+ content is not allowed (keep it PG-13)\n\nPlease keep it friendly and fun, and follow the admin's instructions.\nThe admins are reasonable and will act in a fair manner, but there are boundaries. Not following the rules or the admin's instructions will result in a mute or a (perma)ban.\n\nNow with that out of the way and without further ado: enjoy your stay in the PRCY Lounge and have fun!");
     ctx.deleteMessage();
   }
 });
@@ -125,37 +125,37 @@ bot.command('multisigwallets', ctx => {
 
 //Coinmarketcap command - link to CoinMarketCap
 bot.command('coinmarketcap', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketCap?\n\nAnswer: Yes, we are listed on Coin Market Cap - the link is: https://coinmarketcap.com/currencies/prcy-coin/");
+  ctx.replyWithHTML("Question: Is PRivaCY listed on CoinMarketCap?\n\nAnswer: Yes, we are listed on Coin Market Cap - the link is: https://coinmarketcap.com/currencies/prcy-coin/");
   ctx.deleteMessage();
 });
 
 //Coingecko command - link to CoinGecko
 bot.command('coingecko', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinGecko?\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/prcy-coin/");
+  ctx.replyWithHTML("Question: Is PRivaCY listed on CoinGecko?\n\nAnswer: Yes, we are listed on CoinGecko - the link is: https://www.coingecko.com/en/coins/prcy-coin/");
   ctx.deleteMessage();
 });
 
 //Coinmarketleague command - link to CoinMarketLeague
 bot.command('coinmarketleague', ctx => {
-  ctx.replyWithHTML("Question: Is PRCY listed on CoinMarketLeague?\n\nAnswer: Yes, we are listed on CoinMarketLeague - the link is: https://coinmarketleague.com/coin/prcy-coin\n\nYou can vote daily to help PrivaCY Coin reach the top of their Mineable, PoS, and Privacy lists. Every vote counts!");
+  ctx.replyWithHTML("Question: Is PRivaCY listed on CoinMarketLeague?\n\nAnswer: Yes, we are listed on CoinMarketLeague - the link is: https://coinmarketleague.com/coin/prcy-coin\n\nYou can vote daily to help PrivaCY Coin reach the top of their Mineable, PoS, and Privacy lists. Every vote counts!");
   ctx.deleteMessage();
 });
 
 //Roadmap command - link to roadmap
 bot.command('roadmap', ctx => {
-  ctx.replyWithHTML("Question: Where is the PRCY roadmap?\n\nAnswer: You can view the most up to date roadmap at: https://prcycoin.com/roadmap/");
+  ctx.replyWithHTML("Question: Where is the PRivaCY roadmap?\n\nAnswer: You can view the most up to date roadmap at: https://prcycoin.com/roadmap/");
   ctx.deleteMessage();
 });
 
 //Whitepaper command - link to Whitepaper
 bot.command('whitepaper', ctx => {
-  ctx.replyWithHTML("Question: Where is the PRCY whitepaper?\n\nAnswer: You can view the full and most up to date whitepaper at: https://prcycoin.com/whitepaper");
+  ctx.replyWithHTML("Question: Where is the PRivaCY whitepaper?\n\nAnswer: You can view the full and most up to date whitepaper at: https://prcycoin.com/whitepaper");
   ctx.deleteMessage();
 });
 
 //Staking command - explain staking can't be done until mainnet as we are ERC-20
 bot.command('staking', ctx => {
-  ctx.replyWithHTML("Question: What are the options for PRCY Staking?\n\nAnswer:\nYou can stake PrivaCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe also have some Staking Pool options below, including for Wrapped PRCY:\n<b><u>PrivaCY Coin:</u></b> <a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n<b><u>bPRCY (BSC):</u></b> <a href='https://safeswap.online/safeearn/bprcy'>Safeswap.online</a>\n<b><u>pPRCY (Polygon):</u></b> <a href='https://safeswap.online/safeearn/pprcy'>Safeswap.online</a>\n\nYou can view all of our Staking Options at https://staking.prcycoin.com");
+  ctx.replyWithHTML("Question: What are the options for PRivaCY Staking?\n\nAnswer:\nYou can stake PrivaCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe also have some Staking Pool options below, including for Wrapped PRCY:\n<b><u>PrivaCY Coin:</u></b> <a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n<b><u>bPRCY (BSC):</u></b> <a href='https://safeswap.online/safeearn/bprcy'>Safeswap.online</a>\n<b><u>pPRCY (Polygon):</u></b> <a href='https://safeswap.online/safeearn/pprcy'>Safeswap.online</a>\n\nYou can view all of our Staking Options at https://staking.prcycoin.com");
   ctx.deleteMessage();
 });
 
@@ -181,7 +181,7 @@ bot.command('socialmedia', ctx => {
 
 //Tech command - a quick welcome to tech, not used as much, mark for possible removal/add admin only
 bot.command('tech', ctx => {
-  ctx.replyWithHTML("Welcome to the PRCY Tech Support room!\n\nThis is the support room for all your (technical) questions related to PRCY. 🛠\n\nIf you have any questions, do not hesitate to ask them here. Our admins will do their best to answer them and help you with your issues!");
+  ctx.replyWithHTML("Welcome to the PRivaCY Tech Support room!\n\nThis is the support room for all your (technical) questions related to PRCY. 🛠\n\nIf you have any questions, do not hesitate to ask them here. Our admins will do their best to answer them and help you with your issues!");
   ctx.deleteMessage();
 });
 
@@ -205,7 +205,7 @@ bot.command('lounge', ctx => {
 
 //Masternodes command - Quick write-up of masternodes and how they work
 bot.command('masternodes', ctx => {
-  ctx.replyWithHTML('PRCY Masternodes are required to have 5,000 PRCY collateral, a dedicated IP address, and be able to run 24 hours a day without more than a 1-hour connection loss. Masternodes get paid using the See-Saw method. For offering their services to the network, Masternodes are paid a portion of block rewards to maintain the ecosystem. This payment will be in PRCY and it serves as a form of passive income to the Masternode owners\n\nTo make things easier, we have partnered with a few Masternode services as well where  there is no need to run your wallet 24/7.\n\nMasternode Hosting:\n<a href="https://higlan.com/">Higlan</a>\n<a href="https://masternodes.biz/cryptocurrency/PRCY">Masternodes.biz</a>\n<a href="https://pecuniaplatform.io/ref/f8556ab0">Pecunia Platform</a>');
+  ctx.replyWithHTML('PRivaCY Masternodes are required to have 5,000 PRCY collateral, a dedicated IP address, and be able to run 24 hours a day without more than a 1-hour connection loss. Masternodes get paid using the See-Saw method. For offering their services to the network, Masternodes are paid a portion of block rewards to maintain the ecosystem. This payment will be in PRCY and it serves as a form of passive income to the Masternode owners\n\nTo make things easier, we have partnered with a few Masternode services as well where  there is no need to run your wallet 24/7.\n\nMasternode Hosting:\n<a href="https://higlan.com/">Higlan</a>\n<a href="https://masternodes.biz/cryptocurrency/PRCY">Masternodes.biz</a>\n<a href="https://pecuniaplatform.io/ref/f8556ab0">Pecunia Platform</a>');
   ctx.deleteMessage();
 });
 
@@ -251,7 +251,7 @@ bot.command('scammers', ctx => {
 
 //Team command - link to PRCY team
 bot.command('team', ctx => {
-  ctx.replyWithHTML("Check out the PRCY Team page to see our list of team members: https://prcycoin.com/our-team");
+  ctx.replyWithHTML("Check out the PRivaCY Team page to see our list of team members: https://prcycoin.com/our-team");
   ctx.deleteMessage();
 });
 
@@ -341,7 +341,7 @@ bot.command('finance_report', ctx => {
 
 //International command - links to International channels
 bot.command('international', ctx => {
-  ctx.replyWithHTML("PRCY International Telegram Groups\n\nNederlands / Belgium: @PrcycoinNLBe\nPolish: @PRCYcoinPL\nRussian: @PRCYcoinRU\nTurkish: @prcycointurkey\nIndoneasian: @PRCYcoinindonesia\nPortuguese: @PRCYPortuguese");
+  ctx.replyWithHTML("PRivaCY International Telegram Groups\n\nNederlands / Belgium: @PrcycoinNLBe\nPolish: @PRCYcoinPL\nRussian: @PRCYcoinRU\nTurkish: @prcycointurkey\nIndoneasian: @PRCYcoinindonesia\nPortuguese: @PRCYPortuguese");
   ctx.deleteMessage();
 });
 
@@ -389,7 +389,7 @@ bot.command('autobootstrap', ctx => {
 
 //Shop command - link to PRCY shop
 bot.command('shop', ctx => {
-  ctx.replyWithHTML("Shop for PRCY merchandise at the new store! https://shop.prcycoin.com");
+  ctx.replyWithHTML("Shop for PRivaCY Coin merchandise at the new store! https://shop.prcycoin.com");
   ctx.deleteMessage();
 });
 
@@ -401,19 +401,19 @@ bot.command('dex', ctx => {
 
 //Promotion materials command - information and link to Promo materials
 bot.command('promo', ctx => {
-  ctx.replyWithHTML('If you wish to create a post on social media related to PRCY then add $PRCY #PRCY.\n\nHere are some <a href="https://drive.google.com/drive/folders/1QE9UtLOkSyC6tCu_25lUzEOHV5AQzocc">PRCY Approved Graphics</a> -https://drive.google.com/drive/folders/1QE9UtLOkSyC6tCu_25lUzEOHV5AQzocc');
+  ctx.replyWithHTML('If you wish to create a post on social media related to PRivaCY then add $PRCY #PRCY.\n\nHere are some <a href="https://drive.google.com/drive/folders/1QE9UtLOkSyC6tCu_25lUzEOHV5AQzocc">PRivaCY Approved Graphics</a> -https://drive.google.com/drive/folders/1QE9UtLOkSyC6tCu_25lUzEOHV5AQzocc');
   ctx.deleteMessage();
 });
 
 //Gamble command - link to CasinoGate
 bot.command('gamble', ctx => {
-  ctx.replyWithHTML("Want to take a gamble?\nTry out PRCY's new integration at <a href='https://www.casinogate.live/?ref=871'>CasinoGate</a>!\nPlay Baccarat, Blackjack, Dice, Roulette, Fruits Slots, and many more to earn PRCY.\nGood luck!\n\nPlease play wisely, It’s real Crypto!\nUse below referral and get 50 free credits! https://www.casinogate.live/?ref=871");
+  ctx.replyWithHTML("Want to take a gamble?\nTry out PRivaCY's new integration at <a href='https://www.casinogate.live/?ref=871'>CasinoGate</a>!\nPlay Baccarat, Blackjack, Dice, Roulette, Fruits Slots, and many more to earn PRCY.\nGood luck!\n\nPlease play wisely, It’s real Crypto!\nUse below referral and get 50 free credits! https://www.casinogate.live/?ref=871");
   ctx.deleteMessage();
 });
 
 //Plane command - link to Top Gun Aviation
 bot.command('plane', ctx => {
-  ctx.replyWithHTML("Looking to catch your next private plane?\n\nPay with PRCY at: <a href='https://topgun-aviation.com'>Top Gun Aviation</a>!");
+  ctx.replyWithHTML("Looking to catch your next private plane?\n\nPay with inter at: <a href='https://topgun-aviation.com'>Top Gun Aviation</a>!");
   ctx.deleteMessage();
 });
 
