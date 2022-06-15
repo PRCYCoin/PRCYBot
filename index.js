@@ -199,12 +199,6 @@ bot.command('support', ctx => {
   ctx.deleteMessage();
 });
 
-//Lounge command - gentle reminder to keep price discussion to Lounge
-bot.command('lounge', ctx => {
-  ctx.replyWithHTML("Please keep price discussion and chit chat in our <a href='https://t.me/prcylounge'>Lounge</a>");
-  ctx.deleteMessage();
-});
-
 //Masternodes command - Quick write-up of masternodes and how they work
 bot.command('masternodes', ctx => {
   ctx.replyWithHTML('PRivaCY Masternodes are required to have 5,000 PRCY collateral, a dedicated IP address, and be able to run 24 hours a day without more than a 1-hour connection loss. Masternodes get paid using the See-Saw method. For offering their services to the network, Masternodes are paid a portion of block rewards to maintain the ecosystem. This payment will be in PRCY and it serves as a form of passive income to the Masternode owners\n\nTo make things easier, we have partnered with a few Masternode services as well where  there is no need to run your wallet 24/7.\n\nMasternode Hosting:\n<a href="https://higlan.com/">Higlan</a>\n<a href="https://masternodes.biz/cryptocurrency/PRCY">Masternodes.biz</a>\n<a href="https://pecuniaplatform.io/ref/f8556ab0">Pecunia Platform</a>');
