@@ -553,13 +553,13 @@ bot.hears([/fuck/i], (ctx) => {
 bot.on('edited_message', (ctx) => {
   //let chatid = ctx.message.chat.id;
   //let userid = ctx.message.from.id;
+  let msg = ctx.message;
   if (ctx.from._is_in_admin_list) {
   } else {
     if (ctx.editedMessage.photo) {
       //ctx.deleteMessage();
       //bot.kickChatMember(chatid, userid);
     }
-    let msg = ctx.message;
     //If message contains link
     if (msg.includes = "tinyurl.com") {
       ctx.deleteMessage();
