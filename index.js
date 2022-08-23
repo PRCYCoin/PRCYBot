@@ -52,7 +52,7 @@ const donationtxt = ""
 const newsletterlink = "https://www.getrevue.co/profile/prcycoin/issues/weekly-newsletter-of-prcy-coin-official-issue-1-471692"
 
 //Scammer text
-const scammertext = "<b>🚨 <u>Important Reminder</u> 🚨 Please BEWARE of scammers‼️\n\nThere might be admin impersonators, fake profiles, pages, websites and download links provided by scammers. ONLY follow links given in our official channels ❗️\n\n❌PRivaCY Coin Admins will not take the initiative to message you privately to solve problems.\n\n🔑Don't share confidential personal information in private chats, and don't make transactions of any kind at all.\n\n🧩Anyone that claims to be an admin and messages you first in a private message, is a SCAMMER.\n\nIf you spot a fake admin or if you are not sure: please inform an admin in the official PRCY channels. 🔎\n\n👉 Always verify Admins with admin tag.</b>"
+const scammertext = "<b>🚨 <u>Important Reminder</u> 🚨 Please BEWARE of scammers‼️\n\nThere might be admin impersonators, fake profiles, pages, websites and download links provided by scammers. ONLY follow links given in our official channels ❗️\n\n❌PRivaCY Coin Admins will not take the initiative to message you privately to solve problems.\n\n🔑Don't share confidential personal information in private chats, and don't make transactions of any kind at all.\n\n🧩Anyone that claims to be an admin and messages you first in a private message, is a SCAMMER.\n\n👉 Always verify Admins with admin tag.</b>"
 
 const supporttext = "Question: What are the Support channels?\n\nAnswer:\nFor Tech Support, please join: @prcySupport\nFor Masternode Support, please join: @PRCY_MN_Support\nFor PoA Mining Support, please join: @PRCYMiners"
 
