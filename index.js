@@ -325,6 +325,12 @@ bot.command('github', ctx => {
   ctx.deleteMessage();
 });
 
+//Doxygen command - links to Doxygen (Developer Documentation)
+bot.command('doxygen', ctx => {
+  ctx.replyWithHTML("Question: What is the link to the PrivaCY Coin Developer Documentation?\n\nAnswer: The PrivaCY Coin Developer Documentation is located at: https://doxygen.prcycoin.com");
+  ctx.deleteMessage();
+});
+
 //Passive_income command - links to Passive Income Opportunities
 bot.command('passive_income', ctx => {
   ctx.replyWithHTML("Question: Does PrivaCY Coin have any Passive Income Opportunities?\n\nAnswer: Yes, we do! You can check them all out at: https://prcycoin.com/category/passive-incomes-opportunities/");
