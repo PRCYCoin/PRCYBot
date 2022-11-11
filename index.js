@@ -26,7 +26,7 @@ bot.use(function (ctx, next) {
   return bot.telegram.getChatAdministrators(ctx.chat.id)
     .then(function (data) {
       if (!data || !data.length) return;
-      console.log('admin list:', data);
+      //console.log('admin list:', data);
       ctx.chat._admins = data;
       ctx.from._is_in_admin_list = data.some(adm => adm.user.id === ctx.from.id);
     })
