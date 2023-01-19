@@ -337,7 +337,7 @@ bot.command('passive_income', ctx => {
 
 //Finance_report command - links to Financial Report
 bot.command('finance_report', ctx => {
-  ctx.replyWithHTML("Question: What is the link to the PrivaCY Coin Q2 Financial Report?\n\nAnswer: The PrivaCY Coin Q2 Financial Report is located at: https://financialreport.prcycoin.com");
+  ctx.replyWithHTML("Question: What is the link to the PrivaCY Coin 2022 Financial Report?\n\nAnswer: The PrivaCY Coin 2022 Financial Report is located at: https://financialreport.prcycoin.com");
   ctx.deleteMessage();
 });
 
