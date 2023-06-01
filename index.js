@@ -14,24 +14,24 @@ const limitConfig = {
 }
 //bot.use(rateLimit(limitConfig))
 
-//Check for admin in channel usage
-bot.use(function (ctx, next) {
-  /// or other chat types...
-  // if( ctx.chat.type !== 'channel' ) return next();
-  if (ctx.chat.id > 0) return next();
+bot.use(async (ctx, next) => {
+  // Skip for non-group chats
+  if(ctx.chat.id > 0) return next();
 
-  /// need to cache this result ( variable or session or ....)
-  /// because u don't need to call this method
-  /// every message
-  return bot.telegram.getChatAdministrators(ctx.chat.id)
-    .then(function (data) {
-      if (!data || !data.length) return;
-      //console.log('admin list:', data);
-      ctx.chat._admins = data;
-      ctx.from._is_in_admin_list = data.some(adm => adm.user.id === ctx.from.id);
-    })
-    .catch(console.log)
-    .then(_ => next(ctx));
+  try {
+    // Get the ChatMember object for the user who sent the message
+    const member = await ctx.getChatMember(ctx.from.id);
+
+    if(member.status === 'administrator' || member.status === 'creator') {
+      ctx.from._is_in_admin_list = true;
+    } else {
+      ctx.from._is_in_admin_list = false;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+  return next();
 });
 
 const walletversion = "2.0.0.6"
