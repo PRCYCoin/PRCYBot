@@ -510,33 +510,37 @@ bot.on('document', (ctx) => {
   } else {
     let userid = ctx.message.from.id;
     let filetype = ctx.message.document.file_name;
-    if (filetype.endsWith(".scr")) {
-      ctx.replyWithHTML(ctx.from.username + ", Please don't post .scr files. Thanks for your cooperation.");
-      ctx.deleteMessage();
-    }
-    if (filetype.endsWith(".pdf")) {
-      ctx.replyWithHTML(ctx.from.username + ", Please don't post .pdf files. Thanks for your cooperation.");
-      ctx.deleteMessage();
-    }
-    if (filetype.endsWith(".exe")) {
-      ctx.replyWithHTML(ctx.from.username + ", Please don't post .exe files. Thanks for your cooperation.");
-      ctx.deleteMessage();
-    }
-    if (filetype.endsWith(".pif")) {
-      ctx.replyWithHTML(ctx.from.username + ", Please don't post .pif files. Thanks for your cooperation.");
-      ctx.deleteMessage();
-    }
-    if (filetype.endsWith(".com")) {
-      ctx.replyWithHTML(ctx.from.username + ", Please don't post .com files. Thanks for your cooperation.");
-      ctx.deleteMessage();
-    }
-    if (filetype.endsWith(".url")) {
-      ctx.replyWithHTML(ctx.from.username + ", Please don't post .url files. Thanks for your cooperation.");
-      ctx.deleteMessage();
-    }
-    if (filetype.endsWith(".rar")) {
-      ctx.replyWithHTML(ctx.from.username + ", Please don't post .rar files. Thanks for your cooperation.");
-      ctx.deleteMessage();
+
+    if (filetype) {
+      if (filetype.endsWith(".scr")) {
+        ctx.replyWithHTML(ctx.from.username + ", Please don't post .scr files. Thanks for your cooperation.");
+        ctx.deleteMessage();
+      }
+      if (filetype.endsWith(".pdf")) {
+        ctx.replyWithHTML(ctx.from.username + ", Please don't post .pdf files. Thanks for your cooperation.");
+        ctx.deleteMessage();
+      }
+      if (filetype.endsWith(".exe")) {
+        ctx.replyWithHTML(ctx.from.username + ", Please don't post .exe files. Thanks for your cooperation.");
+        ctx.deleteMessage();
+      }
+      if (filetype.endsWith(".pif")) {
+        ctx.replyWithHTML(ctx.from.username + ", Please don't post .pif files. Thanks for your cooperation.");
+        ctx.deleteMessage();
+      }
+      if (filetype.endsWith(".com")) {
+        ctx.replyWithHTML(ctx.from.username + ", Please don't post .com files. Thanks for your cooperation.");
+        ctx.deleteMessage();
+      }
+      if (filetype.endsWith(".url")) {
+        ctx.replyWithHTML(ctx.from.username + ", Please don't post .url files. Thanks for your cooperation.");
+        ctx.deleteMessage();
+      }
+      if (filetype.endsWith(".rar")) {
+        ctx.replyWithHTML(ctx.from.username + ", Please don't post .rar files. Thanks for your cooperation.");
+        ctx.deleteMessage();
+      }
+    } else {
     }
     //ctx.kickChatMember(userid);
   }
