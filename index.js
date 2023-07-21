@@ -37,6 +37,7 @@ bot.use(async (ctx, next) => {
 const walletversion = "2.0.0.6"
 const officialID = "-1001251263614"
 const loungeID = "-1001475331704"
+const isBprcyStakingAvailable = false; // bPRCY staking options available?
 
 //Coins that can be swapped in the DEX - If you add it here, add it to the dex command
 const dexcoins = "BINANCE COIN, BINANCE USD, BINANCE USD (BEP20), BITCOIN, BITCOIN CASH, BITTORRENT OLD (BEP20), bPRCY, DASH, DIGIBYTE, DOGECOIN, ETHEREUM, FANTOM, FIRO, LITECOIN, MONERO, PIRATECHAIN, PIVX, pPRCY, PRCY, RAVEN, SHIBA INU, tPRCY, TRX, USDC, USDT, USDT (BEP20), USDT (TRC20), VERGE, WOWNERO, wPRCY, XRP, ZCASH"
@@ -153,11 +154,14 @@ bot.command('whitepaper', ctx => {
   ctx.deleteMessage();
 });
 
-//Staking command - explain staking can't be done until mainnet as we are ERC-20
+//Staking command - explain staking options
 bot.command('staking', ctx => {
-  //ORiginal
-  //  ctx.replyWithHTML("Question: What are the options for PRivaCY Staking?\n\nAnswer:\nYou can stake PrivaCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe also have some Staking Pool options below, including for Wrapped PRCY:\n<b><u>PrivaCY Coin:</u></b> <a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n<b><u>bPRCY (BSC):</u></b> <a href='https://safeswap.online/safeearn/bprcy'>Safeswap.online</a>\n<b><u>pPRCY (Polygon):</u></b> <a href='https://safeswap.online/safeearn/pprcy'>Safeswap.online</a>\n\nYou can view all of our Staking Options at https://staking.prcycoin.com");
-  ctx.replyWithHTML("Question: What are the options for PRivaCY Staking?\n\nAnswer:\nYou can stake PRivaCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe also have a Staking Pool option below:\n<b><u>PRivaCY Coin:</u></b>\n<a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n<a href='https://stakecube.net'>StakeCube.net</a>\n\nOr earn <b>bPRCY</b> by staking <b>SWAP</b>\n<b><u>bPRCY Coin</u></b>: <a href='https://safeswap.online/safeearn/bprcy'>SafeSwap.online</a>\n\nYou can view all of our Staking Options at https://staking.prcycoin.com");
+  //Check if bprcyStakingOptions are enabled and add them to the message if they are
+  const bprcyStakingOptions = isBprcyStakingAvailable
+    ? "\n\nOr earn <b>bPRCY</b> by staking <b>SWAP</b>\n<b><u>bPRCY Coin</u></b>: <a href='https://safeswap.online/safeearn/bprcy'>SafeSwap.online</a>" //Text to add if bPRCY staking is available
+    : "";
+
+  ctx.replyWithHTML(`Question: What are the options for PRivaCY Staking?\n\nAnswer:\nYou can stake PRivaCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe also have a Staking Pool option below:\n<b><u>PRivaCY Coin:</u></b>\n<a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n<a href='https://stakecube.net'>StakeCube.net</a>${bprcyStakingOptions}\n\nYou can view all of our Staking Options at https://staking.prcycoin.com`);
   ctx.deleteMessage();
 });
 
