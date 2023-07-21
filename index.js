@@ -161,7 +161,7 @@ bot.command('staking', ctx => {
     ? "\n\nOr earn <b>bPRCY</b> by staking <b>SWAP</b>\n<b><u>bPRCY Coin</u></b>: <a href='https://safeswap.online/safeearn/bprcy'>SafeSwap.online</a>" //Text to add if bPRCY staking is available
     : "";
 
-  ctx.replyWithHTML(`Question: What are the options for PRivaCY Staking?\n\nAnswer:\nYou can stake PRivaCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe also have a Staking Pool option below:\n<b><u>PRivaCY Coin:</u></b>\n<a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n<a href='https://stakecube.net'>StakeCube.net</a>${bprcyStakingOptions}\n\nYou can view all of our Staking Options at https://staking.prcycoin.com`);
+  ctx.replyWithHTML(`Question: What are the options for PRivaCY Staking?\n\nAnswer:\nYou can stake PRivaCY Coin with our desktop QT wallet. A minimum of 2.5k (2,500) PRCY is required.\n\nWe also have Staking Pool option(s) below:\n<b><u>PRivaCY Coin:</u></b>\n<a href='https://stackofstake.com/r/4511222407073786006'>StackOfStake.com</a>\n<a href='https://stakecube.net'>StakeCube.net</a>${bprcyStakingOptions}\n\nYou can view all of our Staking Options at https://staking.prcycoin.com`);
   ctx.deleteMessage();
 });
 
