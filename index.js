@@ -437,9 +437,29 @@ bot.command('shop', ctx => {
   ctx.deleteMessage();
 });
 
-//Dex command - PrivacyDex.io information
-bot.command('dex', ctx => {
-  ctx.replyWithHTML('Question: What coins can be swapped for PRCY at PRivaCYDEX.io?\n\nAnswer: Below are the coins that you can swap to PRCY/Wrapped PRCY on PRivaCYDEX.io:\n\n<a href="https://privacydex.io/Swap?from=BNB&to=PRCY">Binance Coin (BNB)</a>\n<a href="https://privacydex.io/Swap?from=BUSD&to=PRCY">Binance USD (BUSD)</a>\n<a href="https://privacydex.io/Swap?from=BTC&to=PRCY">Bitcoin (BTC)</a>\n<a href="https://privacydex.io/Swap?from=BCH&to=PRCY">BitcoinCash (BCH)</a>\n<a href="https://privacydex.io/Swap?from=BSC-BTT&to=PRCY">BitTorrent Token BEP20 (BTT)</a>\n<a href="https://privacydex.io/Swap?from=BPRCY&to=PRCY">bPRCY (bPRCY)</a>\n<a href="https://privacydex.io/Swap?from=BSC-BUSD&to=PRCY">BUSD BEP20 (BUSD)</a>\n<a href="https://privacydex.io/Swap?from=CCX&to=PRCY">Conceal (CCX)</a>\n<a href="https://privacydex.io/Swap?from=DASH&to=PRCY">Dash (DASH)</a>\n<a href="https://privacydex.io/Swap?from=DGB&to=PRCY">DigiByte (DGB)</a>\n<a href="https://privacydex.io/Swap?from=DOGE&to=PRCY">DogeCoin (DOGE)</a>\n<a href="https://privacydex.io/Swap?from=ETH&to=PRCY">Ethereum (ETH)</a>\n<a href="https://privacydex.io/Swap?from=FTM&to=PRCY">Fantom (FTM)</a>\n<a href="https://privacydex.io/Swap?from=FIRO&to=PRCY">Firo (FIRO)</a>\n<a href="https://privacydex.io/Swap?from=LTC&to=PRCY">Litecoin (LTC)</a>\n<a href="https://privacydex.io/Swap?from=XMR&to=PRCY">Monero (XMR)</a>\n<a href="https://privacydex.io/Swap?from=ARRR&to=PRCY">PirateChain (ARRR)</a>\n<a href="https://privacydex.io/Swap?from=PIVX&to=PRCY">PIVX (PIVX)</a>\n<a href="https://privacydex.io/Swap?from=PPRCY&to=PRCY">pPRCY (pPRCY)</a>\n<a href="https://privacydex.io/Swap?from=RVN&to=PRCY">Raven (RVN)</a>\n<a href="https://privacydex.io/Swap?from=SHIB&to=PRCY">Shiba Inu (SHIB)</a>\n<a href="https://privacydex.io/Swap?from=TPRCY&to=PRCY">tPRCY (tPRCY)</a>\n<a href="https://privacydex.io/Swap?from=TRX&to=PRCY">Tron (TRX)</a>\n<a href="https://privacydex.io/Swap?from=USDC&to=PRCY">USD Coin (USDC)</a>\n<a href="https://privacydex.io/Swap?from=USDT&to=PRCY">USDT (USDT)</a>\n<a href="https://privacydex.io/Swap?from=BSC-USDT&to=PRCY">USDT BEP20 (BSC-USDT)</a>\n<a href="https://privacydex.io/Swap?from=TRX-USDT&to=PRCY">USDT TRC20 (TRX-USDT)</a>\n<a href="https://privacydex.io/Swap?from=XVG&to=PRCY">Verge (XVG)</a>\n<a href="https://privacydex.io/Swap?from=WOW&to=PRCY">Wownero (WOW)</a>\n<a href="https://privacydex.io/Swap?from=WPRCY&to=PRCY">wPRCY ERC20 (wPRCY)</a>\n<a href="https://privacydex.io/Swap?from=WCCX&to=PRCY">Wrapped Conceal BEP20 (BSC) (wCCX)</a>\n<a href="https://privacydex.io/Swap?from=WEPIC&to=PRCY">Wrapped EPIC CASH BEP20 (BSC) (wEPIC)</a>\n<a href="https://privacydex.io/Swap?from=WFIRO&to=PRCY">Wrapped Firo BEP20 (BSC) (wFIRO)</a>\n<a href="https://privacydex.io/Swap?from=WXMR&to=PRCY">Wrapped Monero ERC20 (ETH) (wXMR)</a>\n<a href="https://privacydex.io/Swap?from=WARRR&to=PRCY">Wrapped PirateChain BEP20 (BSC) (wARRR)</a>\n<a href="https://privacydex.io/Swap?from=WSCRT&to=PRCY">Wrapped Secret ERC20 (ETH) (wSCRT)</a>\n<a href="https://privacydex.io/Swap?from=WZEC&to=PRCY">Wrapped Zcash BEP20 (BSC) (wZEC)</a>\n<a href="https://privacydex.io/Swap?from=XRP&to=PRCY">XRP (XRP)</a>\n<a href="https://privacydex.io/Swap?from=ZEC&to=PRCY">Zcash (ZEC)</a>');
+// Function to construct the dex links
+async function getDexLinks() {
+  const uniqueFromAssets = await getUniqueFromAssets();
+
+  if (uniqueFromAssets.length === 0) {
+    return 'Error fetching exchange data. Please try again later.';
+  }
+
+  const dexLinks = uniqueFromAssets.map(asset => {
+    const link = `https://privacydex.io/Swap?from=${encodeURIComponent(asset)}&to=PRCY`;
+    return `<a href="${link}">${asset}</a>`;
+  });
+
+  return dexLinks.join('\n');
+}
+
+// Dex command - PrivacyDex.io information
+bot.command('dex', async ctx => {
+  const dexLinks = await getDexLinks();
+
+  const replyText = `Question: What coins can be swapped for PRCY at PRivaCYDEX.io?\n\nAnswer: Below are the coins that you can swap to PRCY/Wrapped PRCY on PRivaCYDEX.io:\n\n${dexLinks}`;
+
+  ctx.replyWithHTML(replyText);
   ctx.deleteMessage();
 });
 
