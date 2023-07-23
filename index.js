@@ -5,6 +5,7 @@ const Markup = require('telegraf/markup')
 const rateLimit = require('telegraf-ratelimit')
 const token = process.env.TELEGRAM_API_KEY || '';
 const bot = new Telegraf(token, { username: 'PRCY_Coin_Bot' });
+const axios = require('axios');
 
 // Set limit to 1 message per 0.5 second (for those having fun with good bot/bad bot) - can be adjusted or removed if necessary
 const limitConfig = {
@@ -39,11 +40,54 @@ const officialID = "-1001251263614"
 const loungeID = "-1001475331704"
 const isBprcyStakingAvailable = false; // bPRCY staking options available?
 
-//Coins that can be swapped in the DEX - If you add it here, add it to the dex command
-const dexcoins = "BINANCE COIN, BINANCE USD, BINANCE USD (BEP20), BITCOIN, BITCOIN CASH, BITTORRENT OLD (BEP20), bPRCY, DASH, DIGIBYTE, DOGECOIN, ETHEREUM, FANTOM, FIRO, LITECOIN, MONERO, PIRATECHAIN, PIVX, pPRCY, PRCY, RAVEN, SHIBA INU, tPRCY, TRX, USDC, USDT, USDT (BEP20), USDT (TRC20), VERGE, WOWNERO, wPRCY, XRP, ZCASH"
+async function getUniqueFromAssets() {
+  try {
+    const response = await axios.get('https://api.privacydex.io/api/SwapRoutes', {
+      headers: {
+        accept: 'text/plain'
+      }
+    });
 
-//Add exchange constant for use in multiple commands
-const exchangetext = 'Question: What exchanges is PRivaCY Coin being traded on?\n\nAnswer:\nPRivaCY Coin is trading on:\n\nExchanges:\n<a href="https://privacydex.io">PRivaCYDEX.io</a>: <b>No KYC / No Limits / No Trading Fees</b>\nTrading Pairs: ' + dexcoins + '\n\n<a href="https://nonkyc.io/?ref=64267adf8660a5f543741c6b/">Nonkyc.io</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-XMR\n(You can also send bPRCY / tPRCY / wPRCY and trade 1:1 as PRCY)\n\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://tradeogre.com/">TradeOgre</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://xeggex.com?ref=61fad77f94a3f9346a083a9a">Xeggex</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-XMR\n(You can also send bPRCY / tPRCY / wPRCY and trade 1:1 as PRCY)\n\n<a href="https://stakecube.net/">StakeCube</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-SCC\n\n<a href="https://dex-trade.com/refcode/pabavp">Dex-Trade</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\nSwap directly between more than 200 different coins for PRCY\n\nAll current markets can be seen here: https://prcycoin.com/exchange\n\nNote: PRCY is not responsible for the coins you hold on an exchange.\n<b>Remember: not your keys, not your coins!</b>'
+    if (response.status === 200) {
+      const result = response.data.result;
+      const uniqueFromAssets = new Set();
+
+      result.forEach(route => {
+        uniqueFromAssets.add(route.fromAsset);
+      });
+
+      return Array.from(uniqueFromAssets);
+    } else {
+      console.error('Failed to fetch data from the API.');
+      return [];
+    }
+  } catch (error) {
+    console.error('An error occurred:', error.message);
+    return [];
+  }
+}
+
+// Function to construct the exchanges text
+async function getExchangesText() {
+  const uniqueFromAssets = await getUniqueFromAssets();
+
+  if (uniqueFromAssets.length === 0) {
+    return 'Error fetching exchange data. Please try again later.';
+  }
+
+  const dexcoins = uniqueFromAssets.join(', ');
+
+  const exchangetext = `Question: What exchanges is PRivaCY Coin being traded on?\n\nAnswer:\nPRivaCY Coin is trading on:\n\nExchanges:\n<a href="https://privacydex.io">PRivaCYDEX.io</a>: <b>No KYC / No Limits / No Trading Fees</b>\nTrading Pairs: ${dexcoins}\n\n<a href="https://nonkyc.io/?ref=64267adf8660a5f543741c6b/">Nonkyc.io</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-XMR\n(You can also send bPRCY / tPRCY / wPRCY and trade 1:1 as PRCY)\n\n<a href="https://txbit.io/?r=13747">Txbit</a>: KYC - Unlimited, Non KYC - 8500 PRCY/day withdrawl limit.\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://tradeogre.com/">TradeOgre</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\n\n<a href="https://xeggex.com?ref=61fad77f94a3f9346a083a9a">Xeggex</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-XMR\n(You can also send bPRCY / tPRCY / wPRCY and trade 1:1 as PRCY)\n\n<a href="https://stakecube.net/">StakeCube</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT / PRCY-SCC\n\n<a href="https://dex-trade.com/refcode/pabavp">Dex-Trade</a>: No KYC\nTrading Pairs: PRCY-BTC / PRCY-USDT\nSwap directly between more than 200 different coins for PRCY\n\nAll current markets can be seen here: https://prcycoin.com/exchange\n\nNote: PRCY is not responsible for the coins you hold on an exchange.\n<b>Remember: not your keys, not your coins!</b>`;
+
+  return exchangetext;
+}
+
+// Exchanges command - list available exchanges
+bot.command('exchanges', async ctx => {
+  const exchangetext = await getExchangesText();
+  ctx.replyWithHTML(exchangetext);
+  ctx.deleteMessage();
+});
 
 const donationtxt = ""
 
@@ -97,12 +141,6 @@ bot.command('rules', ctx => {
 //Newsletter command - provide latest newsletter link and subcription link
 bot.command('newsletter', ctx => {
   ctx.replyWithHTML("Our newsletter summarizes all our updates for you\n\nThis week's newsletter: " + newsletterlink + "\n\n<b>Subscribe for future updates:</b> https://www.getrevue.co/profile/prcycoin");
-  ctx.deleteMessage();
-});
-
-//Exchanges command - list available exchanges
-bot.command('exchanges', ctx => {
-  ctx.replyWithHTML(exchangetext);
   ctx.deleteMessage();
 });
 
