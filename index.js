@@ -414,10 +414,10 @@ bot.command('wrapped', ctx => {
 });
 
 //Contracts command - Basic Contracts information
-// bot.command('contracts', ctx => {
-//   ctx.replyWithHTML("Question: What are the Wrapped PRCY (bPRCY/pPRCY/tPRCY/wPRCY) Contract Addresses?\n\nAnswer:\nbPRCY - BSC Contract: <a href='https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>0xdfc3829b127761a3218bfcee7fc92e1232c9d116</a>\npPRCY - Polygon Contract: <a href='https://polygonscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>0xdfc3829b127761a3218bfcee7fc92e1232c9d116</a>\ntPRCY - TRON Contract: <a href='https://tronscan.io/#/token20/TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS'>TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS</a>\nwPRCY - ETH Contract: <a href='https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>0xdfc3829b127761a3218bfcee7fc92e1232c9d116</a>\n\nThe Bridge Wallet Addresses on each chain are as follows:\nbPRCY: <a href='https://bscscan.com/address/0x6c096a66d64bcd2d603df4d94e70519b38395d00'>0x6c096a66d64bcd2d603df4d94e70519b38395d00</a>\npPRCY: <a href='https://polygonscan.com/address/0x6c096a66d64bcd2d603df4d94e70519b38395d00'>0x6c096a66d64bcd2d603df4d94e70519b38395d00</a>\ntPRCY: <a href='https://tronscan.io/#/address/TLwk39xfW4K7PMscRxi6nvsvTgmuVGXMEM'>TLwk39xfW4K7PMscRxi6nvsvTgmuVGXMEM</a>\nwPRCY: <a href='https://etherscan.io/address/0x6c096a66d64bcd2d603df4d94e70519b38395d00'>0x6c096a66d64bcd2d603df4d94e70519b38395d00</a>");
-//   ctx.deleteMessage();
-// });
+bot.command('contracts', ctx => {
+  ctx.replyWithHTML("Question: What are the Wrapped PRCY (bPRCY/pPRCY/tPRCY/wPRCY) Contract Addresses?\n\nAnswer:\nbPRCY - BSC Contract: <a href='https://bscscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>0xdfc3829b127761a3218bfcee7fc92e1232c9d116</a>\npPRCY - Polygon Contract: <a href='https://polygonscan.com/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>0xdfc3829b127761a3218bfcee7fc92e1232c9d116</a>\ntPRCY - TRON Contract: <a href='https://tronscan.io/#/token20/TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS'>TYV5eu6UgSPtxVLkPD9YfxmUEcXhum35yS</a>\nwPRCY - ETH Contract: <a href='https://etherscan.io/token/0xdfc3829b127761a3218bfcee7fc92e1232c9d116'>0xdfc3829b127761a3218bfcee7fc92e1232c9d116</a>\n\nThe Bridge Wallet Addresses on each chain are as follows:\nbPRCY: <a href='https://bscscan.com/address/0x6c096a66d64bcd2d603df4d94e70519b38395d00'>0x6c096a66d64bcd2d603df4d94e70519b38395d00</a>\npPRCY: <a href='https://polygonscan.com/address/0x6c096a66d64bcd2d603df4d94e70519b38395d00'>0x6c096a66d64bcd2d603df4d94e70519b38395d00</a>\ntPRCY: <a href='https://tronscan.io/#/address/TLwk39xfW4K7PMscRxi6nvsvTgmuVGXMEM'>TLwk39xfW4K7PMscRxi6nvsvTgmuVGXMEM</a>\nwPRCY: <a href='https://etherscan.io/address/0x6c096a66d64bcd2d603df4d94e70519b38395d00'>0x6c096a66d64bcd2d603df4d94e70519b38395d00</a>");
+  ctx.deleteMessage();
+});
 
 //Comparison command - Comparison information
 bot.command('comparison', ctx => {
