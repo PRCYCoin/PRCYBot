@@ -42,7 +42,7 @@ const isBprcyStakingAvailable = false; // bPRCY staking options available?
 const checkDex = false;
 
 async function getUniqueFromAssets() {
-  if checkDex == false return [];
+  if (checkDex === false) return [];
   try {
     const response = await axios.get('https://api.privacydex.io/api/SwapRoutes', {
       headers: {
