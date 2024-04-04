@@ -511,7 +511,7 @@ bot.command('channels', ctx => {
 
 //Mobile - Answer about mobile
 bot.command('mobile', ctx => {
-  ctx.replyWithHTML("Question: My Mobile/Web Wallet won't send, what can I do?\n\nAnswer: We are aware of the Mobile Wallet/Web Wallet taking a long time to send/sync.\n\nThis is due to 20k+ users trying to access it at once to check/send their airdrop.\nFor now, the current solutions:\n- If it has already been running for 5 minutes, Restart the app\n- Try the Web Wallet (if using Mobile)\n- Check back later.\n\nDesktop wallets are unaffected. You can import your seed phrase to Desktop.");
+  ctx.replyWithHTML("Question: My Mobile/Web Wallet won't send, what can I do?\n\nAnswer: If the Mobile Wallet/Web Wallet taking a long time to send/sync:\n\n - If it has already been running for 5 minutes, Restart the app\n- Try the Web Wallet (if using Mobile)\n- Check back later.\n\nDesktop wallets are unaffected. You can import your seed phrase to Desktop.");
   ctx.deleteMessage();
 });
 
